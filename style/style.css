@@ -20,7 +20,7 @@ header p {
 }
 
 body header {
-  width: 900px;
+  width: 55%;
   min-height: 50px;
   margin: auto;
   margin-bottom: 0px;
@@ -35,7 +35,7 @@ section img {
 }
 
 main section {
-  width: 800px;
+  width: 50%;
   min-height: 50px;
   background-color: #c1ffdec2;
   border: 1px dashed black;
