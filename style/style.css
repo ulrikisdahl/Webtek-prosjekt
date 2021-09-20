@@ -5,6 +5,9 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
+    font-size: 1.2em;
+    line-height: 150%;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 body header {
     width: 800px;
@@ -15,12 +18,12 @@ body header {
     margin-bottom: 10px;
 }
 
-main section, footer{
+main section, footer {
     width: 800px;
 }
 
 main section {
-    min-height: 400px;
+    min-height: 200px;
     background-color: rgb(119, 119, 119);
     border: 1px dashed black;
     margin:auto;
