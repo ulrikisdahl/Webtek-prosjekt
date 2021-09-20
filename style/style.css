@@ -28,11 +28,9 @@ body header {
     margin-bottom: 0px;
 }
 
-main section, footer {
-    width: 800px;
-}
 
 main section {
+    width: 800px;
     min-height: 200px;
     background-color: rgb(119, 119, 119);
     border: 1px dashed black;
@@ -42,7 +40,8 @@ main section {
 }  
 
 footer {
-    margin-top: 70px;
+    width: 900px;
+    margin-top: 30px;
     height: 40px;
     bottom: 0px;
     background-color: rgb(82, 82, 82);
