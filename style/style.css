@@ -1,3 +1,33 @@
 body {
     background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+header {
+    width: 50%;
+    min-height: 50px;
+    background-color: rgb(105, 105, 105);
+    border: 1px dotted black;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+main section {
+    width: 80%;
+    min-height: 400px;
+    background-color: rgb(119, 119, 119);
+    border: 1px dashed black;
+    margin:auto;
+    margin-bottom: 10px;
+}  
+
+footer {
+    margin-top: 70px;
+    width: 100%;
+    height: 40px;
+    bottom: 0px;
+    background-color: cyan;
 }
