@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
 }
-header {
+body header {
     width: 800px;
     min-height: 50px;
     background-color: rgb(105, 105, 105);
