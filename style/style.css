@@ -9,8 +9,8 @@ body {
   line-height: 150%;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-header {
-  width: 50%;
+body header {
+  width: 800px;
   min-height: 50px;
   background-color: rgb(105, 105, 105);
   border: 1px dotted black;
@@ -18,8 +18,12 @@ header {
   margin-bottom: 10px;
 }
 
+main section,
+footer {
+  width: 800px;
+}
+
 main section {
-  width: 80%;
   min-height: 200px;
   background-color: rgb(119, 119, 119);
   border: 1px dashed black;
@@ -29,8 +33,7 @@ main section {
 
 footer {
   margin-top: 70px;
-  width: 100%;
   height: 40px;
   bottom: 0px;
-  background-color: cyan;
+  background-color: rgb(82, 82, 82);
 }
