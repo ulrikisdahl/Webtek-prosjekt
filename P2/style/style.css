@@ -8,6 +8,11 @@ body {
   font-size: 1.2em;
   line-height: 150%;
   font-family: Georgia, "Times New Roman", Times, serif;
+  width: 100%;
+}
+
+main {
+  width: 100%;  
 }
 
 h3 {
@@ -24,14 +29,6 @@ body header {
   min-height: 50px;
   margin: auto;
   margin-bottom: 0px;
-}
-
-section img {
-  width: 200px;
-  margin: auto;
-  display: block;
-  border: 2px solid black;
-  border-radius: 10px;
 }
 
 main section {
