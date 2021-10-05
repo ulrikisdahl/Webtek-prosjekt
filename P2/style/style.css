@@ -1,5 +1,5 @@
 body {
-  background-color: #bee6ce;
+  background-color: lightgray;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +34,7 @@ body header {
 main section {
   width: 50%;
   min-height: 50px;
-  background-color: #c1ffdec2;
+  background-color: #ebebeb;
   border: 1px dashed black;
   border-radius: 5px;
   margin: auto;
@@ -70,6 +70,6 @@ td, th {
 }
 
 th {
-  background-color: darkgray;
+  background-color: #4056a1;
   height: 60px;
 }
