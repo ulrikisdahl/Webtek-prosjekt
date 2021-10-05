@@ -58,3 +58,18 @@ figure p {
 figure img {
   width: 100%;
 }
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 2px solid gray;
+  padding: 0.5em;
+  text-align: left;
+}
+
+th {
+  background-color: darkgray;
+  height: 60px;
+}
