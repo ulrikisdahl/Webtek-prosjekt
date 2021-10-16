@@ -1,9 +1,15 @@
 html, body {
   margin: 0px;
   padding: 0px;
+  background-color: #EFE2BA;
 }
 
-.footer {
+header {
+  border-bottom: 1px solid;
+  height: 120px;
+}
+
+footer {
     position: absolute;
     bottom: 0px;
     width: 100%;
