@@ -37,4 +37,6 @@ function timeSinceBorn(){
     `
 }
 
+
+
 setInterval(timeSinceBorn, 1000)
