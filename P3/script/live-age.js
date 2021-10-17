@@ -12,10 +12,9 @@ function timeSinceBorn(){
     const hourInMillisec = 3.6e+6
     const minuteInMillisec = 60000
     const secondInMillisec = 1000
-    let rest = 0
 
     const n_yearsSinceBorn = Math.floor(millisecSinceBorn / yearInMillisec)
-    rest = millisecSinceBorn % yearInMillisec
+    let rest = millisecSinceBorn % yearInMillisec
 
     const n_monthsSinceBorn = Math.floor(rest / monthInMillisec)
     rest %=  monthInMillisec
@@ -36,5 +35,5 @@ function timeSinceBorn(){
         I am currently ${n_yearsSinceBorn} yr, ${n_monthsSinceBorn} mth, ${n_hoursSinceBorn} hrs, ${n_minutesSinceBorn} min, ${n_secondsSinceBorn} sec old
     `
 }
-
+timeSinceBorn()
 setInterval(timeSinceBorn, 1000)
