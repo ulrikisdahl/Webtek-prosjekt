@@ -19,11 +19,12 @@ header {
   text-align: center;
   padding: 15px 0;
   border-radius: 5px;
+  transition: 0.2s;
 }
 
 .menu:hover {
-  border: 2px solid black;
   cursor: pointer;
+  background-color: hsl(234, 68%, 70%)
 }
 
 #aktiv {

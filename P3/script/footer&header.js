@@ -14,6 +14,8 @@ let madeByText = document.createElement("p");
 madeByText.innerHTML = "WEBSITE MADE BY....";
 footerEl.appendChild(madeByText);
 
+// Lager navbar
+
 for (let i = 0; i < 6; i++) {
     let e1 = document.createElement("div")
     e1.className = "menu"
@@ -49,4 +51,9 @@ for (let i = 0; i < 6; i++) {
     e2.className = "menuP"
     e1.appendChild(e2)
     headerEl.appendChild(e1)
+
+    e1.addEventListener('click', function() {
+        window.location = link
+        }, false)
+    
 }
