@@ -1,17 +1,6 @@
 // Born 12 april 2020
 displayAge = document.querySelector('#displayAge');
 
-
-let a = 1
-
-function func(){
-    a += 1
-    displayAge.innerHTML = `
-        <p>${a}</p>
-    `
-}
-
-
 function timeSinceBorn(){
     const millisec = Date.parse('12 Apr 2020 00:12:00 GMT')
     const millisecNow = Date.parse(Date())
