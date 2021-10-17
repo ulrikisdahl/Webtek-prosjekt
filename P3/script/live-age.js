@@ -18,16 +18,16 @@ function timeSinceBorn(){
     rest = millisecSinceBorn % yearInMillisec
 
     const n_monthsSinceBorn = Math.floor(rest / monthInMillisec)
-    rest = rest % monthInMillisec
+    rest %=  monthInMillisec
 
     const n_daysSinceBorn = Math.floor(rest / dayInMillisec)
-    rest = rest % dayInMillisec
+    rest %= dayInMillisec
 
     const n_hoursSinceBorn = Math.floor(rest / hourInMillisec)
-    rest = rest % hourInMillisec
+    rest %= hourInMillisec
 
     const n_minutesSinceBorn = Math.floor(rest / minuteInMillisec)
-    rest = rest % minuteInMillisec
+    rest %=  minuteInMillisec
 
     const n_secondsSinceBorn = Math.floor(rest / secondInMillisec)
 
