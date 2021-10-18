@@ -232,13 +232,89 @@ footer {
   }
 
 #video {
-  margin: 0;
-  height: 250px;
-  background-color: red;
+  height: 230px;
+  background-color: rgba(224, 71, 255, 0.26);
 }
 
-#bilder {
-  height: 25px;
-  background-color: pink;
+.bilder {
+  width: 1000px;
+  border: 2px solid black;
+  background-color: rgba(249,235,223);
+  border-radius: 15px;
+  margin: 10px auto;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bilde {
+  margin: 20px;
+  height: 140px;
+  width: 140px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.mappe{
+  position: absolute;
+  right: -850px;
+  top: 10px;
+  width: 180%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.left{
+  animation: slideLeft 2s ease-Out;
+}
+.right{
+  animation: slideRight 2s ease-Out;
+}
+@keyframes slideLeft {
+  0% {
+    right: -850px;
+  }
+  100% {
+    right: 50px;
+  }
+}
+@keyframes slideRight {
+  0% {
+    right: 50px;
+  }
+  100% {
+    right: -850px;
+  }
+}
+
+.arrow-left {
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  margin: auto 0px;
+  margin-left: 20px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; 
+  border-right:50px solid #afb7ffb0; 
+  transition: 0.1s;
+}
+.arrow-left:hover {
+  border-right:50px solid hsla(234, 100%, 72%, 0.69); 
+  cursor: pointer;
+}
+.arrow-right {
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  margin-right: 20px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 50px solid #afb7ffb0;
+  transition: 0.1s;
+}
+.arrow-right:hover {
+  border-left:50px solid hsla(234, 100%, 72%, 0.69);
+  cursor: pointer;
 }
 
