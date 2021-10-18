@@ -92,6 +92,7 @@ footer {
 .contentContainer-item{
   background-color: #B5AFAF;
   width: 20%;
+  margin-top: 7em;
 }
 
 .contentContainer-item>img{
@@ -99,6 +100,7 @@ footer {
 }
 
 #content-header{
+  position: absolute;
   text-align: center;
 }
 /*** 4.0 - DIET ***/
@@ -111,6 +113,18 @@ footer {
 
 /*** 8.0 - CONTACT ***/
 #galleryTitle {
-    font-size: 3em;
-    text-align: center;
+  margin: 20px;
+  font-size: 3em;
+  text-align: center;
   }
+
+#video {
+  margin: 0;
+  height: 250px;
+  background-color: red;
+}
+
+#bilder {
+  height: 25px;
+  background-color: pink;
+}
