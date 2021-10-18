@@ -22,10 +22,14 @@ html, body {
   position: relative;
 }
 
+.container{
+  position: relative;
+}
+
 /*** 1.0 - HEADER ***/
 
  
-header {
+header { 
   border-bottom: 1px solid;
   height: 80px;
   display: flex;
@@ -64,7 +68,41 @@ footer {
   }
 
 /*** 3.0 - HOME ***/
+#hovedsideImg{
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
 
+#contentContainer{
+  position: absolute;
+  margin-top: 200em;
+  background-color: #E0E0E0;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  bottom: 0;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contentContainer-item{
+  background-color: #B5AFAF;
+  width: 20%;
+  margin-top: 7em;
+}
+
+.contentContainer-item>img{
+  width: 40%;
+}
+
+#content-header{
+  position: absolute;
+  text-align: center;
+}
 /*** 4.0 - DIET ***/
 
 /*** 5.0 - DOG BREED ***/
@@ -73,6 +111,69 @@ footer {
 
 /*** 7.0 - AGE CALCULATOR ***/
 
+#age_calc_main{
+  width: 60%;
+  margin: auto;
+}
+
+#age_calc_img{
+  width: 80%;
+  margin: auto;
+  display: block;
+  display: none;
+  position: relative;
+  bottom: -64px;
+}
+
+#age_calc_box{
+  background-color: #FFF1F8;
+  padding: 50px;
+  border-radius: 59px;
+}
+
+#age_calc_title{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 64px;
+  text-align: center;
+}
+
+#age_calc_text{
+  line-height: 25px;
+}
+
+#age_calc_form{
+
+}
+
+#age_calc_input{
+
+}
+
+#age_calc_months{
+
+}
+
+#age_calc_years{
+
+}
+
+.age_calc_selected{
+  background-color: red;
+}
+
+#age_calc_select{
+
+}
+
+#age_calc_submit{
+
+}
+
+#age_calc_output{
+
+}
+
 /*** 8.0 - CONTACT ***/
 #galleryTitle {
   margin: 20px;
@@ -80,61 +181,87 @@ footer {
   text-align: center;
   }
 
-#hovedsideImg{
-  width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
-}
-
 #video {
   height: 230px;
   background-color: rgba(224, 71, 255, 0.26);
 }
 
-#bilder {
+.bilder {
   width: 1000px;
   border: 2px solid black;
   background-color: rgba(249,235,223);
   border-radius: 15px;
   margin: 10px auto;
   height: 200px;
+  position: relative;
   overflow: hidden;
-  display: flex;
 }
 
-.bilder {
+.bilde {
   margin: 20px;
-  height: 170px;
-  width: 170px;
+  height: 140px;
+  width: 140px;
   background-color: white;
   border: 2px solid black;
   border-radius: 5px;
 }
 
-#mappe{
-  margin: auto;
-  width: 80%;
+.mappe{
+  position: absolute;
+  right: -850px;
+  top: 10px;
+  width: 180%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.left{
+  animation: slideLeft 2s ease-Out;
+}
+.right{
+  animation: slideRight 2s ease-Out;
+}
+@keyframes slideLeft {
+  0% {
+    right: -850px;
+  }
+  100% {
+    right: 50px;
+  }
+}
+@keyframes slideRight {
+  0% {
+    right: 50px;
+  }
+  100% {
+    right: -850px;
+  }
 }
 
 .arrow-left {
+  position: absolute;
+  top: 70px;
+  left: 0px;
   margin: auto 0px;
   margin-left: 20px;
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent; 
   border-right:50px solid #afb7ffb0; 
+  transition: 0.1s;
 }
 .arrow-left:hover {
   border-right:50px solid hsla(234, 100%, 72%, 0.69); 
   cursor: pointer;
 }
 .arrow-right {
-  margin: auto 0px;
+  position: absolute;
+  top: 70px;
+  right: 0px;
   margin-right: 20px;
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent;
   border-left: 50px solid #afb7ffb0;
+  transition: 0.1s;
 }
 .arrow-right:hover {
   border-left:50px solid hsla(234, 100%, 72%, 0.69);
