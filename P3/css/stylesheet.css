@@ -79,22 +79,29 @@ footer {
 }
 
 #age_calc_img{
-  width: 100%;
+  width: 80%;
+  margin: auto;
+  display: block;
+  display: none;
   position: relative;
   bottom: -64px;
 }
 
 #age_calc_box{
-  background-color: yellow;
+  background-color: #FFF1F8;
   padding: 50px;
+  border-radius: 59px;
 }
 
 #age_calc_title{
-
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 64px;
+  text-align: center;
 }
 
 #age_calc_text{
-
+  line-height: 25px;
 }
 
 #age_calc_form{
@@ -111,6 +118,10 @@ footer {
 
 #age_calc_years{
 
+}
+
+.age_calc_selected{
+  background-color: red;
 }
 
 #age_calc_select{
