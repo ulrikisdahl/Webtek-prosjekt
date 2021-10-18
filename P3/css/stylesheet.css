@@ -75,12 +75,19 @@ footer {
 
 /*** 8.0 - CONTACT ***/
 #galleryTitle {
-    font-size: 3em;
-    text-align: center;
+  margin: 20px;
+  font-size: 3em;
+  text-align: center;
   }
 
 #hovedsideImg{
   width: 50%;
   margin-left: 25%;
   margin-right: 25%;
+}
+
+#video {
+  margin: 0;
+  height: 250px;
+  background-color: red;
 }
