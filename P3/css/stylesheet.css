@@ -246,7 +246,7 @@ footer {
   margin-left: 20px;
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent; 
-  border-right:50px solid #afb7ffb0; 
+  border-right: 50px solid #afb7ffb0; 
   transition: 0.1s;
 }
 .arrow-left:hover {
