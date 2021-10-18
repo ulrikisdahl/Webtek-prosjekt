@@ -70,3 +70,8 @@ footer {
 /*** 7.0 - AGE CALCULATOR ***/
 
 /*** 8.0 - CONTACT ***/
+#hovedsideImg{
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
