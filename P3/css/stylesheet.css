@@ -42,7 +42,13 @@ footer {
     display: flex;
   }
 
-  #galleryTitle {
+#galleryTitle {
     font-size: 3em;
     text-align: center;
   }
+
+#hovedsideImg{
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
