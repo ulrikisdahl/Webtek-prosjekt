@@ -12,7 +12,7 @@ bodyEl.insertBefore(headerEl, bodyEl.firstChild);
 // Lager tekstelement
 let madeByText = document.createElement("p");
 madeByText.innerHTML = "WEBSITE MADE BY....";
-footerEl.appendChild(madeByText);
+footerEl.appendChild(madeByText); 
 
 // Lager navbar
 
