@@ -73,6 +73,58 @@ footer {
 
 /*** 7.0 - AGE CALCULATOR ***/
 
+#age_calc_main{
+  width: 60%;
+  margin: auto;
+}
+
+#age_calc_img{
+  width: 100%;
+  position: relative;
+  bottom: -64px;
+}
+
+#age_calc_box{
+  background-color: yellow;
+  padding: 50px;
+}
+
+#age_calc_title{
+
+}
+
+#age_calc_text{
+
+}
+
+#age_calc_form{
+
+}
+
+#age_calc_input{
+
+}
+
+#age_calc_months{
+
+}
+
+#age_calc_years{
+
+}
+
+#age_calc_select{
+
+}
+
+#age_calc_submit{
+
+}
+
+#age_calc_output{
+
+}
+
 /*** 8.0 - CONTACT ***/
 #galleryTitle {
   margin: 20px;
