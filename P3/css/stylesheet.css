@@ -16,12 +16,20 @@ html, body {
   padding: 0px;
   background-color: #EFE2BA;
   font-family: arial;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container{
+  position: relative;
 }
 
 /*** 1.0 - HEADER ***/
 
  
-header {
+header { 
   border-bottom: 1px solid;
   height: 80px;
   display: flex;
@@ -52,16 +60,47 @@ header {
 /*** 2.0 - FOOTER ***/
 
 footer {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 95px;
-    background-color: #4056A1; 
-    display: flex;
+  margin-top: auto;
+  padding: 10px 0px 10px 0px;
+  bottom: 0px;
+  background-color: #4056A1; 
+  display: flex;
   }
 
 /*** 3.0 - HOME ***/
+#hovedsideImg{
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
 
+#contentContainer{
+  position: absolute;
+  margin-top: 200em;
+  background-color: #E0E0E0;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  bottom: 0;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contentContainer-item{
+  background-color: #B5AFAF;
+  width: 20%;
+}
+
+.contentContainer-item>img{
+  width: 40%;
+}
+
+#content-header{
+  text-align: center;
+}
 /*** 4.0 - DIET ***/
 
 /*** 5.0 - DOG BREED ***/
@@ -75,9 +114,3 @@ footer {
     font-size: 3em;
     text-align: center;
   }
-
-#hovedsideImg{
-  width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
-}
