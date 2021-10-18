@@ -2,11 +2,12 @@ html, body {
   margin: 0px;
   padding: 0px;
   background-color: #EFE2BA;
+  font-family: arial;
 }
 
 header {
   border-bottom: 1px solid;
-  height: 120px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -17,7 +18,7 @@ header {
   width: 10em;
   background-color: #AFB7FF;
   text-align: center;
-  padding: 15px 0;
+  padding: 10px 0;
   border-radius: 5px;
   transition: 0.2s;
 }
