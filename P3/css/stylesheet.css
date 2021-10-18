@@ -109,8 +109,8 @@ footer {
 
 .pb-outline {
   background-color: white;
-  margin-left: auto;
-  margin-right: auto;
+  margin-right: 100px;
+  float: right;
   width: 350px;
   height: 40px;
   border-radius: 30px;
@@ -125,19 +125,27 @@ footer {
 }
 
 .pb-measure {
-  position: relative;
   background-color: rgb(188, 242, 107);
   border-radius: 30px;
   height: 100%;
 }
 
+@keyframes progress {
+  0% {
+    width: 100%;
+  }
+}
+
 #barking-level {
+  animation: progress 2s;
   width: 70%;
 }
 #shedding-level {
+  animation: progress 2s;
   width: 12%;
 }
 #family-adaptability {
+  animation: progress 2s;
   width: 87%;
 }
 #breed-h1 {
