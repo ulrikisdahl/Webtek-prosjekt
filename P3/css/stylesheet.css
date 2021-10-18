@@ -195,6 +195,56 @@ footer {
 
 /*** 5.0 - DOG BREED ***/
 
+.pb-outline {
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  height: 40px;
+  border-radius: 30px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.pb-unit {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.pb-measure {
+  position: relative;
+  background-color: rgb(188, 242, 107);
+  border-radius: 30px;
+  height: 100%;
+}
+
+#barking-level {
+  width: 70%;
+}
+#shedding-level {
+  width: 12%;
+}
+#family-adaptability {
+  width: 87%;
+}
+#breed-h1 {
+  text-align: center;
+  background-color: rgb(255, 241, 248);
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#breed-text {
+  text-align: center;
+  background-color: rgb(255, 241, 248);
+  padding: 20px;
+  border-radius: 15px;
+  width: 50%;
+  margin-left: 10%;
+}
 /*** 6.0 - GALLERY ***/
 
 /*** 7.0 - AGE CALCULATOR ***/
@@ -355,3 +405,4 @@ footer {
   border-left:50px solid hsla(234, 100%, 72%, 0.69);
   cursor: pointer;
 }
+
