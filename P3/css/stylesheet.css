@@ -17,9 +17,13 @@ html, body {
   background-color: #EFE2BA;
   font-family: arial;
 }
+<<<<<<< HEAD
 
 /*** 1.0 - HEADER ***/
 
+=======
+ 
+>>>>>>> 57217375e71a6c84e444ef4f9661fdf77300eb9a
 header {
   border-bottom: 1px solid;
   height: 80px;
@@ -70,6 +74,11 @@ footer {
 /*** 7.0 - AGE CALCULATOR ***/
 
 /*** 8.0 - CONTACT ***/
+#galleryTitle {
+    font-size: 3em;
+    text-align: center;
+  }
+
 #hovedsideImg{
   width: 50%;
   margin-left: 25%;
