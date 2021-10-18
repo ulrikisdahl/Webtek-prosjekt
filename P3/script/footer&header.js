@@ -27,7 +27,7 @@ for (let i = 0; i < 6; i++) {
         navn = "HOME"
         link = "index.html"
     } else if (i==1){
-        navn = "FOOD"
+        navn = "DIET"
         link = "diet.html"
     } else if (i==2){
         navn = "DOG BREED"
