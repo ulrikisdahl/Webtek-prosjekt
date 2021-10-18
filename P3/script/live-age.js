@@ -30,7 +30,7 @@ function timeSinceBorn(){
     const n_secondsSinceBorn = Math.floor(rest)
 
     displayAge.innerHTML = `
-        I am currently ${n_yearsSinceBorn} yr, ${n_monthsSinceBorn} mth, ${n_daysSinceBorn} days, ${n_hoursSinceBorn} hrs, ${n_minutesSinceBorn} min and ${n_secondsSinceBorn} sec old
+        <b>${n_yearsSinceBorn}</b> yr, <b>${n_monthsSinceBorn}</b> mth, <b>${n_daysSinceBorn}</b> days, <b>${n_hoursSinceBorn}</b> hrs, <b>${n_minutesSinceBorn}</b> min and <b>${n_secondsSinceBorn}</b> seconds
     `
 }
 

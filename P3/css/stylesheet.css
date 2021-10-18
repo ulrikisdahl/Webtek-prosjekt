@@ -41,3 +41,9 @@ footer {
     background-color: #4056A1; 
     display: flex;
   }
+
+#hovedsideImg{
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
