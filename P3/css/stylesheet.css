@@ -4,7 +4,7 @@ html, body {
   background-color: #EFE2BA;
   font-family: arial;
 }
-
+ 
 header {
   border-bottom: 1px solid;
   height: 80px;
@@ -40,4 +40,9 @@ footer {
     height: 95px;
     background-color: #4056A1; 
     display: flex;
+  }
+
+  #galleryTitle {
+    font-size: 3em;
+    text-align: center;
   }
