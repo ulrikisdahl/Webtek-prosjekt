@@ -197,15 +197,17 @@ footer {
 
 .pb-outline {
   background-color: white;
-  margin-right: 100px;
-  float: right;
   width: 350px;
   height: 40px;
   border-radius: 30px;
   border-color: black;
   border-width: 1px;
   border-style: solid;
+  box-shadow: 5px 5px black;
+  margin-right: auto;
+  margin-left: auto;
 }
+
 
 .pb-unit {
   font-family: 'Courier New', Courier, monospace;
@@ -213,10 +215,12 @@ footer {
 }
 
 .pb-measure {
-  background-color: rgb(188, 242, 107);
+  background-color: #93DE91;
   border-radius: 30px;
   height: 100%;
 }
+
+/* Animation and display of traits. */
 
 @keyframes progress {
   0% {
@@ -236,6 +240,17 @@ footer {
   animation: progress 2s;
   width: 87%;
 }
+#drooling-level {
+  animation: progress 2s;
+  width: 18%;
+}
+#trainability {
+  animation: progress 2s;
+  width: 95%;
+}
+
+/* Styling title and text */
+
 #breed-h1 {
   text-align: center;
   background-color: rgb(255, 241, 248);
@@ -251,7 +266,9 @@ footer {
   padding: 20px;
   border-radius: 15px;
   width: 50%;
-  margin-left: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translate(-200px, -32px);
 }
 /*** 6.0 - GALLERY ***/
 
