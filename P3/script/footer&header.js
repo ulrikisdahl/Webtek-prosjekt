@@ -9,10 +9,30 @@ bodyEl.insertBefore(footerEl, script);
 let headerEl = document.createElement("header");
 bodyEl.insertBefore(headerEl, bodyEl.firstChild);
 
-// Lager tekstelement
+// Legger til logo
+let logoDiv = document.createElement("div");
+footerEl.appendChild(logoDiv);
+logoDiv.className = "logoDivClass";
+
+// Lager made by element
 let madeByText = document.createElement("p");
 madeByText.innerHTML = "WEBSITE MADE BY....";
+madeByText.style.color = "white";
 footerEl.appendChild(madeByText); 
+
+// Legger til facebook logo
+let fbDiv = document.createElement("div");
+footerEl.appendChild(fbDiv);
+fbDiv.className = "fbDivClass";
+
+// Lager faebook tekst by element
+let fbText = document.createElement("p");
+fbText.innerHTML = "FACEBOOK GROUP";
+fbText.style.color = "white";
+footerEl.appendChild(fbText); 
+fbText.className = "fbTextClass";
+
+
 
 // Lager navbar
 
