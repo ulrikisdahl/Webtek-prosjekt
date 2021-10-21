@@ -15,3 +15,11 @@ function changeButtonColor(e) {
         monthsOrYears = e.target
     }
 }
+
+// Bildene under unsafe foods
+let unsafeImgEl = document.querySelectorAll(".unsafeImg");
+
+for (const img in unsafeImgEl) {
+    img[i].addEventListener("click",openLink);
+}
+

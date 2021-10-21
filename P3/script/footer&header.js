@@ -26,7 +26,7 @@ footerEl.appendChild(fbDiv);
 fbDiv.className = "fbDivClass";
 
 // Lager faebook tekst by element
-let fbText = document.createElement("p");
+let fbText = document.createElement("p");   
 fbText.innerHTML = "FACEBOOK GROUP";
 fbText.style.color = "white";
 footerEl.appendChild(fbText); 
