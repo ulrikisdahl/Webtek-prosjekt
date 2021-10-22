@@ -93,6 +93,9 @@ footer {
   border-radius: 10px;
 }
 
+.fbClass:hover {
+  border: 2px solid black;
+}
 /*** 3.0 - HOME ***/
 #hovedsideImg{
   width: 50%;

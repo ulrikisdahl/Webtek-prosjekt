@@ -26,11 +26,15 @@ let fbDiv = document.createElement("div");
 fbDiv.style.display = "flex";
 footerEl.appendChild(fbDiv);
 
-// Legger til facebook logo
+// Legger til facebook logo med link
+fbLink = document.createElement("a");
+fbLink.href = "https://www.facebook.com/groups/202077743151125";
+fbLink.target = "_blank";
+fbDiv.appendChild(fbLink);
 let fb = document.createElement("img");
 fb.src = "../images/facebook.png";
-fbDiv.appendChild(fb);
 fb.className = "fbClass";
+fbLink.appendChild(fb);
 
 // Lager faebook tekst by element
 let fbText = document.createElement("p");   
