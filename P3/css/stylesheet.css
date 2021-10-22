@@ -33,6 +33,10 @@ h1 {
 h2 {
   font-size: 2em;
 }
+
+h3 {
+  font-size: 1.5em;
+}
 /*** 1.0 - HEADER ***/
 
  
@@ -74,6 +78,29 @@ footer {
   display: flex;
   justify-content: center;
   }
+
+.logoDivClass {
+  width: 40px;
+  height: 50px;
+  background-image: url("../images/logoliten.png");
+  position: absolute;
+  left: 30px;
+}
+
+.fbDivClass {
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/fb.png");
+  position: absolute;
+  right: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.fbTextClass {
+  position: absolute;
+  right: 30px;
+}
 
 
 /*** 3.0 - HOME ***/
@@ -130,34 +157,41 @@ footer {
 /* Tekstdelen på venstre side av siden */
 #dietTextDiv {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
   font-size: 1.2em;
-  line-height: 200%;
+  line-height: 150%;
 }
 
 /* Kalkulatoren på høyre siden av siden */
 #dietCalcDiv {
   display: flex;
-  width: 100%;
+  width: 40%;
   align-items: center;
   flex-direction: column;
 }
 
 /* Venstre side */
 
+#smilingDogsDiv {
+  margin-top: 25px;
+  margin-bottom: -25px;
+  z-index: 1;
+}
+
 #dietInformationDiv {
   background-color: white;
   width: 80%;
   border-radius: 50px;
   padding: 20px;
-  margin-top: 50px;
 }
 
 /* Høyre side */
 
+/* Kalkualtoren */
 #dietInputDiv {
-  padding-top: 100px;
+  margin-top: 50px;
 }
 
 #dietCalcTable td {
@@ -171,16 +205,25 @@ footer {
 
 .dietCalcInput {
   height: 50px;
-  width: 150px;
+  width: 160px;
   border: 1px solid lightgray;
 }
 
-.dietCalcButton {
+#dietCalcButtonYears, #dietCalcButtonMoths {
   width: 90px;
   height: 50px;
   background-color: white;
   border: 1px solid lightgray;
   color: gray;
+}
+
+#dietCalcButtonYears {
+  background-color:gray;
+  color: white;
+}
+
+#dietCalcButtonYears:hover, #dietCalcButtonMoths:hover, #dietSubmit:hover, .dietCalcInput:hover {
+  border: 2px solid black;
 }
 
 #dietSubmit {
@@ -192,20 +235,63 @@ footer {
   color: gray;
 }
 
+#dietOutputDiv {
+  height: 100px;
+}
+
+/* Unsafe foods */
+
+#dietUnsafeFoodsDiv {
+  background-color: #ffb8b8;
+  display: flex;
+  width: 90%;
+  height: 650px;
+  flex-direction: column;
+  margin-bottom: 100px
+}
+
+#unsafeHeaderDiv {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#unsafeContentDiv {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#unsafeLearnmore {
+  margin-left: 25%;
+}
+
+.unsafeDivs {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+}
+
+.unsafeImg:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 10px 100px red;
+
+}
+
 
 /*** 5.0 - DOG BREED ***/
 
 .pb-outline {
   background-color: white;
-  margin-right: 100px;
-  float: right;
   width: 350px;
   height: 40px;
   border-radius: 30px;
   border-color: black;
   border-width: 1px;
   border-style: solid;
+  box-shadow: 5px 5px black;
+  margin-right: auto;
+  margin-left: auto;
 }
+
 
 .pb-unit {
   font-family: 'Courier New', Courier, monospace;
@@ -213,10 +299,12 @@ footer {
 }
 
 .pb-measure {
-  background-color: rgb(188, 242, 107);
+  background-color: #93DE91;
   border-radius: 30px;
   height: 100%;
 }
+
+/* Animation and display of traits. */
 
 @keyframes progress {
   0% {
@@ -236,6 +324,17 @@ footer {
   animation: progress 2s;
   width: 87%;
 }
+#drooling-level {
+  animation: progress 2s;
+  width: 18%;
+}
+#trainability {
+  animation: progress 2s;
+  width: 95%;
+}
+
+/* Styling title and text */
+
 #breed-h1 {
   text-align: center;
   background-color: rgb(255, 241, 248);
@@ -251,7 +350,9 @@ footer {
   padding: 20px;
   border-radius: 15px;
   width: 50%;
-  margin-left: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translate(-200px, -32px);
 }
 /*** 6.0 - GALLERY ***/
 
