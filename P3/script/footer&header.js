@@ -39,8 +39,6 @@ fbText.style.color = "white";
 fbDiv.appendChild(fbText); 
 fbText.className = "fbTextClass";
 
-
-
 // Lager navbar
 
 for (let i = 0; i < 6; i++) {
