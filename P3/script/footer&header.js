@@ -11,7 +11,7 @@ bodyEl.insertBefore(headerEl, bodyEl.firstChild);
 
 // Legger til logo
 let logo = document.createElement("img");
-logo.src = "../images/logo.png";
+logo.src = "images/logo.png";
 footerEl.appendChild(logo);
 logo.className = "logoClass";
 
@@ -32,7 +32,7 @@ fbLink.href = "https://www.facebook.com/groups/202077743151125";
 fbLink.target = "_blank";
 fbDiv.appendChild(fbLink);
 let fb = document.createElement("img");
-fb.src = "../images/facebook.png";
+fb.src = "images/facebook.png";
 fb.className = "fbClass";
 fbLink.appendChild(fb);
 
