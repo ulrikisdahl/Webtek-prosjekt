@@ -10,9 +10,10 @@ let headerEl = document.createElement("header");
 bodyEl.insertBefore(headerEl, bodyEl.firstChild);
 
 // Legger til logo
-let logoDiv = document.createElement("div");
-footerEl.appendChild(logoDiv);
-logoDiv.className = "logoDivClass";
+let logo = document.createElement("img");
+logo.src = "images/logo.png";
+footerEl.appendChild(logo);
+logo.className = "logoClass";
 
 // Lager made by element
 let madeByText = document.createElement("p");
@@ -20,19 +21,27 @@ madeByText.innerHTML = "WEBSITE MADE BY....";
 madeByText.style.color = "white";
 footerEl.appendChild(madeByText); 
 
-// Legger til facebook logo
+// Lager div'en til facebook logo og tekst
 let fbDiv = document.createElement("div");
+fbDiv.style.display = "flex";
 footerEl.appendChild(fbDiv);
-fbDiv.className = "fbDivClass";
+
+// Legger til facebook logo med link
+fbLink = document.createElement("a");
+fbLink.href = "https://www.facebook.com/groups/202077743151125";
+fbLink.target = "_blank";
+fbDiv.appendChild(fbLink);
+let fb = document.createElement("img");
+fb.src = "images/facebook.png";
+fb.className = "fbClass";
+fbLink.appendChild(fb);
 
 // Lager faebook tekst by element
 let fbText = document.createElement("p");   
 fbText.innerHTML = "FACEBOOK GROUP";
 fbText.style.color = "white";
-footerEl.appendChild(fbText); 
+fbDiv.appendChild(fbText); 
 fbText.className = "fbTextClass";
-
-
 
 // Lager navbar
 

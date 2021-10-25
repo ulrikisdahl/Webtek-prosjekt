@@ -72,37 +72,30 @@ header {
 
 footer {
   margin-top: auto;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 30px 10px 30px;
   bottom: 0px;
   background-color: #4056A1; 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   }
 
-.logoDivClass {
-  width: 40px;
-  height: 50px;
-  background-image: url("../images/logoliten.png");
-  position: absolute;
-  left: 30px;
+.logoClass {
+  width: 50px;
+  height: 68px;
 }
 
-.fbDivClass {
+.fbClass {
   width: 50px;
   height: 50px;
-  background-image: url("../images/fb.png");
-  position: absolute;
-  right: 200px;
+  margin-right: 10px;
   border: 1px solid black;
   border-radius: 10px;
 }
 
-.fbTextClass {
-  position: absolute;
-  right: 30px;
+.fbClass:hover {
+  border: 2px solid black;
 }
-
-
 /*** 3.0 - HOME ***/
 #hovedsideImg{
   width: 50%;
@@ -183,6 +176,7 @@ footer {
 #dietInformationDiv {
   background-color: white;
   width: 80%;
+  height: 80%;
   border-radius: 50px;
   padding: 20px;
 }
@@ -236,7 +230,7 @@ footer {
 }
 
 #dietOutputDiv {
-  height: 100px;
+  height: 400px;
 }
 
 /* Unsafe foods */
@@ -252,7 +246,7 @@ footer {
 
 #unsafeHeaderDiv {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 #unsafeContentDiv {
