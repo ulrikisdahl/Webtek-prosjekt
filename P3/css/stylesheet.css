@@ -445,6 +445,16 @@ footer {
   background-color: white;
   border: 2px solid black;
   border-radius: 5px;
+  background-size: cover;
+  transition: 0.1s;
+}
+
+
+.bilde:hover{
+  cursor: pointer;
+  height: 150px;
+  width: 150px;
+  margin-right: 10px;
 }
 
 .mappe{
@@ -457,10 +467,10 @@ footer {
 }
 
 .left{
-  animation: slideLeft 2s ease-Out;
+  animation: slideLeft 1s ease-Out;
 }
 .right{
-  animation: slideRight 2s ease-Out;
+  animation: slideRight 1s ease-Out;
 }
 @keyframes slideLeft {
   0% {
