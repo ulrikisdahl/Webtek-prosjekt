@@ -85,6 +85,7 @@ footer {
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
   padding-bottom: 200px;
+  
   display: flex;
   justify-content: space-around;
 }
