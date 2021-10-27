@@ -273,6 +273,12 @@ footer {
 
 /*** 5.0 - DOG BREED ***/
 
+.pb-all {
+  float: right;
+  margin-right: 5%;
+  margin-bottom: 50px;
+}
+
 .pb-outline {
   background-color: white;
   width: 350px;
@@ -282,8 +288,6 @@ footer {
   border-width: 1px;
   border-style: solid;
   box-shadow: 5px 5px black;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 
@@ -335,18 +339,27 @@ footer {
   padding: 20px;
   border-radius: 15px;
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 #breed-text {
   text-align: center;
   background-color: rgb(255, 241, 248);
+  font-size: larger;
+  float: left;
   padding: 20px;
   border-radius: 15px;
-  width: 50%;
-  margin-left: auto;
+  width: 40%;
+  margin-left: 25px;
   margin-right: auto;
-  transform: translate(-200px, -32px);
+  transform: translate(0%, -50px);
+  margin-bottom: 40px;
+}
+#breed-vectordog {
+  display: inline;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 15%;
 }
 /*** 6.0 - GALLERY ***/
 
