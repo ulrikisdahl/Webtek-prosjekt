@@ -26,6 +26,17 @@ html, body {
   position: relative;
 }
 
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
 /*** 1.0 - HEADER ***/
 
  
@@ -61,53 +72,248 @@ header {
 
 footer {
   margin-top: auto;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 30px 10px 30px;
   bottom: 0px;
   background-color: #4056A1; 
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   }
 
+.logoClass {
+  width: 50px;
+  height: 68px;
+}
+
+.fbClass {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.fbClass:hover {
+  border: 2px solid black;
+}
 /*** 3.0 - HOME ***/
-#hovedsideImg{
-  width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
-}
 
-#contentContainer{
-  position: absolute;
-  margin-top: 200em;
-  background-color: #E0E0E0;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  bottom: 0;
-  border-top-left-radius: 10%;
-  border-top-right-radius: 10%;
-  padding-bottom: 200px;
-  
-  display: flex;
-  justify-content: space-around;
-}
-
-.contentContainer-item{
-  background-color: #B5AFAF;
-  width: 20%;
-  margin-top: 7em;
-}
-
-.contentContainer-item>img{
-  width: 40%;
-}
-
-#content-header{
-  position: absolute;
-  text-align: center;
-}
 /*** 4.0 - DIET ***/
+
+#dietParent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Overskriften skilt fra resten av siden */
+#dietChild1Div, #dietChild2Div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+} 
+
+/* Tekstdelen på venstre side av siden */
+#dietTextDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  font-size: 1.2em;
+  line-height: 150%;
+}
+
+/* Kalkulatoren på høyre siden av siden */
+#dietCalcDiv {
+  display: flex;
+  width: 40%;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Venstre side */
+
+#smilingDogsDiv {
+  margin-top: 25px;
+  margin-bottom: -25px;
+  z-index: 1;
+}
+
+#dietInformationDiv {
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  border-radius: 50px;
+  padding: 20px;
+}
+
+/* Høyre side */
+
+/* Kalkualtoren */
+#dietInputDiv {
+  margin-top: 50px;
+}
+
+#dietCalcTable td {
+    width: 200px;
+    height: 30px;
+}
+
+#dietCalcTable tr:nth-child(even) {
+  margin-top: 100px;
+}
+
+.dietCalcInput {
+  height: 50px;
+  width: 160px;
+  border: 1px solid lightgray;
+}
+
+#dietCalcButtonYears, #dietCalcButtonMoths {
+  width: 90px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid lightgray;
+  color: gray;
+}
+
+#dietCalcButtonYears {
+  background-color:gray;
+  color: white;
+}
+
+#dietCalcButtonYears:hover, #dietCalcButtonMoths:hover, #dietSubmit:hover, .dietCalcInput:hover {
+  border: 2px solid black;
+}
+
+#dietSubmit {
+  border-radius: 20px;
+  width: 150px; 
+  height: 40px;
+  background-color: white;
+  border: 1px solid lightgray;
+  color: gray;
+}
+
+#dietOutputDiv {
+  height: 400px;
+}
+
+/* Unsafe foods */
+
+#dietUnsafeFoodsDiv {
+  background-color: #ffb8b8;
+  display: flex;
+  width: 90%;
+  height: 650px;
+  flex-direction: column;
+  margin-bottom: 100px
+}
+
+#unsafeHeaderDiv {
+  display: flex;
+  justify-content: center;
+}
+
+#unsafeContentDiv {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#unsafeLearnmore {
+  margin-left: 25%;
+}
+
+.unsafeDivs {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+}
+
+.unsafeImg:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 10px 100px red;
+
+}
+
 
 /*** 5.0 - DOG BREED ***/
 
+.pb-outline {
+  background-color: white;
+  width: 350px;
+  height: 40px;
+  border-radius: 30px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 5px 5px black;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.pb-unit {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.pb-measure {
+  background-color: #93DE91;
+  border-radius: 30px;
+  height: 100%;
+}
+
+/* Animation and display of traits. */
+
+@keyframes progress {
+  0% {
+    width: 100%;
+  }
+}
+
+#barking-level {
+  animation: progress 2s;
+  width: 70%;
+}
+#shedding-level {
+  animation: progress 2s;
+  width: 12%;
+}
+#family-adaptability {
+  animation: progress 2s;
+  width: 87%;
+}
+#drooling-level {
+  animation: progress 2s;
+  width: 18%;
+}
+#trainability {
+  animation: progress 2s;
+  width: 95%;
+}
+
+/* Styling title and text */
+
+#breed-h1 {
+  text-align: center;
+  background-color: rgb(255, 241, 248);
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#breed-text {
+  text-align: center;
+  background-color: rgb(255, 241, 248);
+  padding: 20px;
+  border-radius: 15px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translate(-200px, -32px);
+}
 /*** 6.0 - GALLERY ***/
 
 /*** 7.0 - AGE CALCULATOR ***/
@@ -118,22 +324,29 @@ footer {
 }
 
 #age_calc_img{
-  width: 100%;
+  width: 80%;
+  margin: auto;
+  display: block;
+  display: none;
   position: relative;
   bottom: -64px;
 }
 
 #age_calc_box{
-  background-color: yellow;
+  background-color: #FFF1F8;
   padding: 50px;
+  border-radius: 59px;
 }
 
 #age_calc_title{
-
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 64px;
+  text-align: center;
 }
 
 #age_calc_text{
-
+  line-height: 25px;
 }
 
 #age_calc_form{
@@ -150,6 +363,10 @@ footer {
 
 #age_calc_years{
 
+}
+
+.age_calc_selected{
+  background-color: red;
 }
 
 #age_calc_select{
@@ -172,12 +389,99 @@ footer {
   }
 
 #video {
-  margin: 0;
-  height: 250px;
-  background-color: red;
+  height: 230px;
+  background-color: rgba(224, 71, 255, 0.26);
 }
 
-#bilder {
-  height: 25px;
-  background-color: pink;
+.bilder {
+  width: 1000px;
+  border: 2px solid black;
+  background-color: rgba(249,235,223);
+  border-radius: 15px;
+  margin: 10px auto;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
 }
+
+.bilde {
+  margin: 20px;
+  height: 140px;
+  width: 140px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-size: cover;
+  transition: 0.1s;
+}
+
+
+.bilde:hover{
+  cursor: pointer;
+  height: 150px;
+  width: 150px;
+  margin-right: 10px;
+}
+
+.mappe{
+  position: absolute;
+  right: -850px;
+  top: 10px;
+  width: 180%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.left{
+  animation: slideLeft 1s ease-Out;
+}
+.right{
+  animation: slideRight 1s ease-Out;
+}
+@keyframes slideLeft {
+  0% {
+    right: -850px;
+  }
+  100% {
+    right: 50px;
+  }
+}
+@keyframes slideRight {
+  0% {
+    right: 50px;
+  }
+  100% {
+    right: -850px;
+  }
+}
+
+.arrow-left {
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  margin: auto 0px;
+  margin-left: 20px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; 
+  border-right: 50px solid #afb7ffb0; 
+  transition: 0.1s;
+}
+.arrow-left:hover {
+  border-right:50px solid hsla(234, 100%, 72%, 0.69); 
+  cursor: pointer;
+}
+.arrow-right {
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  margin-right: 20px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 50px solid #afb7ffb0;
+  transition: 0.1s;
+}
+.arrow-right:hover {
+  border-left:50px solid hsla(234, 100%, 72%, 0.69);
+  cursor: pointer;
+}
+

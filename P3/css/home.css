@@ -1,0 +1,86 @@
+#hovedsideImg{
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+
+#introText{
+    text-align: center;
+    font-family: Roboto, Oxygen, sans-serif;
+    font-size: 23px;
+}
+
+#introText>p:nth-child(2){
+    font-size: 28px;
+}
+
+#title{
+    text-align: center;
+    font-family: Roboto, Oxygen, sans-serif;
+    font-size: 33px;
+    margin-bottom: 1.5em;
+}
+
+#title::first-letter{
+    font-size: 125%;
+}
+
+#textBubbleContainer{
+    position: absolute;
+    top: 16em;
+    right: 5em;
+}
+
+#textBubbleContainer>img{
+    width: 20em; /*Kanskje gjøre om dette til % for dynamisk*/
+}
+
+#textBubbleContainer>p{
+    font-family: Roboto, Oxygen, sans-serif;
+    font-size: 2em;
+    position: absolute;
+    top: 1.8em;
+    left: 2.1em;
+}
+
+#contentContainer{
+    background-color: #f8f1d5;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-top-left-radius: 6%;
+    border-top-right-radius: 6%;
+    padding-bottom: 5em;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 2.5fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 0em;
+    justify-content:space-evenly;
+}
+
+.contentContainer-item{
+    position: relative; /* Positioned this class relative so that the width % of the images will be relative to the elements with with class*/
+    background-color: #B5AFAF;
+    margin: 2em 2em 0em 2em;
+}
+
+.contentContainer-item>img{
+    width: 70%;
+    height: 70%;
+    margin: 15% 15% 15% 15%;
+}
+
+.contentContainer-text{
+    text-align: center;
+    padding: 0em 2em 0em 2em;
+}
+
+.contentContainer-text>p{
+    font-size: 120%;
+}
+
+.item1{
+    grid-column: span 4;
+}

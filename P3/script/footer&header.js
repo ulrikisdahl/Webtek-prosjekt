@@ -9,10 +9,39 @@ bodyEl.insertBefore(footerEl, script);
 let headerEl = document.createElement("header");
 bodyEl.insertBefore(headerEl, bodyEl.firstChild);
 
-// Lager tekstelement
+// Legger til logo
+let logo = document.createElement("img");
+logo.src = "images/logo.png";
+footerEl.appendChild(logo);
+logo.className = "logoClass";
+
+// Lager made by element
 let madeByText = document.createElement("p");
 madeByText.innerHTML = "WEBSITE MADE BY....";
-footerEl.appendChild(madeByText);
+madeByText.style.color = "white";
+footerEl.appendChild(madeByText); 
+
+// Lager div'en til facebook logo og tekst
+let fbDiv = document.createElement("div");
+fbDiv.style.display = "flex";
+footerEl.appendChild(fbDiv);
+
+// Legger til facebook logo med link
+fbLink = document.createElement("a");
+fbLink.href = "https://www.facebook.com/groups/202077743151125";
+fbLink.target = "_blank";
+fbDiv.appendChild(fbLink);
+let fb = document.createElement("img");
+fb.src = "images/facebook.png";
+fb.className = "fbClass";
+fbLink.appendChild(fb);
+
+// Lager faebook tekst by element
+let fbText = document.createElement("p");   
+fbText.innerHTML = "FACEBOOK GROUP";
+fbText.style.color = "white";
+fbDiv.appendChild(fbText); 
+fbText.className = "fbTextClass";
 
 // Lager navbar
 
@@ -57,3 +86,12 @@ for (let i = 0; i < 6; i++) {
         }, false)
     
 }
+
+// GOOGLE FONTS
+
+const head = document.querySelector("head");
+
+head.innerHTML += `<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">`; 
+
