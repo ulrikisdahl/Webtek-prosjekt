@@ -62,7 +62,6 @@
                                     <td>
                                         <select name="dietActivity" id="dietActivity" class="dietCalcInput">
                                             <option value="selectSize">Select an activity level</option>
-                                            <option value="small">No active</option>
                                             <option value="medium">Little active</option>
                                             <option value="large">Active</option>
                                             <option value="large">Very active</option>
@@ -73,7 +72,17 @@
                             </table> <br>
                             <button id="dietSubmit">Create a plan</button></td>
                     </div>
-                    <div id="dietOutputDiv"></div>
+                    <div id="dietOutputDiv">
+                        <div id="dietOutputHeader">
+                            <h3>Daily plan</h3>
+                        </div>
+                        <div id="dietOutputContent">
+                            <div class="foodNone">
+                                <img src="images/diet/dogfood.png" alt="" width="200px" height="173px">
+                            </div>
+                            <div id="dietOutputText"></div>
+                        </div>
+                    </div>
                     <div id="dietUnsafeFoodsDiv">
                         <div id="unsafeHeaderDiv">
                             <img src="images/diet/redX.png" alt="" width="80px" height="80px">

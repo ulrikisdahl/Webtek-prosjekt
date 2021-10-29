@@ -224,15 +224,55 @@ footer {
   border-radius: 20px;
   width: 150px; 
   height: 40px;
-  background-color: white;
   border: 1px solid lightgray;
   color: gray;
+  background-color: white;
+}
+
+#dietOutputHeader {
+  background-color: lightcoral;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dietOutputContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #dietOutputDiv {
-  height: 400px;
+  height: 300px;
+  width: 50%;
+  margin: 30px;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: #ffb8b8;
 }
 
+.foodNone {
+  display: none;
+}
+
+.spinningFood {
+  display: flex;
+  animation-name: spin;
+  animation-duration: 0.7s; 
+  animation-iteration-count: 3;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
 /* Unsafe foods */
 
 #dietUnsafeFoodsDiv {
@@ -267,6 +307,7 @@ footer {
 .unsafeImg:hover {
   transform: scale(1.2);
   box-shadow: 0px 10px 100px red;
+  background-color: lightcoral;
 
 }
 
