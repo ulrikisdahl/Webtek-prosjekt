@@ -70,6 +70,10 @@
     margin: 15% 15% 15% 15%;
 }
 
+.contentContainer-item:hover{
+    border: 0.3em solid rgb(0, 0, 0, 0.2);
+}
+
 .item1{
     grid-column: span 4;
 }
@@ -110,7 +114,7 @@
     }
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 480px){ /*!!?!?!?!?!?! */
     .item1{
         grid-column: span 1;
     }
