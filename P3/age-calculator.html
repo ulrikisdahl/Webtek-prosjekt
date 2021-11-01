@@ -15,28 +15,33 @@
         
             <div id="age_calc_box">
                 <div id="age_calc_title">AGE CALCULATOR</div>
-                <p id="age_calc_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac pharetra erat. Duis pharetra
-                    ipsum purus, ut vestibulum urna bibendum sit amet. Donec molestie est ut nisl porta, vel aliquet
-                    lacus pretium. Proin porttitor, elit a tempor lacinia, sapien tellus bibendum metus, eget pulvinar
-                    orci urna ut odio. Suspendisse bibendum.</p>
+                <p id="age_calc_text">
+                    How do you calculate your dogs age in human years? You have probably head about the 
+                    rule where you just multiply your dogs age by 7, however, it turns out that the math 
+                    is not that simple. Aging in dogs varies from breed to breed. 
+                    Since aging in dogs is so complicated, this age calculator has cut some corners. Instead 
+                    of relying on breed, the calculator relies on the weight of the dog.
+                </p>
 
                 <div id="age_calc_form">
-                    <div id="labels">
+                    <div id="age_calc_form_left">
                         <label for="age_calc_input" id="age_calc_input_label">AGE</label>
-                        <label for="age_calc_select" id="age_calc_select_label">SIZE</label>
+                        <input id="age_calc_input" type="number" placeholder="Enter age" min="0">
+                        <button id="age_calc_months" onclick="button_function(months_input, years_input, 'months')">Months</button>
+                        <button id="age_calc_years" onclick="button_function(years_input, months_input, 'years')" class="age_calc_selected">Years</button>
                     </div>
-                    <input id="age_calc_input" type="number" placeholder="Enter age">
-                    <button id="age_calc_months" onclick="button_function(months_input, years_input, 'months')">Months</button>
-                    <button id="age_calc_years" onclick="button_function(years_input, months_input, 'years')" class="age_calc_selected">Years</button>
-                    <select id="age_calc_select">
-                        <option value="">Select Size</option>
-                        <option value="small">Small (0-9kg)</option>
-                        <option value="medium">Medium (9-22kg)</option>
-                        <option value="big">Big (22kg+)</option>
-                    </select>
-                    <button id="age_calc_submit" onclick="calculate_age()">CALCULATE</button>
-                    <p id="age_calc_output"></p>
+                    <div id="age_calc_form_right">
+                        <label for="age_calc_select" id="age_calc_select_label">SIZE</label>
+                        <select id="age_calc_select">
+                            <option value="">Select Size</option>
+                            <option value="small">Small (0-9kg)</option>
+                            <option value="medium">Medium (9-22kg)</option>
+                            <option value="big">Big (22kg+)</option>
+                        </select>
+                    </div>
                 </div>
+                <button id="age_calc_submit" onclick="calculate_age()">CALCULATE</button>
+                <p id="age_calc_output"></p>
             </div>
         </div>
 
