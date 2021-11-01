@@ -103,6 +103,7 @@ footer {
 #dietParent {
   height: 100%;
   display: flex;
+  font-size: 1.1em;
   flex-direction: column;
 }
 
@@ -119,7 +120,6 @@ footer {
   flex-direction: column;
   align-items: center;
   width: 60%;
-  font-size: 1.2em;
   line-height: 150%;
 }
 
@@ -142,7 +142,6 @@ footer {
 #dietInformationDiv {
   background-color: white;
   width: 80%;
-  height: 80%;
   border-radius: 50px;
   padding: 20px;
 }
@@ -196,6 +195,18 @@ footer {
 }
 
 /* Output div */
+#dietOutputDiv {
+  height: 300px;
+  width: 70%;
+  margin: 30px;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: #ffb8b8;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 #dietOutputHeader {
   background-color: lightcoral;
   width: 100%;
@@ -213,18 +224,6 @@ footer {
   justify-content: center;
 }
 
-#dietOutputDiv {
-  height: 300px;
-  width: 50%;
-  margin: 60px;
-  margin-left: 0px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-  background-color: #ffb8b8;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
 .mealDivClass {
   display: flex;
   width: 100%;
@@ -233,10 +232,9 @@ footer {
 }
 
 .foodCheckPhotoClass {
-  width: 45px;
+  width: 30px;
   height: 30px;
   margin-right: 10px;
-   background-color: black;
 }
 
 .foodNone {
@@ -277,7 +275,7 @@ footer {
 }
 
 #unsafeLearnmore {
-  margin-left: 25%;
+  margin-left: 15%;
 }
 
 .unsafeDivs {
