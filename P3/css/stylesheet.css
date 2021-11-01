@@ -50,7 +50,8 @@ header {
 }
 
 .menu {
-  width: 10em;
+  width: 14%;
+  font-size: 0.8em;
   background-color: #AFB7FF;
   text-align: center;
   padding: 10px 0;
@@ -81,8 +82,8 @@ footer {
   }
 
 .logoClass {
-  width: 50px;
-  height: 68px;
+  width: 40px;
+  height: 55px;
 }
 
 .fbClass {
