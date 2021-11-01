@@ -314,10 +314,9 @@ footer {
 
 /*** 5.0 - DOG BREED ***/
 
-.pb-all {
+#pb-all {
   float: right;
   margin-right: 5%;
-  margin-bottom: 50px;
 }
 
 .pb-outline {
@@ -386,22 +385,56 @@ footer {
 #breed-text {
   text-align: center;
   background-color: rgb(255, 241, 248);
-  font-size: larger;
+  font-size: 20px;
   float: left;
   padding: 20px;
   border-radius: 15px;
   width: 40%;
-  margin-left: 25px;
   margin-right: auto;
   transform: translate(0%, -50px);
   margin-bottom: 40px;
+  margin-left: 25px;
 }
 #breed-vectordog {
-  display: inline;
-  margin-left: 5%;
-  margin-right: 5%;
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  margin-left: 2%;
+  margin-right: 2%;
   margin-top: 15%;
 }
+
+@media screen and (max-width: 1250px) {
+  #breed-vectordog {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0%;
+  }
+  #pb-all {
+    float: none;
+    margin-right: 15%;
+    margin-left: auto;
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 950px) {
+  #breed-text {
+    float: none;
+    margin-left: auto;
+    width: 85%;
+  }
+  #breed-h1 {
+    float: none;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #breed-vectordog {
+    margin-top: 0%;
+  }
+}
+
 /*** 6.0 - GALLERY ***/
 
 /*** 7.0 - AGE CALCULATOR ***/
