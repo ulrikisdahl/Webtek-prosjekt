@@ -27,15 +27,15 @@ html, body {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 /*** 1.0 - HEADER ***/
 
@@ -73,8 +73,9 @@ header {
 
 footer {
   margin-top: auto;
-  padding: 10px 30px 10px 30px;
+  padding: 5px 30px 5px 30px;
   bottom: 0px;
+  font-size: 0.8em;
   background-color: #4056A1; 
   display: flex;
   justify-content: space-between;
@@ -87,8 +88,8 @@ footer {
 }
 
 .fbClass {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin-right: 10px;
   border: 1px solid black;
   border-radius: 10px;
@@ -306,7 +307,13 @@ footer {
   #smilingDogsDiv {
     width: 80%;
     display: flex;
+    height: 100px;
     justify-content: center;
+  }
+
+  #smilingDogs {
+    width: 80%;
+    height: 100%;
   }
 }
 
@@ -424,6 +431,7 @@ footer {
     width: 50%;
   }
 }
+
 @media screen and (max-width: 950px) {
   #breed-text {
     float: none;

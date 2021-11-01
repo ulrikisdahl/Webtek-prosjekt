@@ -30,6 +30,7 @@ footerEl.appendChild(madeByText);
 // Lager div'en til facebook logo og tekst
 let fbDiv = document.createElement("div");
 fbDiv.style.display = "flex";
+fbDiv.style.alignItems = "center";
 footerEl.appendChild(fbDiv);
 
 // Legger til facebook logo med link
