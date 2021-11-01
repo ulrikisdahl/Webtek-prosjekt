@@ -12,8 +12,6 @@ function button_function(add, remove, type){
   remove.classList.remove("age_calc_selected");
 
   age_type = type;
-
-  console.log(age_type);
 }
 
 function calculate_age(){
@@ -35,7 +33,21 @@ function calculate_age(){
       age_input = input.value;
     }
 
-    if(select_input.value == "small"){
+    if(age_input <= 1){
+      age_output = 15 * age_input;
+    } else if(age_input <= 2){
+      age_output = 9 * age_input + 6;
+    } else if(age_input <= 16){
+        if(select_input.value == "small"){
+          age_output = 4 * age_input + 16;
+        } else if(select_input.value == "medium"){
+          age_output = 4.57 * age_input + 14.36;
+        } else if(select_input.value == "big"){
+          age_output = 5.46 * age_input + 11.4;
+        }
+    }
+
+    /*if(select_input.value == "small"){
       if(age_input <= 1){
         age_output = 15 * age_input;
       } else if(age_input <= 2){
@@ -59,7 +71,7 @@ function calculate_age(){
       } else if(age_input <= 16){
         age_output = 5.46 * age_input + 11.4;
       }
-    }
+    }*/
 
     output_p.innerHTML = `Your ${select_input.value} sized dog is ${Math.floor(age_output)} years in human years :)`;
     }
