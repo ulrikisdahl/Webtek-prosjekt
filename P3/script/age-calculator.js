@@ -14,8 +14,11 @@ function button_function(add, remove, type){
   age_type = type;
 }
 
+//form: onsubmit="return false"
+
 function calculate_age(){
   output_p.style.padding = "15px";
+  output_p.style.backgroundColor = "#FF4F4F";
   if(input.value == ""){
     output_p.innerHTML = `Select the age of your dog`;
   } else if(select_input.value == ""){
@@ -27,6 +30,8 @@ function calculate_age(){
   } else{
     let age_input;
     let age_output;
+
+    output_p.style.backgroundColor = "#A2FF99";
 
     if(age_type == "months"){
       age_input = input.value / 12;
