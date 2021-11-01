@@ -12,19 +12,18 @@ function button_function(add, remove, type){
   remove.classList.remove("age_calc_selected");
 
   age_type = type;
-
-  console.log(age_type);
 }
 
 function calculate_age(){
+  output_p.style.padding = "15px";
   if(input.value == ""){
-    output_p.innerHTML = `please select age`;
+    output_p.innerHTML = `Select the age of your dog`;
   } else if(select_input.value == ""){
-    output_p.innerHTML = `please select size`;
+    output_p.innerHTML = `Select the size of your dog`;
   } else if(age_type == "years" && (input.value < 0 || input.value > 16)){
-    output_p.innerHTML = `select an age between 0 and 16`;
+    output_p.innerHTML = `Select an age between 0 and 16 years`;
   } else if(age_type == "months" && (input.value < 0 || input.value > 192)){
-    output_p.innerHTML = `select an age between 0 and 192 months`;
+    output_p.innerHTML = `Select an age between 0 and 192 months`;
   } else{
     let age_input;
     let age_output;
@@ -35,33 +34,21 @@ function calculate_age(){
       age_input = input.value;
     }
 
-    if(select_input.value == "small"){
-      if(age_input <= 1){
-        age_output = 15 * age_input;
-      } else if(age_input <= 2){
-        age_output = 9 * age_input + 6;
-      } else if(age_input <= 16){
-        age_output = 4 * age_input + 16;
-      }
-    } else if(select_input.value == "medium"){
-      if(age_input <= 1){
-        age_output = 15 * age_input;
-      } else if(age_input <= 2){
-        age_output = 9 * age_input + 6;
-      } else if(age_input <= 16){
-        age_output = 4.57 * age_input + 14.36;
-      }
-    } else if(select_input.value == "big"){
-      if(age_input <= 1){
-        age_output = 15 * age_input;
-      } else if(age_input <= 2){
-        age_output = 9 * age_input + 6;
-      } else if(age_input <= 16){
-        age_output = 5.46 * age_input + 11.4;
-      }
+    if(age_input <= 1){
+      age_output = 15 * age_input;
+    } else if(age_input <= 2){
+      age_output = 9 * age_input + 6;
+    } else if(age_input <= 16){
+        if(select_input.value == "small"){
+          age_output = 4 * age_input + 16;
+        } else if(select_input.value == "medium"){
+          age_output = 4.57 * age_input + 14.36;
+        } else if(select_input.value == "big"){
+          age_output = 5.46 * age_input + 11.4;
+        }
     }
 
-    output_p.innerHTML = `Your ${select_input.value} sized dog is ${Math.floor(age_output)} years in human years :)`;
+    output_p.innerHTML = `Your <b>${select_input.value}</b> sized dog is <b>${Math.floor(age_output)}</b> years in human years`;
     }
   }
 

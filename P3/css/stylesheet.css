@@ -312,10 +312,11 @@ footer {
 
 /*** 5.0 - DOG BREED ***/
 
-.pb-all {
-  float: right;
-  margin-right: 5%;
-  margin-bottom: 50px;
+#pb-all {
+  display: inline-block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pb-outline {
@@ -327,6 +328,7 @@ footer {
   border-width: 1px;
   border-style: solid;
   box-shadow: 5px 5px black;
+  display: inline-block;
 }
 
 
@@ -384,22 +386,67 @@ footer {
 #breed-text {
   text-align: center;
   background-color: rgb(255, 241, 248);
-  font-size: larger;
+  font-size: 20px;
   float: left;
   padding: 20px;
   border-radius: 15px;
   width: 40%;
-  margin-left: 25px;
-  margin-right: auto;
-  transform: translate(0%, -50px);
+  transform: translate(0%, -53px);
   margin-bottom: 40px;
+  margin-left: 25px;
 }
 #breed-vectordog {
-  display: inline;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 15%;
+  display: inline-block;
+  position: relative;
+  top: -200px;
+  width: 250px;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 0%;
 }
+/* Making the page responsive */
+@media screen and (max-width: 1325px) {
+  #breed-vectordog {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0%;
+    top: 0px;
+  }
+  #pb-all {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0%;
+  }
+  #breed-text {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 950px) {
+  #breed-text {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+  }
+  #breed-h1 {
+    float: none;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #breed-vectordog {
+    margin-top: 0%;
+  }
+  #pb-all {
+    float: none;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 /*** 6.0 - GALLERY ***/
 
 /*** 7.0 - AGE CALCULATOR ***/
@@ -410,18 +457,22 @@ footer {
 }
 
 #age_calc_img{
-  width: 80%;
+  width: 600px;
   margin: auto;
   display: block;
-  display: none;
   position: relative;
-  bottom: -64px;
+  bottom: -34px;
+  z-index: 1;
 }
 
 #age_calc_box{
   background-color: #FFF1F8;
   padding: 50px;
-  border-radius: 59px;
+  border-top-left-radius: 59px;
+  border-top-right-radius: 59px;
+  position: relative;
+  bottom: 0;
+  font-size: 1.2em;
 }
 
 #age_calc_title{
@@ -436,35 +487,89 @@ footer {
 }
 
 #age_calc_form{
-  
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+#age_calc_form_left{
+  outline: none;
+}
+
+#age_calc_form_left > input{
+  outline: none;
+}
+
+#age_calc_form_right{
+  margin-left: 20%;
+}
+
+#age_calc_input_label{
+  display: block;
+  font-weight: bold;
+}
+
+#age_calc_select_label{
+  display: block;
+  font-weight: bold;
 }
 
 #age_calc_input{
-
+  padding: 15px;
+  font-size: 15px;
 }
 
 #age_calc_months{
-
+  padding: 15px;
+  margin-left: 50px;
+  border: 1px solid #A6A6A6;
+  cursor: pointer;
 }
 
 #age_calc_years{
-
+  padding: 15px;
+  border: 1px solid #A6A6A6;
+  cursor: pointer;
 }
 
 .age_calc_selected{
-  background-color: red;
+  background-color: #A6A6A6;
+  color: white;
+  border: 1px solid white;;
 }
 
 #age_calc_select{
-
+  padding: 15px;
+  outline: none;
+  cursor: pointer;
 }
 
 #age_calc_submit{
+  background-color: white;
+  border: 1px solid #A6A6A6;
+  color: #A6A6A6;
+  padding: 15px;
+  border-radius: 100px;
+  display: block;
+  margin: 50px auto;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+  box-shadow: 1px 1px #A6A6A6;
+}
 
+#age_calc_submit:hover{
+  background-color: #A6A6A6;
+  border: 1px solid white;
+  color: white;
+  box-shadow: none;
 }
 
 #age_calc_output{
-
+  background-color: #C4C4C4;
+  margin: auto;
+  width: max-content;
+  box-shadow: 3px 3px #A6A6A6;
 }
 
 /*** 8.0 - CONTACT ***/
@@ -475,44 +580,68 @@ footer {
   }
 
 #video {
-  height: 230px;
-  background-color: rgba(224, 71, 255, 0.26);
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.poster {
+  display: inline-block;
+  position: relative;
+  background-color: #0000ff2f;
+  width: 17%;
+  height: 17vw;
+  cursor: pointer;
+  background-size: cover;
+  border: 2px solid #EFE2BA;
+  border-radius: 5px;
+}
+
+.poster:hover {
+  border: 2px solid #4242ff;
+}
+
+#poster1 {
+  background-image: url("../videoes/poster1.png");
+}
+#poster2 {
+  background-image: url("../videoes/poster2.png");
+}
+#poster3 {
+  background-image: url("../videoes/poster3.png");
 }
 
 .bilder {
-  width: 1000px;
+  width: 69%;
   border: 2px solid black;
   background-color: rgba(249,235,223);
   border-radius: 15px;
-  margin: 10px auto;
-  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  height: 13.8vw;
   position: relative;
   overflow: hidden;
 }
 
 .bilde {
-  margin: 20px;
-  height: 140px;
-  width: 140px;
+  height: 9.8vw;
+  width: 9.8vw;
   background-color: white;
-  border: 2px solid black;
   border-radius: 5px;
   background-size: cover;
   transition: 0.1s;
+  border: 2px solid rgba(249,235,223);
 }
 
-
 .bilde:hover{
+  border: 2px solid #4242ff;
   cursor: pointer;
-  height: 150px;
-  width: 150px;
-  margin-right: 10px;
 }
 
 .mappe{
   position: absolute;
-  right: -850px;
-  top: 10px;
+  right: -85%;
+  top: 15%;
   width: 180%;
   display: flex;
   justify-content: space-around;
@@ -526,48 +655,53 @@ footer {
 }
 @keyframes slideLeft {
   0% {
-    right: -850px;
+    right: -85%;
   }
   100% {
-    right: 50px;
+    right: 5%;
   }
 }
 @keyframes slideRight {
   0% {
-    right: 50px;
+    right: 5%;
   }
   100% {
-    right: -850px;
+    right: -85%;
   }
 }
 
 .arrow-left {
   position: absolute;
-  top: 70px;
-  left: 0px;
-  margin: auto 0px;
-  margin-left: 20px;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent; 
-  border-right: 50px solid #afb7ffb0; 
+  top: calc(50% - 1.7vw);
+  left: 2%;
+  border-top: 2.1vw solid transparent;
+  border-bottom: 2.1vw solid transparent; 
+  border-right: 3.5vw solid #afb7ffb0; 
   transition: 0.1s;
 }
 .arrow-left:hover {
-  border-right:50px solid hsla(234, 100%, 72%, 0.69); 
+  border-right: 3.5vw solid hsla(234, 100%, 72%, 0.69); 
   cursor: pointer;
 }
 .arrow-right {
   position: absolute;
-  top: 70px;
-  right: 0px;
-  margin-right: 20px;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-left: 50px solid #afb7ffb0;
+  top: calc(50% - 1.7vw);
+  right: 2%;
+  border-top: 2.1vw solid transparent;
+  border-bottom: 2.1vw solid transparent;
+  border-left: 3.5vw solid #afb7ffb0;
   transition: 0.1s;
 }
 .arrow-right:hover {
-  border-left:50px solid hsla(234, 100%, 72%, 0.69);
+  border-left: 3.5vw solid hsla(234, 100%, 72%, 0.69);
   cursor: pointer;
 }
 
+.play {
+  position: absolute;
+  top: calc(50% - 1.7vw);
+  right: calc(50% - 2.1vw);
+  border-top: 2.1vw solid transparent;
+  border-bottom: 2.1vw solid transparent;
+  border-left: 3.5vw solid hsla(0, 0%, 76%, 0.6);
+}
