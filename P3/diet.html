@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P3</title>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant">
 </head>
 
 <body>
@@ -20,7 +21,7 @@
                     </div>
                     <div id="dietInformationDiv">
                         <h3>Nalas diet</h3>
-                        <p>Since Nala is only 8 months old and a very small dog, that is taken into consideration when feeding her.  </p>
+                        <p>Since Nala is only 8 months old and a very small dog, that is taken into consideration when feeding her. Lorem ipsum dolor sit amet consectetur adipisicing elit. A repudiandae officia, natus itaque tempore quam reiciendis maiores saepe quaerat facere quos ad doloremque, nihil minima beatae, tempora quo exercitationem adipisci! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus dignissimos voluptatum tenetur excepturi tempore placeat sunt voluptatibus sapiente, in velit. Veniam soluta id porro tenetur perspiciatis sequi iste illum similique.  </p>
                         <h3>What should a diet consist of?</h3>
                         <p>The are plenty of different diets that you can give your dog. It is important to understand that every dog is different, and that you should always 
                             see how your dog reacts to different foods. There are still som guidelines that we can give you to help optimizing the diet. Some important factores 
@@ -34,12 +35,13 @@
                 <div id="dietCalcDiv">
                     <div id="dietInputDiv">
                         <h2>Get a customed diet plan</h2>
+                        <form id="dietCalcForm" onsubmit="return false">
                             <table id="dietCalcTable">
                                 <tr>
                                     <td><label for="dietAge">AGE</label> <br></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="number" name="dietAge" id="dietAge" class="dietCalcInput" placeholder="Enter age" min="0"></td>
+                                    <td><input type="number" name="dietAge" id="dietAge" class="dietCalcInput" placeholder="Enter age" min="0" required></td>
                                     <td>
                                         <button id="dietCalcButtonMoths">MONTHS</button>
                                         <button id="dietCalcButtonYears">YEARS</button>
@@ -62,18 +64,28 @@
                                     <td>
                                         <select name="dietActivity" id="dietActivity" class="dietCalcInput">
                                             <option value="selectSize">Select an activity level</option>
-                                            <option value="small">No active</option>
-                                            <option value="medium">Little active</option>
-                                            <option value="large">Active</option>
-                                            <option value="large">Very active</option>
-                                            <option value="large">Super active</option>
+                                            <option value="littleActive">Little active</option>
+                                            <option value="active">Active</option>
+                                            <option value="veryActive">Very active</option>
+                                            <option value="superActive">Super active</option>
                                         </select>
                                     </td>
                                 </tr>
                             </table> <br>
                             <button id="dietSubmit">Create a plan</button></td>
+                        </form>
                     </div>
-                    <div id="dietOutputDiv"></div>
+                    <div id="dietOutputDiv">
+                        <div id="dietOutputHeader">
+                            <h3>Daily plan</h3>
+                        </div>
+                        <div id="dietOutputContent">
+                            <div class="foodNone">
+                                <img src="images/diet/dogfood.png" alt="" width="200px" height="173px">
+                            </div>
+                            <div id="dietOutputText"></div>
+                        </div>
+                    </div>
                     <div id="dietUnsafeFoodsDiv">
                         <div id="unsafeHeaderDiv">
                             <img src="images/diet/redX.png" alt="" width="80px" height="80px">

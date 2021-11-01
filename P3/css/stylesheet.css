@@ -190,17 +190,73 @@ footer {
   border-radius: 20px;
   width: 150px; 
   height: 40px;
-  background-color: white;
   border: 1px solid lightgray;
-  color: gray;
+  color: black;
+  background-color: white;
+}
+
+/* Output div */
+#dietOutputHeader {
+  background-color: lightcoral;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dietOutputContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #dietOutputDiv {
-  height: 400px;
+  height: 300px;
+  width: 50%;
+  margin: 60px;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: #ffb8b8;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.mealDivClass {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.foodCheckPhotoClass {
+  width: 45px;
+  height: 30px;
+  margin-right: 10px;
+   background-color: black;
+}
+
+.foodNone {
+  display: none;
+}
+
+.spinningFood {
+  display: flex;
+  animation-name: spin;
+  animation-duration: 1s; 
+  animation-iteration-count: 2;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
 }
 
 /* Unsafe foods */
-
 #dietUnsafeFoodsDiv {
   background-color: #ffb8b8;
   display: flex;
@@ -233,16 +289,36 @@ footer {
 .unsafeImg:hover {
   transform: scale(1.2);
   box-shadow: 0px 10px 100px red;
+  background-color: lightcoral;
 
+}
+
+/* Gjør siden responsiv */
+@media screen and (max-width: 950px) {
+  #dietChild2Div {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #dietCalcDiv, #dietTextDiv {
+    width: 100%;
+  }
+
+  #smilingDogsDiv {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 
 /*** 5.0 - DOG BREED ***/
 
-.pb-all {
-  float: right;
-  margin-right: 5%;
-  margin-bottom: 50px;
+#pb-all {
+  display: inline-block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pb-outline {
@@ -254,6 +330,7 @@ footer {
   border-width: 1px;
   border-style: solid;
   box-shadow: 5px 5px black;
+  display: inline-block;
 }
 
 
@@ -311,22 +388,67 @@ footer {
 #breed-text {
   text-align: center;
   background-color: rgb(255, 241, 248);
-  font-size: larger;
+  font-size: 20px;
   float: left;
   padding: 20px;
   border-radius: 15px;
   width: 40%;
-  margin-left: 25px;
-  margin-right: auto;
-  transform: translate(0%, -50px);
+  transform: translate(0%, -53px);
   margin-bottom: 40px;
+  margin-left: 25px;
 }
 #breed-vectordog {
-  display: inline;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 15%;
+  display: inline-block;
+  position: relative;
+  top: -200px;
+  width: 250px;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 0%;
 }
+/* Making the page responsive */
+@media screen and (max-width: 1325px) {
+  #breed-vectordog {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0%;
+    top: 0px;
+  }
+  #pb-all {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0%;
+  }
+  #breed-text {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 950px) {
+  #breed-text {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+  }
+  #breed-h1 {
+    float: none;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #breed-vectordog {
+    margin-top: 0%;
+  }
+  #pb-all {
+    float: none;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 /*** 6.0 - GALLERY ***/
 
 /*** 7.0 - AGE CALCULATOR ***/
@@ -366,28 +488,55 @@ footer {
 
 }
 
-#age_calc_input{
+#labels{
+}
 
+#age_calc_input_label{
+
+}
+
+#age_calc_select_label{
+
+}
+
+#age_calc_input{
+  color: #A6A6A6;
 }
 
 #age_calc_months{
-
+  color: #A6A6A6;
 }
 
 #age_calc_years{
-
+  color: #A6A6A6;
 }
 
 .age_calc_selected{
-  background-color: red;
+  background-color: #A6A6A6;
+  color: white;
 }
 
 #age_calc_select{
-
+  color: #A6A6A6;
 }
 
 #age_calc_submit{
+  background-color: white;
+  border: 1px solid #A6A6A6;
+  color: #A6A6A6;
+  padding: 15px;
+  border-radius: 100px;
+  display: block;
+  margin: auto;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+}
 
+#age_calc_submit:hover{
+  background-color: #A6A6A6;
+  border: 1px solid white;
+  color: white;
 }
 
 #age_calc_output{

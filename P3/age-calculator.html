@@ -20,19 +20,23 @@
                     lacus pretium. Proin porttitor, elit a tempor lacinia, sapien tellus bibendum metus, eget pulvinar
                     orci urna ut odio. Suspendisse bibendum.</p>
 
-                <form id="age_calc_form">
+                <div id="age_calc_form">
+                    <div id="labels">
+                        <label for="age_calc_input" id="age_calc_input_label">AGE</label>
+                        <label for="age_calc_select" id="age_calc_select_label">SIZE</label>
+                    </div>
                     <input id="age_calc_input" type="number" placeholder="Enter age">
-                    <button id="age_calc_months">Months</button>
-                    <button id="age_calc_years">Years</button>
-                    <select id="age_calc_select" name="">
+                    <button id="age_calc_months" onclick="button_function(months_input, years_input, 'months')">Months</button>
+                    <button id="age_calc_years" onclick="button_function(years_input, months_input, 'years')" class="age_calc_selected">Years</button>
+                    <select id="age_calc_select">
                         <option value="">Select Size</option>
-                        <option value="">Small</option>
-                        <option value="">Medium</option>
-                        <option value="">Big</option>
+                        <option value="small">Small (0-9kg)</option>
+                        <option value="medium">Medium (9-22kg)</option>
+                        <option value="big">Big (22kg+)</option>
                     </select>
-                    <button id="age_calc_submit">CALCULATE</button>
+                    <button id="age_calc_submit" onclick="calculate_age()">CALCULATE</button>
                     <p id="age_calc_output"></p>
-                </form>
+                </div>
             </div>
         </div>
 
@@ -41,6 +45,7 @@
 
 
     </div>
+    <script src="script/age-calculator.js"></script>
     <script src="script/footer&header.js"></script>
 </body>
 </html>
