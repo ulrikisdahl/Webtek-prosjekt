@@ -45,31 +45,33 @@
 
 #contentContainer{
     background-color: #f8f1d5;
+    margin: auto;
     width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
     border-top-left-radius: 6%;
     border-top-right-radius: 6%;
     padding-bottom: 5em;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 2.5fr 1fr;
+    grid-template-rows: 1fr min(2fr, 15vw) 1fr;
     grid-column-gap: 1em;
-    grid-row-gap: 0em;
-    justify-content:space-evenly;
+    grid-row-gap: 0.1em;
 }
 
 .contentContainer-item{
     position: relative; /* Positioned this class relative so that the width % of the images will be relative to the elements with with class*/
     background-color: #B5AFAF;
-    margin: 2em 2em 0em 2em;
+    margin: 2em 2em 0em 2em; 
 }
 
 .contentContainer-item>img{
     width: 70%;
-    height: 70%;
+    height: 10em;
     margin: 15% 15% 15% 15%;
+}
+
+.item1{
+    grid-column: span 4;
 }
 
 .contentContainer-text{
@@ -81,6 +83,35 @@
     font-size: 120%;
 }
 
-.item1{
-    grid-column: span 4;
+
+@media only screen and (max-width: 1225px){
+    #textBubbleContainer{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .item1{
+        grid-column: span 2;
+    }
+
+    #contentContainer{
+        color: red;
+        grid-template-columns: 1fr 1fr; 
+        grid-column-gap: 0;
+    }
+
+    .contentContainer-text{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .item1{
+        grid-column: span 1;
+    }
+
+    #contentContainer{
+        grid-template-columns: 1fr;
+    }
 }
