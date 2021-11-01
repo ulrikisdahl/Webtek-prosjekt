@@ -315,8 +315,10 @@ footer {
 /*** 5.0 - DOG BREED ***/
 
 #pb-all {
-  float: right;
-  margin-right: 5%;
+  display: inline-block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pb-outline {
@@ -328,6 +330,7 @@ footer {
   border-width: 1px;
   border-style: solid;
   box-shadow: 5px 5px black;
+  display: inline-block;
 }
 
 
@@ -390,38 +393,43 @@ footer {
   padding: 20px;
   border-radius: 15px;
   width: 40%;
-  margin-right: auto;
-  transform: translate(0%, -50px);
+  transform: translate(0%, -53px);
   margin-bottom: 40px;
   margin-left: 25px;
 }
 #breed-vectordog {
   display: inline-block;
   position: relative;
+  top: -200px;
   width: 250px;
   margin-left: 2%;
   margin-right: 2%;
-  margin-top: 15%;
+  margin-top: 0%;
 }
-
-@media screen and (max-width: 1250px) {
+/* Making the page responsive */
+@media screen and (max-width: 1325px) {
   #breed-vectordog {
     display: block;
     margin-right: auto;
     margin-left: auto;
     margin-top: 0%;
+    top: 0px;
   }
   #pb-all {
-    float: none;
-    margin-right: 15%;
+    display: block;
+    margin-right: auto;
     margin-left: auto;
-    max-width: 300px;
+    margin-top: 0%;
+  }
+  #breed-text {
+    width: 50%;
   }
 }
 @media screen and (max-width: 950px) {
   #breed-text {
     float: none;
     margin-left: auto;
+    margin-right: auto;
     width: 85%;
   }
   #breed-h1 {
@@ -432,6 +440,12 @@ footer {
   }
   #breed-vectordog {
     margin-top: 0%;
+  }
+  #pb-all {
+    float: none;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
