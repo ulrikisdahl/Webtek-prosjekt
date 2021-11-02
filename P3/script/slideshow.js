@@ -59,3 +59,41 @@ function left(){
     void mappe.offsetWidth;
     mappe.classList.add("right")
 }
+
+
+document.getElementById("poster1").style.backgroundImage = 'url("./videoes/poster1.png")'
+document.getElementById("poster2").style.backgroundImage = 'url("./videoes/poster2.png")'
+document.getElementById("poster3").style.backgroundImage = 'url("./videoes/poster3.png")'
+
+let posters = document.querySelectorAll(".poster")
+let pictures = document.querySelectorAll(".bilde")
+let blackscreen = document.querySelector("#blackscreen")
+let dark = document.querySelectorAll(".dark")
+
+blackscreen.addEventListener("click", show)
+for (let i = 0; i < posters.length; i++) {
+    posters[i].addEventListener("click", show)
+}
+for (let i = 0; i < pictures.length; i++) {
+    pictures[i].addEventListener("click", show)
+}
+for (let i = 0; i < dark.length; i++) {
+    dark[i].addEventListener("click", show)
+}
+
+function show(){
+    if (event.target.className == "darker"){
+        setTimeout(function(){blackscreen.style.display = "none"; dark[0].style.display = "none"; dark[1].style.display = "none";dark[1].pause()},200)
+        blackscreen.className = "lighter"
+    } else if(blackscreen.className == "lighter"){
+        if (event.target.className == dark[0].id) {
+            dark[0].style.display = "block"
+            dark[0].src = event.target.style.backgroundImage.slice(5,-2)
+        } else {
+            dark[1].style.display = "block"
+            dark[1].src = `./videoes/nalavid${event.target.id.slice(-1)}.mp4`
+        }
+        blackscreen.style.display = "flex"
+        blackscreen.className = "darker"
+    }
+}

@@ -572,16 +572,6 @@ footer {
   border: 2px solid #4242ff;
 }
 
-#poster1 {
-  background-image: url("../videoes/poster1.png");
-}
-#poster2 {
-  background-image: url("../videoes/poster2.png");
-}
-#poster3 {
-  background-image: url("../videoes/poster3.png");
-}
-
 .bilder {
   width: 69%;
   border: 2px solid black;
@@ -624,6 +614,12 @@ footer {
 .right{
   animation: slideRight 1s ease-Out;
 }
+.darker{
+  animation: darker 0.2s ease-Out;
+}
+.lighter{
+  animation: lighter 0.2s ease-Out;
+}
 @keyframes slideLeft {
   0% {
     right: -85%;
@@ -640,6 +636,20 @@ footer {
     right: -85%;
   }
 }
+@keyframes darker {
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes lighter {
+  100% {
+    opacity: 0;
+  }
+}
+
 
 .arrow-left {
   position: absolute;
@@ -675,4 +685,26 @@ footer {
   border-top: 2.1vw solid transparent;
   border-bottom: 2.1vw solid transparent;
   border-left: 3.5vw solid hsla(0, 0%, 76%, 0.6);
+}
+
+#blackscreen {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  display: none;
+  justify-content: center;
+}
+
+.dark{
+  position: fixed;
+  top: 5%;
+  min-height: 50%;
+  max-height: 90%;
+  max-width: 90%;
+  border-radius: 5px;
+  border: 2px solid black;
+  display: none;
 }
