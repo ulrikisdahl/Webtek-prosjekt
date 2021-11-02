@@ -9,7 +9,13 @@ bodyEl.insertBefore(footerEl, script);
 let headerEl = document.createElement("header");
 bodyEl.insertBefore(headerEl, bodyEl.firstChild);
 
-// Legger til logo
+// Legger til logo til header
+let logoHeader = document.createElement("img");
+logoHeader.src = "images/logo.png";
+headerEl.appendChild(logoHeader);
+logoHeader.className = "logoClass";
+
+// Legger til logo til footer
 let logo = document.createElement("img");
 logo.src = "images/logo.png";
 footerEl.appendChild(logo);
@@ -24,6 +30,7 @@ footerEl.appendChild(madeByText);
 // Lager div'en til facebook logo og tekst
 let fbDiv = document.createElement("div");
 fbDiv.style.display = "flex";
+fbDiv.style.alignItems = "center";
 footerEl.appendChild(fbDiv);
 
 // Legger til facebook logo med link
@@ -44,7 +51,6 @@ fbDiv.appendChild(fbText);
 fbText.className = "fbTextClass";
 
 // Lager navbar
-
 for (let i = 0; i < 6; i++) {
     let e1 = document.createElement("div")
     e1.className = "menu"

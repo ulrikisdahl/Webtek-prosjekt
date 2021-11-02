@@ -6,11 +6,10 @@ let dietSizeEl = document.getElementById("dietSize");
 let dietActivityEl = document.getElementById("dietActivity");
 let monthsOrYears = calcButtons[1];
 let foodNoneEl = document.querySelector(".foodNone");
-let dietFormEl = document.getElementById("dietCalcForm") 
 
 calcButtons[0].addEventListener("click", changeButtonColor);
 calcButtons[1].addEventListener("click", changeButtonColor);
-dietFormEl.addEventListener("submit", runAnimation);
+calcButtons[2].addEventListener("click", runAnimation);
 
 // Endrer fargen på knappene MONTHS og YEARS basert på om de er trykket på
 function changeButtonColor(e) {
@@ -22,15 +21,16 @@ function changeButtonColor(e) {
         e.target.style.backgroundColor = "gray";
         e.target.style.color = "white";
         monthsOrYears = e.target;
-        console.log(monthsOrYears.id);
     }
 }
 
 // Kjører animasjon når knappen create plan blir trykket på 
 function runAnimation() {
-    dietOutputTextEL.innerHTML = "Creating plan...";
-    foodNoneEl.className = "spinningFood";
-    foodNoneEl.addEventListener("animationend", createPlan);
+    if (dietAgeEl.value != "" && dietSizeEl.value != "" && dietActivityEl.value != "") {
+        dietOutputTextEL.innerHTML = "Creating plan...";
+        foodNoneEl.className = "spinningFood";
+        foodNoneEl.addEventListener("animationend", createPlan);
+    }
 }
 
 // Lager og viser planen etter animasjonen er ferdig
@@ -70,7 +70,7 @@ function createPlan() {
         dietOutputTextEL.appendChild(mealDiv)
         // Legger til bildet
         let foodCheckPhoto = document.createElement("img");
-        foodCheckPhoto.src = "images/diet/dogFoodCheck.jpeg";
+        foodCheckPhoto.src = "images/diet/dogFoodCheck.png";
         foodCheckPhoto.className = "foodCheckPhotoClass";
         mealDiv.appendChild(foodCheckPhoto);
         // Lager teksten
