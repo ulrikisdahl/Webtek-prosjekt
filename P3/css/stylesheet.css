@@ -477,8 +477,7 @@ footer {
 #age_calc_box{
   background-color: #FFF1F8;
   padding: 50px;
-  border-top-left-radius: 59px;
-  border-top-right-radius: 59px;
+  border-radius: 60px;
   position: relative;
   bottom: 0;
   font-size: 1.2em;
