@@ -32,12 +32,12 @@
 }
 
 #textBubbleContainer>a>img{
-    width: 20em; 
+    width: 16em; 
 }
 
 #textBubbleContainer>a>p{
     font-family: Roboto, Oxygen, sans-serif;
-    font-size: 2em;
+    font-size: 1.6em;
     color: black;
     position: absolute;
     top: 1.8em;
