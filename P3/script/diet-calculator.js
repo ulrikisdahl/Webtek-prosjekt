@@ -26,7 +26,7 @@ function changeButtonColor(e) {
 
 // Kjører animasjon når knappen create plan blir trykket på 
 function runAnimation() {
-    if (dietAgeEl.value != "") {
+    if (dietAgeEl.value != "" && dietSizeEl.value != "" && dietActivityEl.value != "") {
         dietOutputTextEL.innerHTML = "Creating plan...";
         foodNoneEl.className = "spinningFood";
         foodNoneEl.addEventListener("animationend", createPlan);
