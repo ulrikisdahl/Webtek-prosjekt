@@ -515,6 +515,184 @@ footer {
 
 /*** 6.0 - GALLERY ***/
 
+#galleryTitle {
+  margin: 20px;
+  font-size: 3em;
+  text-align: center;
+  }
+
+#video {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.poster {
+  display: inline-block;
+  position: relative;
+  background-color: #0000ff2f;
+  width: 17%;
+  height: 17vw;
+  cursor: pointer;
+  background-size: cover;
+  border: 2px solid #EFE2BA;
+  border-radius: 5px;
+}
+
+.poster:hover {
+  border: 2px solid #4242ff;
+}
+
+.bilder {
+  width: 69%;
+  border: 2px solid black;
+  background-color: rgba(249,235,223);
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  height: 13.8vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.bilde {
+  height: 9.8vw;
+  width: 9.8vw;
+  background-color: white;
+  border-radius: 5px;
+  background-size: cover;
+  transition: 0.1s;
+  border: 2px solid rgba(249,235,223);
+}
+
+.bilde:hover{
+  border: 2px solid #4242ff;
+  cursor: pointer;
+}
+
+.mappe{
+  position: absolute;
+  right: -85%;
+  top: 15%;
+  width: 180%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.left{
+  animation: slideLeft 1s ease-Out;
+}
+.right{
+  animation: slideRight 1s ease-Out;
+}
+.darker{
+  animation: darker 0.2s ease-Out;
+}
+.lighter{
+  animation: lighter 0.2s ease-Out;
+}
+@keyframes slideLeft {
+  0% {
+    right: -85%;
+  }
+  100% {
+    right: 5%;
+  }
+}
+@keyframes slideRight {
+  0% {
+    right: 5%;
+  }
+  100% {
+    right: -85%;
+  }
+}
+@keyframes darker {
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes lighter {
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.arrow-left {
+  position: absolute;
+  top: calc(50% - 1.7vw);
+  left: 2%;
+  border-top: 2.1vw solid transparent;
+  border-bottom: 2.1vw solid transparent; 
+  border-right: 3.5vw solid #afb7ffb0; 
+  transition: 0.1s;
+}
+.arrow-left:hover {
+  border-right: 3.5vw solid hsla(234, 100%, 72%, 0.69); 
+  cursor: pointer;
+}
+.arrow-right {
+  position: absolute;
+  top: calc(50% - 1.7vw);
+  right: 2%;
+  border-top: 2.1vw solid transparent;
+  border-bottom: 2.1vw solid transparent;
+  border-left: 3.5vw solid #afb7ffb0;
+  transition: 0.1s;
+}
+.arrow-right:hover {
+  border-left: 3.5vw solid hsla(234, 100%, 72%, 0.69);
+  cursor: pointer;
+}
+
+.play {
+  position: absolute;
+  top: calc(50% - 1.7vw);
+  right: calc(50% - 2.1vw);
+  border-top: 2.1vw solid transparent;
+  border-bottom: 2.1vw solid transparent;
+  border-left: 3.5vw solid hsla(0, 0%, 76%, 0.6);
+}
+
+#blackscreen {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  display: none;
+  justify-content: center;
+}
+
+.dark{
+  position: fixed;
+  top: 5%;
+  min-height: 50%;
+  max-height: 90%;
+  max-width: 90%;
+  border-radius: 5px;
+  border: 2px solid black;
+  display: none;
+}
+@media (max-aspect-ratio: 1/1) {
+  #video{
+    flex-direction: column;
+    align-items: center;
+  }
+  .poster{
+    width: 50vw;
+    height: 50vw;
+    margin-top: 20px;
+  }
+}
+
+
+
 /*** 7.0 - AGE CALCULATOR ***/
 
 #age_calc_main{
@@ -712,183 +890,4 @@ footer {
 #FAQ{
   margin-left: 15.5%;
   margin-top: 5em;
-}
-
-
-
-/*Gallery*/
-#galleryTitle {
-  margin: 20px;
-  font-size: 3em;
-  text-align: center;
-  }
-
-#video {
-  display: flex;
-  justify-content: space-around;
-  margin: 50px 0;
-}
-
-.poster {
-  display: inline-block;
-  position: relative;
-  background-color: #0000ff2f;
-  width: 17%;
-  height: 17vw;
-  cursor: pointer;
-  background-size: cover;
-  border: 2px solid #EFE2BA;
-  border-radius: 5px;
-}
-
-.poster:hover {
-  border: 2px solid #4242ff;
-}
-
-.bilder {
-  width: 69%;
-  border: 2px solid black;
-  background-color: rgba(249,235,223);
-  border-radius: 15px;
-  margin: 0 auto;
-  margin-bottom: 40px;
-  height: 13.8vw;
-  position: relative;
-  overflow: hidden;
-}
-
-.bilde {
-  height: 9.8vw;
-  width: 9.8vw;
-  background-color: white;
-  border-radius: 5px;
-  background-size: cover;
-  transition: 0.1s;
-  border: 2px solid rgba(249,235,223);
-}
-
-.bilde:hover{
-  border: 2px solid #4242ff;
-  cursor: pointer;
-}
-
-.mappe{
-  position: absolute;
-  right: -85%;
-  top: 15%;
-  width: 180%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.left{
-  animation: slideLeft 1s ease-Out;
-}
-.right{
-  animation: slideRight 1s ease-Out;
-}
-.darker{
-  animation: darker 0.2s ease-Out;
-}
-.lighter{
-  animation: lighter 0.2s ease-Out;
-}
-@keyframes slideLeft {
-  0% {
-    right: -85%;
-  }
-  100% {
-    right: 5%;
-  }
-}
-@keyframes slideRight {
-  0% {
-    right: 5%;
-  }
-  100% {
-    right: -85%;
-  }
-}
-@keyframes darker {
-  0%{
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes lighter {
-  100% {
-    opacity: 0;
-  }
-}
-
-
-.arrow-left {
-  position: absolute;
-  top: calc(50% - 1.7vw);
-  left: 2%;
-  border-top: 2.1vw solid transparent;
-  border-bottom: 2.1vw solid transparent; 
-  border-right: 3.5vw solid #afb7ffb0; 
-  transition: 0.1s;
-}
-.arrow-left:hover {
-  border-right: 3.5vw solid hsla(234, 100%, 72%, 0.69); 
-  cursor: pointer;
-}
-.arrow-right {
-  position: absolute;
-  top: calc(50% - 1.7vw);
-  right: 2%;
-  border-top: 2.1vw solid transparent;
-  border-bottom: 2.1vw solid transparent;
-  border-left: 3.5vw solid #afb7ffb0;
-  transition: 0.1s;
-}
-.arrow-right:hover {
-  border-left: 3.5vw solid hsla(234, 100%, 72%, 0.69);
-  cursor: pointer;
-}
-
-.play {
-  position: absolute;
-  top: calc(50% - 1.7vw);
-  right: calc(50% - 2.1vw);
-  border-top: 2.1vw solid transparent;
-  border-bottom: 2.1vw solid transparent;
-  border-left: 3.5vw solid hsla(0, 0%, 76%, 0.6);
-}
-
-#blackscreen {
-  position: fixed;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 2;
-  display: none;
-  justify-content: center;
-}
-
-.dark{
-  position: fixed;
-  top: 5%;
-  min-height: 50%;
-  max-height: 90%;
-  max-width: 90%;
-  border-radius: 5px;
-  border: 2px solid black;
-  display: none;
-}
-@media (max-aspect-ratio: 1/1) {
-  #video{
-    flex-direction: column;
-    align-items: center;
-  }
-  .poster{
-    width: 50vw;
-    height: 50vw;
-    margin-top: 20px;
-  }
 }
