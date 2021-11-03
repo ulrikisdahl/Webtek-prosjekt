@@ -69,13 +69,32 @@ header {
   color: #C5CBE3;
 }
 
+@media screen and (max-width: 600px) {
+  header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    flex-direction: column;
+    height: 200px;
+    z-index: 1000;
+  }
+
+  .menu {
+    width: 100%;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 0px;
+  }
+}
+
 /*** 2.0 - FOOTER ***/
 
 footer {
   margin-top: auto;
   padding: 5px 30px 5px 30px;
   bottom: 0px;
-  font-size: 0.8em;
+  font-size: 0.6em;
+  color: white;
   background-color: #4056A1; 
   display: flex;
   justify-content: space-between;
@@ -83,13 +102,13 @@ footer {
   }
 
 .logoClass {
-  width: 40px;
-  height: 55px;
+  width: 32px;
+  height: 45px;
 }
 
 .fbClass {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
   border: 1px solid black;
   border-radius: 10px;
@@ -98,6 +117,14 @@ footer {
 .fbClass:hover {
   border: 2px solid black;
 }
+
+@media screen and (max-width: 500px) {
+  .fbTextClass {
+    display: none;
+  }
+}
+
+
 /*** 3.0 - HOME ***/
 
 /*** 4.0 - DIET ***/
@@ -137,7 +164,7 @@ footer {
 
 #smilingDogsDiv {
   margin-top: 25px;
-  margin-bottom: -25px;
+  margin-bottom: -20px;
   z-index: 1;
 }
 
@@ -203,10 +230,11 @@ footer {
   margin: 30px;
   margin-left: 0px;
   display: flex;
+  font-size: 0.8em;
   flex-direction: column;
   border-radius: 20px;
   background-color: #ffb8b8;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
 }
 
 #dietOutputHeader {
@@ -229,8 +257,15 @@ footer {
 .mealDivClass {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+}
+
+.mealServingClass {
+  font: 0.3em;
+  position: relative;
+  bottom: 0px;
+  left: 20%;
 }
 
 .foodCheckPhotoClass {
@@ -304,18 +339,40 @@ footer {
     width: 100%;
   }
 
+  #dietOutputDiv {
+    max-width: 300px;
+  }
+
+  #dietUnsafeFoodsDiv {
+    max-width: 400px;
+  }
+
   #smilingDogsDiv {
     width: 80%;
     display: flex;
-    height: 100px;
     justify-content: center;
   }
 
   #smilingDogs {
-    width: 80%;
-    height: 100%;
+    width: 60%;
   }
 }
+
+@media screen and (max-width: 690px) {
+
+  #smilingDogsDiv {
+    margin-bottom: -15px;
+  }
+
+  #smilingDogs {
+    height: 60px;
+  }
+
+  #dietTitle {
+    font-size: 2em;
+  }
+}
+
 
 
 /*** 5.0 - DOG BREED ***/
@@ -458,208 +515,6 @@ footer {
 
 /*** 6.0 - GALLERY ***/
 
-/*** 7.0 - AGE CALCULATOR ***/
-
-#age_calc_main{
-  width: 60%;
-  margin: auto;
-}
-
-#age_calc_img{
-  width: 600px;
-  margin: auto;
-  display: block;
-  position: relative;
-  bottom: -34px;
-  z-index: 1;
-}
-
-#age_calc_box{
-  background-color: #FFF1F8;
-  padding: 50px;
-  border-radius: 60px;
-  position: relative;
-  bottom: 0;
-  font-size: 1.2em;
-}
-
-#age_calc_title{
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: bold;
-  font-size: 64px;
-  text-align: center;
-}
-
-#age_calc_text{
-  line-height: 25px;
-}
-
-#age_calc_form{
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-#age_calc_form_left{
-  outline: none;
-}
-
-#age_calc_form_left > input{
-  outline: none;
-}
-
-#age_calc_form_right{
-  margin-left: 20%;
-}
-
-#age_calc_input_label{
-  display: block;
-  font-weight: bold;
-}
-
-#age_calc_select_label{
-  display: block;
-  font-weight: bold;
-}
-
-#age_calc_input{
-  padding: 15px;
-  font-size: 15px;
-}
-
-#age_calc_months{
-  padding: 15px;
-  margin-left: 50px;
-  border: 1px solid #A6A6A6;
-  cursor: pointer;
-}
-
-#age_calc_years{
-  padding: 15px;
-  border: 1px solid #A6A6A6;
-  cursor: pointer;
-}
-
-.age_calc_selected{
-  background-color: #A6A6A6;
-  color: white;
-  border: 1px solid white;;
-}
-
-#age_calc_select{
-  padding: 15px;
-  outline: none;
-  cursor: pointer;
-}
-
-#age_calc_submit{
-  background-color: white;
-  border: 1px solid #A6A6A6;
-  color: #A6A6A6;
-  padding: 15px;
-  border-radius: 100px;
-  display: block;
-  margin: 50px auto;
-  font-weight: bold;
-  cursor: pointer;
-  transition: .2s;
-  box-shadow: 1px 1px #A6A6A6;
-}
-
-#age_calc_submit:hover{
-  background-color: #A6A6A6;
-  border: 1px solid white;
-  color: white;
-  box-shadow: none;
-}
-
-#age_calc_output{
-  background-color: #C4C4C4;
-  margin: auto;
-  width: max-content;
-  box-shadow: 3px 3px #A6A6A6;
-}
-
-/*** 8.0 - CONTACT ***/
-#contactSection{
-  margin-left: 6em;
-  margin-top: 5em;
-  display: inline-block;
-  width: 40%;
-  font-size: 1.2em;
-}
-
-#contactForm{
-  background-color: #FFF1F8;
-  width: 75%;
-  padding-bottom: 3em;
-  border-radius: 4%;
-}
-
-#email, #subject{
-  margin: 0.2em 5% 0.2em 5%;
-  width: 90%;
-  height: 2.3em;
-}
-
-#message{
-  margin: 0.2em 5% 0.2em 5%;
-  width: 90%;
-  padding-bottom: 10em;
-}
-
-#contactForm>form{
-  width: 90%;
-  margin: auto;
-}
-
-#contactNalaImg{
-  width: 25em;
-  height: 25em;
-  margin-left: 8%;
-  margin-bottom: 11em;
-  border: 0.2em solid black;
-  border-radius: 4%;
-}
-
-.faqChild{
-  width: 70%;
-  position: relative;
-  background-color: white;
-  margin: 0 auto;
-  margin-bottom: 1em;
-}
-
-.faqChild>h3{
-  display: inline-block;
-  margin-left: 1em;
-}
-
-.faqChild>img{
-  position: absolute;
-  width: 2.8em;
-  height: 1.5em;
-  right: 2em;
-  top: 1.8em;
-}
-
-.faqChild>p{
-  padding: 0 1em 1em 1.5em;
-}
-
-.faqChild:hover{
-  background-color: rgb(240, 236, 236);
-  cursor: pointer;
-}
-
-#FAQ{
-  margin-left: 15.5%;
-  margin-top: 5em;
-}
-
-
-
-/*Gallery*/
 #galleryTitle {
   margin: 20px;
   font-size: 3em;
@@ -823,4 +678,247 @@ footer {
   border-radius: 5px;
   border: 2px solid black;
   display: none;
+}
+@media (max-aspect-ratio: 1/1) {
+  #video{
+    flex-direction: column;
+    align-items: center;
+  }
+  .poster{
+    width: 50vw;
+    height: 50vw;
+    margin-top: 20px;
+  }
+}
+
+
+
+/*** 7.0 - AGE CALCULATOR ***/
+
+#age_calc_main{
+  width: 60%;
+  margin: auto;
+}
+
+#age_calc_img{
+  margin: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1200px) {
+  #age_calc_img{
+    width: 600px;
+    bottom: -34px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #age_calc_img{
+    width: 400px;
+    bottom: -22px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #age_calc_img{
+    width: 300px;
+    bottom: -15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #age_calc_img{
+    width: 200px;
+    bottom: -10px;
+  }
+}
+
+#age_calc_box{
+  background-color: #FFF1F8;
+  padding: 50px;
+  border-radius: 60px;
+  position: relative;
+  bottom: 0;
+  font-size: 1.2em;
+  margin-bottom: 50px;
+}
+
+#age_calc_title{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 64px;
+  text-align: center;
+}
+
+#age_calc_text{
+  line-height: 25px;
+}
+
+#age_calc_form{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+#age_calc_form_left{
+  outline: none;
+}
+
+#age_calc_form_left > input{
+  outline: none;
+}
+
+#age_calc_form_right{
+  margin-left: 20%;
+}
+
+#age_calc_input_label{
+  display: block;
+  font-weight: bold;
+}
+
+#age_calc_select_label{
+  display: block;
+  font-weight: bold;
+}
+
+#age_calc_input{
+  padding: 15px;
+  font-size: 15px;
+}
+
+#age_calc_months{
+  padding: 15px;
+  margin-left: 50px;
+  border: 1px solid #A6A6A6;
+  cursor: pointer;
+}
+
+#age_calc_years{
+  padding: 15px;
+  border: 1px solid #A6A6A6;
+  cursor: pointer;
+}
+
+.age_calc_selected{
+  background-color: #A6A6A6;
+  color: white;
+  border: 1px solid white;;
+}
+
+#age_calc_select{
+  padding: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+#age_calc_submit{
+  background-color: white;
+  border: 1px solid #A6A6A6;
+  color: #A6A6A6;
+  padding: 15px;
+  border-radius: 100px;
+  display: block;
+  margin: 50px auto;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+  box-shadow: 1px 1px #A6A6A6;
+}
+
+#age_calc_submit:hover{
+  background-color: #A6A6A6;
+  border: 1px solid white;
+  color: white;
+  box-shadow: none;
+}
+
+#age_calc_output{
+  background-color: #C4C4C4;
+  margin: auto;
+  width: max-content;
+  box-shadow: 3px 3px #A6A6A6;
+}
+
+@media screen and (max-width: 950px) {
+
+}
+
+/*** 8.0 - CONTACT ***/
+#contactSection{
+  margin-left: 6em;
+  margin-top: 5em;
+  display: inline-block;
+  width: 40%;
+  font-size: 1.2em;
+}
+
+#contactForm{
+  background-color: #FFF1F8;
+  width: 75%;
+  padding-bottom: 3em;
+  border-radius: 4%;
+}
+
+#email, #subject{
+  margin: 0.2em 5% 0.2em 5%;
+  width: 90%;
+  height: 2.3em;
+}
+
+#message{
+  margin: 0.2em 5% 0.2em 5%;
+  width: 90%;
+  padding-bottom: 10em;
+}
+
+#contactForm>form{
+  width: 90%;
+  margin: auto;
+}
+
+#contactNalaImg{
+  width: 25em;
+  height: 25em;
+  margin-left: 8%;
+  margin-bottom: 11em;
+  border: 0.2em solid black;
+  border-radius: 4%;
+}
+
+.faqChild{
+  width: 70%;
+  position: relative;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+.faqChild>h3{
+  display: inline-block;
+  margin-left: 1em;
+}
+
+.faqChild>img{
+  position: absolute;
+  width: 2.8em;
+  height: 1.5em;
+  right: 2em;
+  top: 1.8em;
+}
+
+.faqChild>p{
+  padding: 0 1em 1em 1.5em;
+}
+
+.faqChild:hover{
+  background-color: rgb(240, 236, 236);
+  cursor: pointer;
+}
+
+#FAQ{
+  margin-left: 15.5%;
+  margin-top: 5em;
 }

@@ -76,21 +76,28 @@ function createPlan() {
         // Lager teksten
         let mealText = document.createElement("h4");
         mealDiv.appendChild(mealText);
-        if (dogAge <= 12 && dogAge >= 0) {
-            mealText.innerHTML = "Meal " + (i) + " : " + (serving*0.75).toPrecision(2) + "s with puppyfood";
+        if (dogAge <= 12) {
+            mealText.innerHTML = "Meal " + (i) + ": " + (serving*0.75).toPrecision(2) + "s with puppyfood";
         } else if (dogAge <= 100) {
-            mealText.innerHTML =  "Meal " + (i) + " : " + (serving*1.5).toPrecision(2) + "s with dogfood";
-            if (i == 2) {
-                break
+            mealText.innerHTML =  "Meal " + (i) + ": " + (serving*1.5).toPrecision(2) + "s with dogfood";
+            if (i == 3) {
+                mealText.innerHTML =  "Snacks: 1s raw meat";
+                break;
             } 
         } else {
-            mealText.innerHTML = foodChecklist + "Meal " + (i) + " : " + (serving*1.25).toPrecision(2) + "s with dogfood";
-            if (i == 3) {
-                break
+            mealText.innerHTML = "Meal " + (i) + ": " + (serving*1.25).toPrecision(2) + "s with dogfood";
+            if (i == 4) {
+                mealText.innerHTML =  "Snacks: 1s raw meat";
+                break;
             }
         }
         
-    }   
+    } 
+    let mealServing = document.createElement("p");
+    mealServing.className = "mealServingClass";
+    dietOutputTextEL.appendChild(mealServing);
+    mealServing.innerHTML =  "(1s = 1 serving = 50g)";
 }
+
 
 
