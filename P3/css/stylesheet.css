@@ -81,33 +81,38 @@ header {
   cursor: default;
 }
 #dropimg {
-  height: 95%;
+  height: 70%;
 }
 #dropbutton{
-  height: 80%;
+  height: 50%;
   cursor: pointer;
   transition: 0.4s;
 }
-#dropbutton:hover {
-  transform: rotate(90deg);
-}
 
 @media screen and (max-width: 600px) {
+  .container{
+    padding-top: 80px;
+  }
   header {
+    position: fixed;
     flex-direction: column;
     height: auto;
+    z-index: 10;
   }
   #logoHead {
     display: none;
   }
   #dropdown{
     display: flex;
+    background-color: #EFE2BA;
   }
   .menu {
     width: 100%;
-    background-color: #EFE2BA;
+    background-color: #F8F3E2;
     border-radius: 0px;
     display: none;
+    border-bottom: 1px solid black;
+    ;
   }
 }
 

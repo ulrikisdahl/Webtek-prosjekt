@@ -39,8 +39,9 @@ droptext.id = "droptext"
 dropdown.appendChild(droptext);
 
 let dropbutton = document.createElement("img");
-dropbutton.src = "images/logo.png";
+dropbutton.src = "images/dropdown-logo.png";
 dropbutton.id = "dropbutton";
+dropbutton.setAttribute("onClick", "dropdownfun()")
 dropdown.appendChild(dropbutton);
 
 
@@ -93,6 +94,31 @@ for (let i of knapp) {
     
 }
 
+let menus = document.querySelectorAll(".menu")
+let prew = false
+function dropdownfun(){
+    if(prew){
+        dropbutton.setAttribute("style","transform: rotate(0deg)")
+        for(i of menus){
+            i.removeAttribute("style")
+        }
+        prew = false
+    } else {
+        dropbutton.setAttribute("style","transform: rotate(90deg)")
+        for(i of menus){
+            if (i != menus[0]){
+                i.setAttribute("style", "display: block")
+            }
+        }
+        menus[0].setAttribute("style", "display: flex")
+        prew = true
+    }
+}
+function removeAtt(x){
+    menus[0].removeAttribute("style")
+}
+let x = window.matchMedia("(min-width: 600px)")
+x.addListener(removeAtt)
 // GOOGLE FONTS
 
 const head = document.querySelector("head");
