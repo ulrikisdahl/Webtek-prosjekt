@@ -81,17 +81,17 @@ for (let i = 0; i < dark.length; i++) {
     dark[i].addEventListener("click", show)
 }
 
-function show(){
-    if (event.target.className == "darker"){
+function show(e){
+    if (e.target.className == "darker"){
         setTimeout(function(){blackscreen.style.display = "none"; dark[0].style.display = "none"; dark[1].style.display = "none";dark[1].pause()},200)
         blackscreen.className = "lighter"
     } else if(blackscreen.className == "lighter"){
-        if (event.target.className == dark[0].id) {
+        if (e.target.className == dark[0].id) {
             dark[0].style.display = "block"
-            dark[0].src = event.target.style.backgroundImage.slice(5,-2)
+            dark[0].src = e.target.style.backgroundImage.slice(5,-2)
         } else {
             dark[1].style.display = "block"
-            dark[1].src = `./videoes/nalavid${event.target.id.slice(-1)}.mp4`
+            dark[1].src = `./videoes/nalavid${e.target.id.slice(-1)}.mp4`
         }
         blackscreen.style.display = "flex"
         blackscreen.className = "darker"
