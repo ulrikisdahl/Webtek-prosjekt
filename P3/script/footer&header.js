@@ -53,20 +53,20 @@ fbText.className = "fbTextClass";
 // Lager navbar
 let knapp = [["HOME","index.html"],["DIET","diet.html"],["DOG BREED","breed.html"],["GALLERY","gallery.html"],["AGE CALCULATOR","age-calculator.html"],["CONTACT","contact.html"]]
 
-for (let i = 0; i < knapp.length; i++) {
+for (let i of knapp) {
     let e1 = document.createElement("div")
     e1.className = "menu"
-    if (window.location.pathname.split("/").splice(-1)[0] == knapp[i][1]){
+    if (window.location.pathname.split("/").splice(-1)[0] == i[1]){
         e1.id = "aktiv"
     }
     e2 = document.createElement("div")
-    e2.innerText = knapp[i][0]
+    e2.innerText = i[0]
     e2.className = "menuP"
     e1.appendChild(e2)
     headerEl.appendChild(e1)
 
     e1.addEventListener('click', function() {
-        window.location = knapp[i][1]
+        window.location = i[1]
         }, false)
     
 }
