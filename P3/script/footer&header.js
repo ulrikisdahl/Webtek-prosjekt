@@ -24,7 +24,7 @@ logo.className = "logoClass";
 // Lager made by element
 let madeByText = document.createElement("p");
 madeByText.innerHTML = "WEBSITE MADE BY....";
-madeByText.style.color = "white";
+madeByText.className = "fbTextClass";
 footerEl.appendChild(madeByText); 
 
 // Lager div'en til facebook logo og tekst
@@ -46,9 +46,8 @@ fbLink.appendChild(fb);
 // Lager faebook tekst by element
 let fbText = document.createElement("p");   
 fbText.innerHTML = "FACEBOOK GROUP";
-fbText.style.color = "white";
-fbDiv.appendChild(fbText); 
 fbText.className = "fbTextClass";
+fbDiv.appendChild(fbText); 
 
 // Lager navbar
 for (let i = 0; i < 6; i++) {
