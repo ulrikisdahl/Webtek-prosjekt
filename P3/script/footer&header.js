@@ -51,7 +51,7 @@ dropdown.appendChild(dropbutton);
 
 // Lager made by element
 let madeByText = document.createElement("p");
-madeByText.innerHTML = "WEBSITE MADE BY....";
+madeByText.innerHTML = "WEBSITE MADE BY GROUP 15";
 madeByText.className = "fbTextClass";
 footerEl.appendChild(madeByText); 
 
