@@ -98,6 +98,11 @@ nav {
   cursor: pointer;
   transition: 0.6s;
 }
+#droptext{
+  font-family: Roboto Condensed;
+  font-variant: small-caps;
+  font-weight: normal;
+}
 
 @media screen and (max-width: 950px) {
   .menu {
