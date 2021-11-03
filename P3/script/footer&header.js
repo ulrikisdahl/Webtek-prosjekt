@@ -48,7 +48,7 @@ dropdown.appendChild(dropbutton);
 // Lager made by element
 let madeByText = document.createElement("p");
 madeByText.innerHTML = "WEBSITE MADE BY....";
-madeByText.className = "madeByClass";
+madeByText.className = "fbTextClass";
 footerEl.appendChild(madeByText); 
 
 // Lager div'en til facebook logo og tekst
