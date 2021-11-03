@@ -378,10 +378,10 @@ footer {
 /*** 5.0 - DOG BREED ***/
 
 #pb-all {
-  display: inline-block;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-right: 2%;  
 }
 
 .pb-outline {
@@ -393,7 +393,6 @@ footer {
   border-width: 1px;
   border-style: solid;
   box-shadow: 5px 5px black;
-  display: inline-block;
 }
 
 
@@ -443,8 +442,7 @@ footer {
   text-align: center;
   background-color: rgb(255, 241, 248);
   padding: 20px;
-  border-radius: 15px;
-  width: 90%;
+  border-radius: 15px; 
   margin-left: 25px;
   margin-right: 25px;
 }
@@ -456,18 +454,14 @@ footer {
   padding: 20px;
   border-radius: 15px;
   width: 40%;
-  transform: translate(0%, -53px);
+  transform: translate(0%, -46px);
   margin-bottom: 40px;
   margin-left: 25px;
 }
 #breed-vectordog {
-  display: inline-block;
-  position: relative;
-  top: -200px;
-  width: 250px;
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-top: 0%;
+  width: 300px;
+  margin-top: 200px;
+  transform: translate(20%);
 }
 /* Making the page responsive */
 @media screen and (max-width: 1325px) {
@@ -477,12 +471,12 @@ footer {
     margin-left: auto;
     margin-top: 0%;
     top: 0px;
+    transform: translate(0%);
   }
   #pb-all {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 0%;
+    float: none;
+    margin-top: 0%; 
+    align-items: center;
   }
   #breed-text {
     width: 50%;
@@ -508,8 +502,7 @@ footer {
   #pb-all {
     float: none;
     margin-bottom: 40px;
-    margin-right: auto;
-    margin-left: auto;
+    align-items: center;
   }
 }
 
