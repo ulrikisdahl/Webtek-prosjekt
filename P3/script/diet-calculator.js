@@ -1,12 +1,13 @@
-// Diet kalkulator
+
 let calcButtons = document.querySelectorAll("button");
 let dietOutputTextEL = document.getElementById("dietOutputText");
 let dietAgeEl = document.getElementById("dietAge");
 let dietSizeEl = document.getElementById("dietSize");
 let dietActivityEl = document.getElementById("dietActivity");
 let monthsOrYears = calcButtons[1];
-let foodNoneEl = document.querySelector(".foodNone");
+let foodNoneEl = document.querySelector("#foodNone");
 
+// Legger til event listener på knappene på siden 
 calcButtons[0].addEventListener("click", changeButtonColor);
 calcButtons[1].addEventListener("click", changeButtonColor);
 calcButtons[2].addEventListener("click", runAnimation);
@@ -28,7 +29,7 @@ function changeButtonColor(e) {
 function runAnimation() {
     if (dietAgeEl.value != "" && dietSizeEl.value != "" && dietActivityEl.value != "") {
         dietOutputTextEL.innerHTML = "Creating plan...";
-        foodNoneEl.className = "spinningFood";
+        foodNoneEl.id = "spinningFood";
         foodNoneEl.addEventListener("animationend", createPlan);
     }
 }
@@ -36,7 +37,7 @@ function runAnimation() {
 // Lager og viser planen etter animasjonen er ferdig
 function createPlan() {
     dietOutputTextEL.innerHTML = "";
-    foodNoneEl.className = "foodNone";
+    foodNoneEl.id = "foodNone";
     let serving = 1;
     let dogAge = dietAgeEl.value;
 
@@ -62,7 +63,7 @@ function createPlan() {
         dogAge *= 12;
     }
 
-    // Generer måltidene, som påvirkes av age 
+    // Generer måltidene, som påvirkes av age og faktorene over 
     for (let i = 1; i < 5; i++) {
         // Lager div
         let mealDiv = document.createElement("div");
@@ -80,19 +81,22 @@ function createPlan() {
             mealText.innerHTML = "Meal " + (i) + ": " + (serving*0.75).toPrecision(2) + "s with puppyfood";
         } else if (dogAge <= 100) {
             mealText.innerHTML =  "Meal " + (i) + ": " + (serving*1.5).toPrecision(2) + "s with dogfood";
+            // Hvis den er yngre enn 100mnd og eldre enn 12mnd skal det være 2 måltider + snacks
             if (i == 3) {
                 mealText.innerHTML =  "Snacks: 1s raw meat";
                 break;
             } 
         } else {
             mealText.innerHTML = "Meal " + (i) + ": " + (serving*1.25).toPrecision(2) + "s with dogfood";
+            // Hvis den er eldre enn 100mnd skal det være 3 måltider + snacks
             if (i == 4) {
                 mealText.innerHTML =  "Snacks: 1s raw meat";
                 break;
             }
         }
         
-    } 
+    }
+    // Legger til forklaring av s = serving på bunnen
     let mealServing = document.createElement("p");
     mealServing.className = "mealServingClass";
     dietOutputTextEL.appendChild(mealServing);
