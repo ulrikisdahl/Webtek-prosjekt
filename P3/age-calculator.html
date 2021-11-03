@@ -23,14 +23,18 @@
                     of relying on breed, the calculator relies solely on the weight of the dog.
                 </p>
 
-                <div id="age_calc_form"> 
-                    <div id="age_calc_form_left">
+                <div id="age_calc_form">
+                    <div id="age_calc_age">
                         <label for="age_calc_input" id="age_calc_input_label">AGE</label>
-                        <input id="age_calc_input" type="number" placeholder="Enter age" min="0">
-                        <button id="age_calc_months" onclick="button_function(months_input, years_input, 'months')">Months</button>
-                        <button id="age_calc_years" onclick="button_function(years_input, months_input, 'years')" class="age_calc_selected">Years</button>
+                        <input id="age_calc_input" type="number" placeholder="Enter age" min="0">    
                     </div>
-                    <div id="age_calc_form_right">
+                    
+                    <button id="age_calc_months" onclick="button_function(months_input, years_input, 'months')">Months</button>
+                    <button id="age_calc_years" onclick="button_function(years_input, months_input, 'years')" class="age_calc_selected">Years</button>
+                    
+                    <div></div>
+
+                    <div id="age_calc_size">
                         <label for="age_calc_select" id="age_calc_select_label">SIZE</label>
                         <select id="age_calc_select">
                             <option value="">Select Size</option>
@@ -39,6 +43,8 @@
                             <option value="big">Big (22kg+)</option>
                         </select>
                     </div>
+
+                    
                 </div>
                 <button id="age_calc_submit" onclick="calculate_age()">CALCULATE</button>
                 <p id="age_calc_output"></p>

@@ -515,208 +515,6 @@ footer {
 
 /*** 6.0 - GALLERY ***/
 
-/*** 7.0 - AGE CALCULATOR ***/
-
-#age_calc_main{
-  width: 60%;
-  margin: auto;
-}
-
-#age_calc_img{
-  width: 600px;
-  margin: auto;
-  display: block;
-  position: relative;
-  bottom: -34px;
-  z-index: 1;
-}
-
-#age_calc_box{
-  background-color: #FFF1F8;
-  padding: 50px;
-  border-radius: 60px;
-  position: relative;
-  bottom: 0;
-  font-size: 1.2em;
-}
-
-#age_calc_title{
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: bold;
-  font-size: 64px;
-  text-align: center;
-}
-
-#age_calc_text{
-  line-height: 25px;
-}
-
-#age_calc_form{
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-#age_calc_form_left{
-  outline: none;
-}
-
-#age_calc_form_left > input{
-  outline: none;
-}
-
-#age_calc_form_right{
-  margin-left: 20%;
-}
-
-#age_calc_input_label{
-  display: block;
-  font-weight: bold;
-}
-
-#age_calc_select_label{
-  display: block;
-  font-weight: bold;
-}
-
-#age_calc_input{
-  padding: 15px;
-  font-size: 15px;
-}
-
-#age_calc_months{
-  padding: 15px;
-  margin-left: 50px;
-  border: 1px solid #A6A6A6;
-  cursor: pointer;
-}
-
-#age_calc_years{
-  padding: 15px;
-  border: 1px solid #A6A6A6;
-  cursor: pointer;
-}
-
-.age_calc_selected{
-  background-color: #A6A6A6;
-  color: white;
-  border: 1px solid white;;
-}
-
-#age_calc_select{
-  padding: 15px;
-  outline: none;
-  cursor: pointer;
-}
-
-#age_calc_submit{
-  background-color: white;
-  border: 1px solid #A6A6A6;
-  color: #A6A6A6;
-  padding: 15px;
-  border-radius: 100px;
-  display: block;
-  margin: 50px auto;
-  font-weight: bold;
-  cursor: pointer;
-  transition: .2s;
-  box-shadow: 1px 1px #A6A6A6;
-}
-
-#age_calc_submit:hover{
-  background-color: #A6A6A6;
-  border: 1px solid white;
-  color: white;
-  box-shadow: none;
-}
-
-#age_calc_output{
-  background-color: #C4C4C4;
-  margin: auto;
-  width: max-content;
-  box-shadow: 3px 3px #A6A6A6;
-}
-
-/*** 8.0 - CONTACT ***/
-#contactSection{
-  margin-left: 6em;
-  margin-top: 5em;
-  display: inline-block;
-  width: 40%;
-  font-size: 1.2em;
-}
-
-#contactForm{
-  background-color: #FFF1F8;
-  width: 75%;
-  padding-bottom: 3em;
-  border-radius: 4%;
-}
-
-#email, #subject{
-  margin: 0.2em 5% 0.2em 5%;
-  width: 90%;
-  height: 2.3em;
-}
-
-#message{
-  margin: 0.2em 5% 0.2em 5%;
-  width: 90%;
-  padding-bottom: 10em;
-}
-
-#contactForm>form{
-  width: 90%;
-  margin: auto;
-}
-
-#contactNalaImg{
-  width: 25em;
-  height: 25em;
-  margin-left: 8%;
-  margin-bottom: 11em;
-  border: 0.2em solid black;
-  border-radius: 4%;
-}
-
-.faqChild{
-  width: 70%;
-  position: relative;
-  background-color: white;
-  margin: 0 auto;
-  margin-bottom: 1em;
-}
-
-.faqChild>h3{
-  display: inline-block;
-  margin-left: 1em;
-}
-
-.faqChild>img{
-  position: absolute;
-  width: 2.8em;
-  height: 1.5em;
-  right: 2em;
-  top: 1.8em;
-}
-
-.faqChild>p{
-  padding: 0 1em 1em 1.5em;
-}
-
-.faqChild:hover{
-  background-color: rgb(240, 236, 236);
-  cursor: pointer;
-}
-
-#FAQ{
-  margin-left: 15.5%;
-  margin-top: 5em;
-}
-
-
-
-/*Gallery*/
 #galleryTitle {
   margin: 20px;
   font-size: 3em;
@@ -891,4 +689,264 @@ footer {
     height: 50vw;
     margin-top: 20px;
   }
+}
+
+
+
+/*** 7.0 - AGE CALCULATOR ***/
+
+#age_calc_main{
+  width: 60%;
+  margin: auto;
+}
+
+#age_calc_img{
+  margin: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+#age_calc_box{
+  background-color: #FFF1F8;
+  padding: 50px;
+  position: relative;
+  bottom: 0;
+  font-size: 1.2em;
+  margin-bottom: 50px;
+}
+
+#age_calc_title{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+#age_calc_text{
+  line-height: 25px;
+}
+
+#age_calc_input_label{
+  display: block;
+  font-weight: bold;
+}
+
+#age_calc_select_label{
+  display: block;
+  font-weight: bold;
+}
+
+#age_calc_form{
+  display: flex;
+  justify-content: center;
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 15px;
+}
+
+#age_calc_age{
+  grid-column: span 3;
+  
+}
+
+#age_calc_size{
+  grid-column: span 3;
+}
+
+#age_calc_input{
+  padding: 15px;
+  font-size: 15px;
+}
+
+#age_calc_months{
+  padding: 15px;
+  border: 1px solid #A6A6A6;
+  cursor: pointer;
+  grid-column: span 1;
+}
+
+#age_calc_years{
+  padding: 15px;
+  border: 1px solid #A6A6A6;
+  cursor: pointer;
+  grid-column: span 1;
+  bottom: 0;
+}
+
+.age_calc_selected{
+  background-color: #A6A6A6;
+  color: white;
+  border: 1px solid white;;
+}
+
+#age_calc_select{
+  padding: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+#age_calc_submit{
+  background-color: white;
+  border: 1px solid #A6A6A6;
+  color: #A6A6A6;
+  padding: 15px;
+  border-radius: 100px;
+  display: block;
+  margin: 50px auto;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s;
+  box-shadow: 1px 1px #A6A6A6;
+}
+
+#age_calc_submit:hover{
+  background-color: #A6A6A6;
+  border: 1px solid white;
+  color: white;
+  box-shadow: none;
+}
+
+#age_calc_output{
+  background-color: #C4C4C4;
+  margin: auto;
+  width: max-content;
+  box-shadow: 3px 3px #A6A6A6;
+}
+
+@media screen and (min-width: 1200px) {
+  #age_calc_box{
+    border-radius: 60px;
+  }
+
+  #age_calc_img{
+    width: 600px;
+    bottom: -34px;
+  }
+
+  #age_calc_title{
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #age_calc_box{
+    border-radius: 50px;
+  }
+
+  #age_calc_img{
+    width: 400px;
+    bottom: -22px;
+  }
+
+  #age_calc_title{
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #age_calc_box{
+    border-radius: 40px;
+  }
+
+  #age_calc_img{
+    width: 300px;
+    bottom: -15px;
+  }
+
+  #age_calc_title{
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #age_calc_box{
+    border-radius: 30px;
+  }
+
+   #age_calc_img{
+    width: 200px;
+    bottom: -10px;
+  }
+
+  #age_calc_title{
+    font-size: 1.5em;
+  }
+}
+
+/*** 8.0 - CONTACT ***/
+#contactSection{
+  margin-left: 6em;
+  margin-top: 5em;
+  display: inline-block;
+  width: 40%;
+  font-size: 1.2em;
+}
+
+#contactForm{
+  background-color: #FFF1F8;
+  width: 75%;
+  padding-bottom: 3em;
+  border-radius: 4%;
+}
+
+#email, #subject{
+  margin: 0.2em 5% 0.2em 5%;
+  width: 90%;
+  height: 2.3em;
+}
+
+#message{
+  margin: 0.2em 5% 0.2em 5%;
+  width: 90%;
+  padding-bottom: 10em;
+}
+
+#contactForm>form{
+  width: 90%;
+  margin: auto;
+}
+
+#contactNalaImg{
+  width: 25em;
+  height: 25em;
+  margin-left: 8%;
+  margin-bottom: 11em;
+  border: 0.2em solid black;
+  border-radius: 4%;
+}
+
+.faqChild{
+  width: 70%;
+  position: relative;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+.faqChild>h3{
+  display: inline-block;
+  margin-left: 1em;
+}
+
+.faqChild>img{
+  position: absolute;
+  width: 2.8em;
+  height: 1.5em;
+  right: 2em;
+  top: 1.8em;
+}
+
+.faqChild>p{
+  padding: 0 1em 1em 1.5em;
+}
+
+.faqChild:hover{
+  background-color: rgb(240, 236, 236);
+  cursor: pointer;
+}
+
+#FAQ{
+  margin-left: 15.5%;
+  margin-top: 5em;
 }
