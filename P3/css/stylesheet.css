@@ -41,7 +41,7 @@ h3 {
 
 /*** 1.0 - HEADER ***/
 
-header { 
+nav { 
   border-bottom: 1px solid;
   height: 80px;
   display: flex;
@@ -88,7 +88,7 @@ header {
 #dropbutton{
   height: 50%;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.6s;
 }
 
 @media screen and (max-width: 600px) {
@@ -97,9 +97,16 @@ header {
   }
   header {
     position: fixed;
+    height: 81px;
+    z-index: 10;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.6s;
+  }
+  nav {
+    position: relative;
     flex-direction: column;
     height: auto;
-    z-index: 10;
   }
   #logoHead {
     display: none;
@@ -112,7 +119,6 @@ header {
     width: 100%;
     background-color: #F8F3E2;
     border-radius: 0px;
-    display: none;
     border-bottom: 1px solid black;
     ;
   }
