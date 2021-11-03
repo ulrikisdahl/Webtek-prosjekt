@@ -53,7 +53,8 @@ function calculate_age(){
         }
     }
 
-    output_p.innerHTML = `Your <b>${select_input.value}</b> sized dog is <b>${Math.floor(age_output)}</b> years in human years`;
+    output_p.innerHTML = `The equivalent of <b>${age_input}</b> dog years is <b>${Math.floor(age_output)}</b> human years`;
+
     }
   }
 
