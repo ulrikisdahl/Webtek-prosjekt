@@ -46,6 +46,7 @@ header {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 
 .menu {
@@ -68,22 +69,45 @@ header {
   background-color: #303549;
   color: #C5CBE3;
 }
+#dropdown {
+  display: none;
+  height: 80px;
+  padding: 0;
+  justify-content: space-around;
+  align-items: center;
+}
+#dropdown:hover {
+  background-color: #EFE2BA;
+  cursor: default;
+}
+#dropimg {
+  height: 95%;
+}
+#dropbutton{
+  height: 80%;
+  cursor: pointer;
+  transition: 0.4s;
+}
+#dropbutton:hover {
+  transform: rotate(90deg);
+}
 
 @media screen and (max-width: 600px) {
   header {
-    position: fixed;
-    top: 0px;
-    width: 100%;
     flex-direction: column;
-    height: 200px;
-    z-index: 1000;
+    height: auto;
   }
-
+  #logoHead {
+    display: none;
+  }
+  #dropdown{
+    display: flex;
+  }
   .menu {
     width: 100%;
-    border: 1px solid black;
-    background-color: white;
+    background-color: #EFE2BA;
     border-radius: 0px;
+    display: none;
   }
 }
 

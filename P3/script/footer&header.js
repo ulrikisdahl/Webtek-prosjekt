@@ -14,12 +14,35 @@ let logoHeader = document.createElement("img");
 logoHeader.src = "images/logo.png";
 headerEl.appendChild(logoHeader);
 logoHeader.className = "logoClass";
+logoHeader.id = "logoHead"
 
 // Legger til logo til footer
 let logo = document.createElement("img");
 logo.src = "images/logo.png";
-footerEl.appendChild(logo);
 logo.className = "logoClass";
+footerEl.appendChild(logo);
+
+// Legger til dropdown header
+let dropdown = document.createElement("div");
+headerEl.appendChild(dropdown);
+dropdown.className = "menu";
+dropdown.id = "dropdown";
+
+let dropimg = document.createElement("img");
+dropimg.src = "images/logo.png";
+dropimg.id = "dropimg";
+dropdown.appendChild(dropimg);
+
+let droptext = document.createElement("h1");
+droptext.innerText = "Nala the Dog"
+droptext.id = "droptext"
+dropdown.appendChild(droptext);
+
+let dropbutton = document.createElement("img");
+dropbutton.src = "images/logo.png";
+dropbutton.id = "dropbutton";
+dropdown.appendChild(dropbutton);
+
 
 // Lager made by element
 let madeByText = document.createElement("p");
