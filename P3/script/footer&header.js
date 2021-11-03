@@ -9,10 +9,14 @@ bodyEl.insertBefore(footerEl, script);
 let headerEl = document.createElement("header");
 bodyEl.insertBefore(headerEl, bodyEl.firstChild);
 
+// Lager nav element
+let navEl = document.createElement("nav");
+headerEl.appendChild(navEl);
+
 // Legger til logo til header
 let logoHeader = document.createElement("img");
 logoHeader.src = "images/logo.png";
-headerEl.appendChild(logoHeader);
+navEl.appendChild(logoHeader);
 logoHeader.className = "logoClass";
 logoHeader.id = "logoHead"
 
@@ -24,7 +28,7 @@ footerEl.appendChild(logo);
 
 // Legger til dropdown header
 let dropdown = document.createElement("div");
-headerEl.appendChild(dropdown);
+navEl.appendChild(dropdown);
 dropdown.className = "menu";
 dropdown.id = "dropdown";
 
@@ -47,7 +51,7 @@ dropdown.appendChild(dropbutton);
 
 // Lager made by element
 let madeByText = document.createElement("p");
-madeByText.innerHTML = "WEBSITE MADE BY....";
+madeByText.innerHTML = "WEBSITE MADE BY GROUP 15";
 madeByText.className = "fbTextClass";
 footerEl.appendChild(madeByText); 
 
@@ -86,7 +90,7 @@ for (let i of knapp) {
     e2.innerText = i[0]
     e2.className = "menuP"
     e1.appendChild(e2)
-    headerEl.appendChild(e1)
+    navEl.appendChild(e1)
 
     e1.addEventListener('click', function() {
         window.location = i[1]
@@ -94,28 +98,21 @@ for (let i of knapp) {
     
 }
 
-let menus = document.querySelectorAll(".menu")
-let prew = false
+// Dropdown
+let header = document.querySelector("header")
+let menu = document.querySelectorAll(".menu")
 function dropdownfun(){
-    if(prew){
-        dropbutton.setAttribute("style","transform: rotate(0deg)")
-        for(i of menus){
-            i.removeAttribute("style")
-        }
-        prew = false
+    let height = `${menu[1].offsetHeight*(menu.length-1)+82}px`
+    if(header.style.height == height){
+        removeAtt()
     } else {
         dropbutton.setAttribute("style","transform: rotate(90deg)")
-        for(i of menus){
-            if (i != menus[0]){
-                i.setAttribute("style", "display: block")
-            }
-        }
-        menus[0].setAttribute("style", "display: flex")
-        prew = true
+        header.setAttribute("style",`height: ${height}`)
     }
 }
-function removeAtt(x){
-    menus[0].removeAttribute("style")
+function removeAtt(){
+    header.removeAttribute("style")
+    dropbutton.setAttribute("style","transform: rotate(0deg)")
 }
 let x = window.matchMedia("(min-width: 600px)")
 x.addListener(removeAtt)
