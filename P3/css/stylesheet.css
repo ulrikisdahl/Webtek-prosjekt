@@ -382,6 +382,7 @@ footer {
   flex-direction: column;
   float: right;
   margin-right: 2%;  
+  margin-bottom: 40px;
 }
 
 .pb-outline {
@@ -449,7 +450,6 @@ footer {
 #breed-text {
   text-align: center;
   background-color: rgb(255, 241, 248);
-  font-size: 20px;
   float: left;
   padding: 20px;
   border-radius: 15px;
@@ -501,7 +501,6 @@ footer {
   }
   #pb-all {
     float: none;
-    margin-bottom: 40px;
     align-items: center;
   }
 }
