@@ -78,7 +78,12 @@ fbText.className = "fbTextClass";
 fbDiv.appendChild(fbText); 
 
 // Lager navbar
-let knapp = [["HOME","index.html"],["DIET","diet.html"],["DOG BREED","breed.html"],["GALLERY","gallery.html"],["AGE CALCULATOR","age-calculator.html"],["CONTACT","contact.html"]]
+let knapp = [["HOME","index.html"],
+            ["DIET","diet.html"],
+            ["DOG BREED","breed.html"],
+            ["GALLERY","gallery.html"],
+            ["AGE CALCULATOR","age-calculator.html"],
+            ["CONTACT","contact.html"]]
 
 for (let i of knapp) {
     let e1 = document.createElement("div")
