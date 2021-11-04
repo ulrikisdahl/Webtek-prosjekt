@@ -818,6 +818,8 @@ footer {
   border: 1px solid #A6A6A6;
   cursor: pointer;
   grid-column: span 1;
+  height: 50px;
+  margin-top: 22px;
 }
 
 #age_calc_years{
@@ -826,6 +828,8 @@ footer {
   cursor: pointer;
   grid-column: span 1;
   bottom: 0;
+  height: 50px;
+  margin-top: 22px;
 }
 
 .age_calc_selected{
@@ -864,8 +868,12 @@ footer {
 #age_calc_output{
   background-color: #C4C4C4;
   margin: auto;
-  width: max-content;
+  text-align: center;
   box-shadow: 3px 3px #A6A6A6;
+}
+
+#space{
+  display: block;
 }
 
 
@@ -874,6 +882,20 @@ footer {
   #age_calc_form{
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 15px;
+  }
+
+  #age_calc_form{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #space{
+    display: none;
+  }
+
+  #age_calc_form{
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -886,7 +908,7 @@ footer {
   }
 
   #age_calc_img{
-    width: 600px;
+    width: 500px;
     bottom: -34px;
   }
 
@@ -946,7 +968,6 @@ footer {
   margin: 2em 0 0 6em;
   display: inline-block;
   width: 40%;
-  font-size: 1.2em;
 }
 
 #contactForm{
@@ -982,6 +1003,7 @@ footer {
   font-size: .7em;
   width: max-content;
   padding: 10px;
+  cursor: not-allowed;
 }
 
 #contact_link{
@@ -1026,6 +1048,7 @@ footer {
 
 .faqChild>p{
   padding: 0 1em 1em 1.5em;
+  line-height: 1.5em;
 }
 
 .faqChild:hover{
