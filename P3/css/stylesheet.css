@@ -907,23 +907,6 @@ footer {
   }
 }
 
-@media screen and (max-width: 850px) {
-  #space{
-    display: none;
-  }
-
-  #age_calc_form{
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  #age_calc_select_label{
-    margin-top: 22px;
-  }
-}
-
-
-
-
 @media screen and (min-width: 1200px) {
   #age_calc_box{
     border-radius: 60px;
@@ -931,7 +914,7 @@ footer {
 
   #age_calc_img{
     width: 500px;
-    bottom: -34px;
+    bottom: -25px;
   }
 
   /*#age_calc_title{
@@ -967,6 +950,22 @@ footer {
   /*#age_calc_title{
     font-size: 2em;
   }*/
+
+  #space{
+    display: none;
+  }
+
+  #age_calc_form{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #age_calc_select_label{
+    margin-top: 22px;
+  }
+
+  #age_calc_main{
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -982,6 +981,18 @@ footer {
   /*#age_calc_title{
     font-size: 1.5em;
   }*/
+
+  #age_calc_main{
+    width: 90%;
+  }
+
+  #age_calc_box{
+    padding: 30px;
+  }
+
+  #age_calc_title{
+    margin-top: 10px;
+  }
 }
 
 /*** 8.0 - CONTACT ***/
