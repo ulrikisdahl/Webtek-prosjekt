@@ -97,7 +97,7 @@ function show(e){
             dark[1].style.display = "none";
             dark[1].pause()
         },200)
-        //Starter animasjon
+        // Starter animasjon
         blackscreen.className = "lighter"
 
     } else if(blackscreen.className == "lighter"){
@@ -111,6 +111,7 @@ function show(e){
             dark[1].src = `./videoes/nalavid${e.target.id.slice(-1)}.mp4`
         }
         blackscreen.style.display = "flex"
+        // Starter animasjon
         blackscreen.className = "darker"
     }
 }
