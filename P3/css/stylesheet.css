@@ -158,13 +158,13 @@ footer {
   }
 
 .logoClass {
-  width: 32px;
-  height: 45px;
+  width: 40px;
+  height: 60px;
 }
 
 .fbClass {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   margin-right: 10px;
   border: 1px solid black;
   border-radius: 10px;
