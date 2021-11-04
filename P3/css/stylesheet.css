@@ -793,11 +793,13 @@ footer {
 #age_calc_input_label{
   display: block;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 #age_calc_select_label{
   display: block;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 #age_calc_form{
@@ -829,7 +831,8 @@ footer {
   cursor: pointer;
   grid-column: span 1;
   height: 50px;
-  margin-top: 22px;
+  box-shadow: 1px 1px #A6A6A6;
+  margin-top: 32px;
 }
 
 #age_calc_years{
@@ -839,13 +842,14 @@ footer {
   grid-column: span 1;
   bottom: 0;
   height: 50px;
-  margin-top: 22px;
+  margin-top: 32px;
+  box-shadow: 1px 1px #A6A6A6;
 }
 
 .age_calc_selected{
-  background-color: #A6A6A6;
+  background-color: #828282;
   color: white;
-  border: 1px solid white;;
+  box-shadow: 0px 0px #A6A6A6;
 }
 
 #age_calc_select{
@@ -894,8 +898,12 @@ footer {
     grid-gap: 15px;
   }
 
+  #space{
+    display: none;
+  }
+
   #age_calc_form{
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -906,6 +914,10 @@ footer {
 
   #age_calc_form{
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  #age_calc_select_label{
+    margin-top: 22px;
   }
 }
 
