@@ -15,8 +15,6 @@ function button_function(add, remove, type){
   age_type = type;
 }
 
-//form: onsubmit="return false"
-
 function calculate_age(){
   output_p.style.padding = "15px";
   output_p.style.backgroundColor = "#FF4F4F";
@@ -60,9 +58,6 @@ function calculate_age(){
       output_p.innerHTML = `The equivalent of <b>${Math.floor(age_in_months)}</b> dog months, for your <b>${select_input.value}</b> dog, is <b>${Math.floor(age_output)}</b> human years.`;
     } else if(age_type == "years"){
       output_p.innerHTML = `The equivalent of <b>${Math.floor(age_input)}</b> dog years, for your <b>${select_input.value}</b> dog, is <b>${Math.floor(age_output)}</b> human years.`;
-
     }
-
-
   }
 }
