@@ -1,10 +1,6 @@
 let bodyEl = document.querySelector("body");
 let script = document.querySelector("script"); 
 
-// Lager footerelementet
-let footerEl = document.createElement("footer");
-bodyEl.insertBefore(footerEl, script);
-
 // Lager header element
 let headerEl = document.createElement("header");
 bodyEl.insertBefore(headerEl, bodyEl.firstChild);
@@ -19,12 +15,6 @@ logoHeader.src = "images/logo.png";
 navEl.appendChild(logoHeader);
 logoHeader.className = "logoClass";
 logoHeader.id = "logoHead"
-
-// Legger til logo til footer
-let logo = document.createElement("img");
-logo.src = "images/logo.png";
-logo.className = "logoClass";
-footerEl.appendChild(logo);
 
 // Legger til dropdown header
 let dropdown = document.createElement("div");
@@ -48,8 +38,15 @@ dropbutton.id = "dropbutton";
 dropbutton.setAttribute("onClick", "dropdownfun()")
 dropdown.appendChild(dropbutton);
 
+// Lager footerelementet
+let footerEl = document.createElement("footer");
+bodyEl.insertBefore(footerEl, script);
 
-// Lager made by element
+let logo = document.createElement("img");
+logo.src = "images/logo.png";
+logo.className = "logoClass";
+footerEl.appendChild(logo);
+
 let madeByText = document.createElement("p");
 madeByText.innerHTML = "WEBSITE MADE BY GROUP 15";
 madeByText.className = "fbTextClass";
@@ -61,7 +58,6 @@ fbDiv.style.display = "flex";
 fbDiv.style.alignItems = "center";
 footerEl.appendChild(fbDiv);
 
-// Legger til facebook logo med link
 let fbLink = document.createElement("a");
 fbLink.href = "https://www.facebook.com/groups/202077743151125";
 fbLink.target = "_blank";
@@ -71,7 +67,6 @@ fb.src = "images/facebook.png";
 fb.className = "fbClass";
 fbLink.appendChild(fb);
 
-// Lager facebook tekst by element
 let fbText = document.createElement("p");   
 fbText.innerHTML = "FACEBOOK GROUP";
 fbText.className = "fbTextClass";

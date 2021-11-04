@@ -43,7 +43,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1em;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -243,27 +243,33 @@ footer {
     height: 30px;
 }
 
+
 .dietCalcInput {
   height: 50px;
   width: 160px;
+  margin-bottom: 20px;
   border: 1px solid lightgray;
 }
 
-#dietCalcButtonYears, #dietCalcButtonMoths {
+.dietCalcButtonMonths {
   width: 90px;
   height: 50px;
-  background-color: white;
+  margin-bottom: 20px;
   border: 1px solid lightgray;
+  background-color: white;
   color: gray;
 }
 
-#dietCalcButtonYears {
+.dietCalcButtonYears {
+  width: 90px;
+  height: 50px;
+  border: 1px solid lightgray;
   background-color:gray;
   color: white;
 }
 
-#dietCalcButtonYears:hover, #dietCalcButtonMoths:hover, #dietSubmit:hover, .dietCalcInput:hover {
-  border: 2px solid black;
+.dietCalcButtonYears:hover, .dietCalcButtonMonths:hover, #dietSubmit:hover, .dietCalcInput:hover {
+  border: 1px solid black;
 }
 
 #dietSubmit {
@@ -282,7 +288,7 @@ footer {
   margin: 30px;
   margin-left: 0px;
   display: flex;
-  font-size: 0.7em;
+  font-size: 0.6em;
   flex-direction: column;
   border-radius: 20px;
   background-color: #ffb8b8;
@@ -428,6 +434,10 @@ footer {
 }
 
 @media screen and (max-width: 550px) {
+  #smilingDogsDiv {
+    margin-bottom: -10px;
+  }
+
   #smilingDogs {
     height: 40px;
   }
@@ -442,6 +452,10 @@ footer {
 
   #dietSubmit {
     margin-left: 25%;
+  }
+
+  .dietCalcButtonYears, .dietCalcButtonMonths {
+    width: 80px;
   }
 }
 
