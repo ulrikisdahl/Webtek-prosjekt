@@ -204,6 +204,8 @@ footer {
   align-items: center;
   line-height: 150%;
   width: 60%;
+  max-width: 900px;
+  margin-bottom: 40px;
 }
 
 /* Kalkulatoren på høyre siden av siden */
@@ -348,6 +350,7 @@ footer {
 #dietUnsafeFoodsDiv {
   background-color: #ffb8b8;
   display: flex;
+  align-items: center;
   width: 90%;
   height: 650px;
   flex-direction: column;
@@ -362,10 +365,6 @@ footer {
 #unsafeContentDiv {
   display: flex;
   flex-wrap: wrap;
-}
-
-#unsafeLearnmore {
-  margin-left: 15%;
 }
 
 /* Classen for div'ene rundt bildene */
@@ -431,7 +430,18 @@ footer {
 @media screen and (max-width: 550px) {
   #smilingDogs {
     height: 40px;
-    margin-bottom: 10px;
+  }
+
+  #unsafeLearnmore {
+    font-size: 1em;
+  }
+
+  .unsafeText {
+    font-size: 0.8em;
+  }
+
+  #dietSubmit {
+    margin-left: 25%;
   }
 }
 
