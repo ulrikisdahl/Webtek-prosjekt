@@ -6,6 +6,7 @@ let dietSizeEl = document.getElementById("dietSize");
 let dietActivityEl = document.getElementById("dietActivity");
 let monthsOrYears = calcButtons[1];
 let foodNoneEl = document.querySelector("#foodNone");
+let formEl = document.getElementById("dietCalcForm")
 
 // Legger til event listener på knappene på siden 
 calcButtons[0].addEventListener("click", changeButtonColor);
@@ -26,6 +27,9 @@ function runAnimation() {
         dietOutputTextEL.innerHTML = "Creating plan...";
         foodNoneEl.id = "spinningFood";
         foodNoneEl.addEventListener("animationend", createPlan);
+        formEl.addEventListener("change", createPlan);
+        calcButtons[0].addEventListener("click", createPlan);
+        calcButtons[1].addEventListener("click", createPlan);
     }
 }
 
