@@ -468,6 +468,7 @@ footer {
   flex-direction: column;
   float: right;
   margin-right: 2%;  
+  margin-bottom: 40px;
 }
 
 .pb-outline {
@@ -535,7 +536,6 @@ footer {
 #breed-text {
   text-align: center;
   background-color: rgb(255, 241, 248);
-  font-size: 20px;
   float: left;
   padding: 20px;
   border-radius: 15px;
@@ -587,7 +587,6 @@ footer {
   }
   #pb-all {
     float: none;
-    margin-bottom: 40px;
     align-items: center;
   }
 }
@@ -784,6 +783,8 @@ footer {
   display: block;
   position: relative;
   z-index: 1;
+  width: 500px;
+  bottom: -25px;
 }
 
 #age_calc_box{
@@ -791,8 +792,8 @@ footer {
   padding: 50px;
   position: relative;
   bottom: 0;
-  /*font-size: 1.2em;*/
   margin-bottom: 50px;
+  border-radius: 60px;
 }
 
 #age_calc_title{
@@ -804,14 +805,10 @@ footer {
   line-height: 25px;
 }
 
-#age_calc_input_label{
+.age_calc_labels{
   display: block;
   font-weight: bold;
-}
-
-#age_calc_select_label{
-  display: block;
-  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 #age_calc_form{
@@ -823,39 +820,32 @@ footer {
   grid-gap: 15px;
 }
 
-#age_calc_age{
-  grid-column: span 3;
-  
-}
-
-#age_calc_size{
+.age_calc_sec{
   grid-column: span 3;
 }
 
 #age_calc_input{
   padding: 15px;
   font-size: 15px;
+  outline: none;
 }
 
-#age_calc_months{
+.age_calc_button{
   padding: 15px;
-  border: 1px solid #A6A6A6;
+  border: 1px solid #767676;
+  background-color: white;
   cursor: pointer;
   grid-column: span 1;
-}
-
-#age_calc_years{
-  padding: 15px;
-  border: 1px solid #A6A6A6;
-  cursor: pointer;
-  grid-column: span 1;
-  bottom: 0;
+  height: 50px;
+  box-shadow: 1px 1px #A6A6A6;
+  margin-top: 32px;
+  border-radius: 2px;
 }
 
 .age_calc_selected{
-  background-color: #A6A6A6;
+  background-color: #828282;
   color: white;
-  border: 1px solid white;;
+  box-shadow: 0px 0px #A6A6A6;
 }
 
 #age_calc_select{
@@ -888,35 +878,27 @@ footer {
 #age_calc_output{
   background-color: #C4C4C4;
   margin: auto;
-  width: max-content;
+  text-align: center;
   box-shadow: 3px 3px #A6A6A6;
 }
 
-
+#space{
+  display: block;
+}
 
 @media screen and (max-width: 1400px) {
   #age_calc_form{
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 15px;
   }
-}
 
-
-
-
-@media screen and (min-width: 1200px) {
-  #age_calc_box{
-    border-radius: 60px;
+  #space{
+    display: none;
   }
 
-  #age_calc_img{
-    width: 600px;
-    bottom: -34px;
+  #age_calc_form{
+    grid-template-columns: repeat(5, 1fr);
   }
-
-  /*#age_calc_title{
-    font-size: 4em;
-  }*/
 }
 
 @media screen and (max-width: 1200px) {
@@ -928,10 +910,6 @@ footer {
     width: 400px;
     bottom: -22px;
   }
-
-  /*#age_calc_title{
-    font-size: 2.5em;
-  }*/
 }
 
 @media screen and (max-width: 850px) {
@@ -944,9 +922,21 @@ footer {
     bottom: -15px;
   }
 
-  /*#age_calc_title{
-    font-size: 2em;
-  }*/
+  #space{
+    display: none;
+  }
+
+  #age_calc_form{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #age_calc_select_label{
+    margin-top: 22px;
+  }
+
+  #age_calc_main{
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -954,14 +944,17 @@ footer {
     border-radius: 30px;
   }
 
-   #age_calc_img{
-    width: 200px;
-    bottom: -10px;
+  #age_calc_main{
+    width: 90%;
   }
 
-  /*#age_calc_title{
-    font-size: 1.5em;
-  }*/
+  #age_calc_box{
+    padding: 30px;
+  }
+
+  #age_calc_title{
+    margin-top: 10px;
+  }
 }
 
 /*** 8.0 - CONTACT ***/
@@ -970,7 +963,6 @@ footer {
   margin: 2em 0 0 6em;
   display: inline-block;
   width: 40%;
-  font-size: 1.2em;
 }
 
 #contactForm{
@@ -1006,6 +998,7 @@ footer {
   font-size: .7em;
   width: max-content;
   padding: 10px;
+  cursor: not-allowed;
 }
 
 #contact_link{
@@ -1050,6 +1043,7 @@ footer {
 
 .faqChild>p{
   padding: 0 1em 1em 1.5em;
+  line-height: 1.5em;
 }
 
 .faqChild:hover{

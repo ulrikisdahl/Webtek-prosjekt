@@ -6,6 +6,7 @@ const submit_button = document.querySelector("#age_calc_submit");
 const output_p = document.querySelector("#age_calc_output");
 
 let age_type = "years";
+let age_in_months;
 
 function button_function(add, remove, type){
   add.classList.add("age_calc_selected");
@@ -13,8 +14,6 @@ function button_function(add, remove, type){
 
   age_type = type;
 }
-
-//form: onsubmit="return false"
 
 function calculate_age(){
   output_p.style.padding = "15px";
@@ -35,6 +34,7 @@ function calculate_age(){
 
     if(age_type == "months"){
       age_input = input.value / 12;
+      age_in_months = input.value;
     } else if(age_type == "years"){
       age_input = input.value;
     }
@@ -53,26 +53,11 @@ function calculate_age(){
         }
     }
 
-    output_p.innerHTML = `The equivalent of <b>${age_input}</b> dog years is <b>${Math.floor(age_output)}</b> human years`;
-
+    if(age_type == "months"){
+      console.log("Months")
+      output_p.innerHTML = `The equivalent of <b>${Math.floor(age_in_months)}</b> dog months, for your <b>${select_input.value}</b> dog, is <b>${Math.floor(age_output)}</b> human years.`;
+    } else if(age_type == "years"){
+      output_p.innerHTML = `The equivalent of <b>${Math.floor(age_input)}</b> dog years, for your <b>${select_input.value}</b> dog, is <b>${Math.floor(age_output)}</b> human years.`;
     }
   }
-
-/*
-
-LITEN HUND
-0-1: 15x
-1-2: 9x + 6
-2-16: 4x + 16
-
-MEDIUM HUND
-0-1: 15x
-1-2: 9x + 6
-2-16: 4.57x + 14.36
-
-STOR HUND
-0-1: 15x
-1-2: 9x + 6
-2-16: 5.46x + 11.4
-
-*/
+}
