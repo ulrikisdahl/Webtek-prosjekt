@@ -83,6 +83,8 @@ let knapp = [["HOME","index.html"],["DIET","diet.html"],["DOG BREED","breed.html
 for (let i of knapp) {
     let e1 = document.createElement("div")
     e1.className = "menu"
+
+    // Styler den aktive nav-knappen
     let path = window.location.pathname.split("/").splice(-1)[0]
     if (path == i[1]){
         e1.id = "aktiv"
@@ -102,8 +104,7 @@ for (let i of knapp) {
         }, false)
 }
 
-
-// Dropdown
+// Dropdown 
 let header = document.querySelector("header")
 let menu = document.querySelectorAll(".menu")
 function dropdownfun(){
@@ -121,8 +122,8 @@ function removeAtt(){
 }
 let x = window.matchMedia("(min-width: 600px)")
 x.addListener(removeAtt)
-// GOOGLE FONTS
 
+// GOOGLE FONTS
 const head = document.querySelector("head");
 
 head.innerHTML += `<link rel="preconnect" href="https://fonts.googleapis.com">
