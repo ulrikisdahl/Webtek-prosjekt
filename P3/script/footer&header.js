@@ -14,12 +14,36 @@ let logoHeader = document.createElement("img");
 logoHeader.src = "images/logo.png";
 headerEl.appendChild(logoHeader);
 logoHeader.className = "logoClass";
+logoHeader.id = "logoHead"
 
 // Legger til logo til footer
 let logo = document.createElement("img");
 logo.src = "images/logo.png";
-footerEl.appendChild(logo);
 logo.className = "logoClass";
+footerEl.appendChild(logo);
+
+// Legger til dropdown header
+let dropdown = document.createElement("div");
+headerEl.appendChild(dropdown);
+dropdown.className = "menu";
+dropdown.id = "dropdown";
+
+let dropimg = document.createElement("img");
+dropimg.src = "images/logo.png";
+dropimg.id = "dropimg";
+dropdown.appendChild(dropimg);
+
+let droptext = document.createElement("h1");
+droptext.innerText = "Nala the Dog"
+droptext.id = "droptext"
+dropdown.appendChild(droptext);
+
+let dropbutton = document.createElement("img");
+dropbutton.src = "images/dropdown-logo.png";
+dropbutton.id = "dropbutton";
+dropbutton.setAttribute("onClick", "dropdownfun()")
+dropdown.appendChild(dropbutton);
+
 
 // Lager made by element
 let madeByText = document.createElement("p");
@@ -70,6 +94,31 @@ for (let i of knapp) {
     
 }
 
+let menus = document.querySelectorAll(".menu")
+let prew = false
+function dropdownfun(){
+    if(prew){
+        dropbutton.setAttribute("style","transform: rotate(0deg)")
+        for(i of menus){
+            i.removeAttribute("style")
+        }
+        prew = false
+    } else {
+        dropbutton.setAttribute("style","transform: rotate(90deg)")
+        for(i of menus){
+            if (i != menus[0]){
+                i.setAttribute("style", "display: block")
+            }
+        }
+        menus[0].setAttribute("style", "display: flex")
+        prew = true
+    }
+}
+function removeAtt(x){
+    menus[0].removeAttribute("style")
+}
+let x = window.matchMedia("(min-width: 600px)")
+x.addListener(removeAtt)
 // GOOGLE FONTS
 
 const head = document.querySelector("head");

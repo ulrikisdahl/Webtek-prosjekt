@@ -47,6 +47,7 @@ header {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 
 .menu {
@@ -69,22 +70,50 @@ header {
   background-color: #303549;
   color: #C5CBE3;
 }
+#dropdown {
+  display: none;
+  height: 80px;
+  padding: 0;
+  justify-content: space-around;
+  align-items: center;
+}
+#dropdown:hover {
+  background-color: #EFE2BA;
+  cursor: default;
+}
+#dropimg {
+  height: 70%;
+}
+#dropbutton{
+  height: 50%;
+  cursor: pointer;
+  transition: 0.4s;
+}
 
 @media screen and (max-width: 600px) {
+  .container{
+    padding-top: 80px;
+  }
   header {
     position: fixed;
-    top: 0px;
-    width: 100%;
     flex-direction: column;
-    height: 200px;
-    z-index: 1000;
+    height: auto;
+    z-index: 10;
   }
-
+  #logoHead {
+    display: none;
+  }
+  #dropdown{
+    display: flex;
+    background-color: #EFE2BA;
+  }
   .menu {
     width: 100%;
-    border: 1px solid black;
-    background-color: white;
+    background-color: #F8F3E2;
     border-radius: 0px;
+    display: none;
+    border-bottom: 1px solid black;
+    ;
   }
 }
 
@@ -354,11 +383,9 @@ footer {
     justify-content: center;
   }
 
-  #smilingDogs {
-    width: 60%;
-}
+  
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 760px) {
 
   #smilingDogsDiv {
     margin-bottom: -15px;
@@ -366,10 +393,18 @@ footer {
 
   #smilingDogs {
     height: 60px;
+    width: 60%
   }
 
   #dietTitle {
     font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #smilingDogs {
+    height: 40px;
+    margin-bottom: 10px;
   }
 }
 
@@ -378,10 +413,10 @@ footer {
 /*** 5.0 - DOG BREED ***/
 
 #pb-all {
-  display: inline-block;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-right: 2%;  
 }
 
 .pb-outline {
@@ -393,7 +428,6 @@ footer {
   border-width: 1px;
   border-style: solid;
   box-shadow: 5px 5px black;
-  display: inline-block;
 }
 
 
@@ -443,8 +477,7 @@ footer {
   text-align: center;
   background-color: rgb(255, 241, 248);
   padding: 20px;
-  border-radius: 15px;
-  width: 90%;
+  border-radius: 15px; 
   margin-left: 25px;
   margin-right: 25px;
 }
@@ -456,18 +489,14 @@ footer {
   padding: 20px;
   border-radius: 15px;
   width: 40%;
-  transform: translate(0%, -53px);
+  transform: translate(0%, -46px);
   margin-bottom: 40px;
   margin-left: 25px;
 }
 #breed-vectordog {
-  display: inline-block;
-  position: relative;
-  top: -200px;
-  width: 250px;
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-top: 0%;
+  width: 300px;
+  margin-top: 200px;
+  transform: translate(20%);
 }
 /* Making the page responsive */
 @media screen and (max-width: 1325px) {
@@ -477,12 +506,12 @@ footer {
     margin-left: auto;
     margin-top: 0%;
     top: 0px;
+    transform: translate(0%);
   }
   #pb-all {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 0%;
+    float: none;
+    margin-top: 0%; 
+    align-items: center;
   }
   #breed-text {
     width: 50%;
@@ -508,8 +537,7 @@ footer {
   #pb-all {
     float: none;
     margin-bottom: 40px;
-    margin-right: auto;
-    margin-left: auto;
+    align-items: center;
   }
 }
 
