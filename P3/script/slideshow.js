@@ -108,7 +108,9 @@ function show(e){
         } else {
             // Hvis video blir trykket på
             dark[1].style.display = "block"
-            dark[1].src = `./videoes/nalavid${e.target.id.slice(-1)}.mp4`
+            dark[2].src = `./videoes/nalavid${e.target.id.slice(-1)}.mp4`
+            dark[3].src = `./videoes/nalavid${e.target.id.slice(-1)}.ogv`
+            dark[1].load()
         }
         blackscreen.style.display = "flex"
         // Starter animasjon
