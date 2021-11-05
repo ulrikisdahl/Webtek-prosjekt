@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +17,7 @@
             <div id="dietChild2Div">
                 <div id="dietTextDiv">
                     <div id="smilingDogsDiv">
-                        <img src="images/smilingDogs.png" alt="" width="400px" height="80px" id="smilingDogs">
+                        <img src="images/smilingDogs.png" alt="" width="400" height="80" id="smilingDogs">
                     </div>
                     <div id="dietInformationDiv">
                         <h3>Nalas diet</h3>
@@ -25,6 +26,7 @@
                             consisting of kibble and the other two being either bread or leftovers. The reason she eats four meals a day is due to her young age. You maybe think 
                             that she eats a lot for her age and size, but Nala is a very active dog, who burns a lot of calories. She is walking at least 1.5 hours a day, and also run 
                             around and plays all the time. <b>Use the diet-calculator to get a meal plan for your dog.</b>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis hic recusandae, quisquam asperiores dolorum magni, sint obcaecati reiciendis eligendi nobis excepturi, ad beatae aspernatur quo deserunt similique harum magnam perferendis?
                         </p>
                         <h3>What should a diet consist of?</h3>
                         <p>
@@ -43,7 +45,7 @@
                             Chocolate, onions, garlic, lactose, alcohol, fatty and salty foods are some examples of foods you should never feed your dog. <b>Under "Unsafe foods for dogs" you can learn more about 
                             what to do if your dog eats a toxic food.</b>
                         </p>
-                        <img src="images/diet/eatingDog.png" alt="" width="300px" height="208px">
+                        <img src="images/diet/eatingDog.png" alt="" width="300" height="208">
                     </div>
                 </div>
                 <div id="dietCalcDiv">
@@ -52,13 +54,13 @@
                         <form id="dietCalcForm" onsubmit="return false">
                             <table id="dietCalcTable">
                                 <tr>
-                                    <td><label for="dietAge">AGE</label> <br></td>
+                                    <td><label for="dietAge">AGE</label></td>
                                 </tr>
                                 <tr>
                                     <td><input type="number" name="dietAge" id="dietAge" class="dietCalcInput" placeholder="Enter age" min="0" required></td>
                                     <td>
-                                        <button id="dietCalcButtonMoths">MONTHS</button>
-                                        <button id="dietCalcButtonYears">YEARS</button>
+                                        <button class="dietCalcButtonMonths" value="months">MONTHS</button>
+                                        <button class="dietCalcButtonYears" value="years">YEARS</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -85,77 +87,77 @@
                                         </select>
                                     </td>
                                 </tr>
-                            </table> <br>
-                            <button id="dietSubmit">Create a plan</button></td>
+                            </table> 
+                            <button id="dietSubmit">Create a plan</button>
                         </form>
                     </div>
                     <div id="dietOutputDiv">
                         <div id="dietOutputHeader">
-                            <h3>Daily plan</h3>
+                            <h2>Daily plan</h2>
                         </div>
                         <div id="dietOutputContent">
                             <div id="foodNone">
-                                <img src="images/diet/dogfood.png" alt="" width="200px" height="173px">
+                                <img src="images/diet/dogfood.png" alt="" width="200" height="173">
                             </div>
                             <div id="dietOutputText">
-                                <h4>(Fill out the calculator above)</h4>
+                                <h3>(Fill out the calculator above)</h3>
                             </div>
                         </div>
                     </div>
                     <div id="dietUnsafeFoodsDiv">
                         <div id="unsafeHeaderDiv">
-                            <img src="images/diet/redX.png" alt="" width="80px" height="80px">
-                            <h2>Unsafe foods for dogs</h2>
+                            <img src="images/diet/redX.png" alt="" width="80" height="80">
+                            <h3>Unsafe foods for dogs</h3>
                         </div>
                         <h4 id="unsafeLearnmore">(learn more by clicking on the foods)</h4>
                         <div id="unsafeContentDiv">
                             <div class="unsafeDivs">
                                 <a href="https://www.akc.org/expert-advice/nutrition/can-dogs-eat-onions/" target="_blank">
-                                    <img src="images/diet/onion.png" alt="" class="unsafeImg" width="100px" height="130">
+                                    <img src="images/diet/onion.png" alt="" class="unsafeImg" width="100" height="130">
                                 </a>
                             </div>
                             <div class="unsafeDivs">
                                 <a href="https://www.hillspet.com/dog-care/nutrition-feeding/is-chocolate-bad-for-dogs" target="_blank">
-                                    <img src="images/diet/chocolate.png" alt="" class="unsafeImg" width="100px" height="140">
+                                    <img src="images/diet/chocolate.png" alt="" class="unsafeImg" width="100" height="140">
                                 </a>
                             </div>
                             <div class="unsafeDivs">
                                 <a href="https://www.akc.org/expert-advice/nutrition/can-dogs-drink-milk/" target="_blank">
-                                    <img src="images/diet/dairy.png" alt="" class="unsafeImg" width="100px" height="137">
+                                    <img src="images/diet/dairy.png" alt="" class="unsafeImg" width="100" height="137">
                                 </a>
                             </div>  
                             <div class="unsafeDivs">
-                                <h4 class="unsafeTextL">Onion/garlic</h4>
+                                <h5 class="unsafeText">Onion/garlic</h5>
                             </div>
                             <div class="unsafeDivs">
-                                <h4 class="unsafeTextS">Chocolate</h4>
+                                <h5 class="unsafeText">Chocolate</h5>
                             </div>
                             <div class="unsafeDivs">
-                                <h4 class="unsafeTextL">Dairy products</h4>
+                                <h5 class="unsafeText">Dairy products</h5>
                             </div>
                             <div class="unsafeDivs">
                                 <a href="https://www.hillspet.com/dog-care/healthcare/what-happens-when-dog-drinks-alcohol" target="_blank">
-                                    <img src="images/diet/alchohol.png" alt="" class="unsafeImg" width="100px" height="145">
+                                    <img src="images/diet/alchohol.png" alt="" class="unsafeImg" width="100" height="145">
                                     </a>
                             </div>
                             <div class="unsafeDivs">
                                 <a href="https://cvets.net/grape-poisoning-what-to-do-when-dog-eats-grapes/" target="_blank">
-                                    <img src="images/diet/grapes.png" alt="" class="unsafeImg" width="100px" height="145">
+                                    <img src="images/diet/grapes.png" alt="" class="unsafeImg" width="100" height="145">
                                 </a>
                             </div>
                             <div class="unsafeDivs">
                                 <a href="https://dogtime.com/dog-health/dog-food-dog-nutrition/59343-can-dogs-eat-avocados" target="_blank">
-                                    <img src="images/diet/avocado.png" alt="" class="unsafeImg" width="100px" height="155">
+                                    <img src="images/diet/avocado.png" alt="" class="unsafeImg" width="100" height="155">
                                 </a>
                             </div>
                             <div class="unsafeDivs">
-                                <h4 class="unsafeTextS">Alchohol</h4>
+                                <h5 class="unsafeText">Alchohol</h5>
                             </div>
                             <div class="unsafeDivs">
-                                <h4 class="unsafeTextL">Raisins/grapes</h4>
+                                <h5 class="unsafeText">Raisins/grapes</h5>
                             </div>
                             <div class="unsafeDivs">
-                                <h4 class="unsafeTextS">Avocado</h4>
+                                <h5 class="unsafeText">Avocado</h5>
                             </div>
                         </div>
                     </div>

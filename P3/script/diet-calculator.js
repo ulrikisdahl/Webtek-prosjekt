@@ -6,6 +6,7 @@ let dietSizeEl = document.getElementById("dietSize");
 let dietActivityEl = document.getElementById("dietActivity");
 let monthsOrYears = calcButtons[1];
 let foodNoneEl = document.querySelector("#foodNone");
+let formEl = document.getElementById("dietCalcForm")
 
 // Legger til event listener på knappene på siden 
 calcButtons[0].addEventListener("click", changeButtonColor);
@@ -14,15 +15,10 @@ calcButtons[2].addEventListener("click", runAnimation);
 
 // Endrer fargen på knappene MONTHS og YEARS basert på om de er trykket på
 function changeButtonColor(e) {
-    if (e.target != monthsOrYears) {
-        calcButtons[0].style.backgroundColor = "white";
-        calcButtons[0].style.color = "gray";
-        calcButtons[1].style.backgroundColor = "white";
-        calcButtons[1].style.color = "gray";
-        e.target.style.backgroundColor = "gray";
-        e.target.style.color = "white";
-        monthsOrYears = e.target;
-    }
+    calcButtons[0].className = "dietCalcButtonMonths";
+    calcButtons[1].className = "dietCalcButtonMonths";
+    e.target.className = "dietCalcButtonYears";
+    monthsOrYears = e.target;
 }
 
 // Kjører animasjon når knappen create plan blir trykket på 
@@ -31,6 +27,9 @@ function runAnimation() {
         dietOutputTextEL.innerHTML = "Creating plan...";
         foodNoneEl.id = "spinningFood";
         foodNoneEl.addEventListener("animationend", createPlan);
+        formEl.addEventListener("change", createPlan);
+        calcButtons[0].addEventListener("click", createPlan);
+        calcButtons[1].addEventListener("click", createPlan);
     }
 }
 
@@ -41,7 +40,6 @@ function createPlan() {
     let serving = 1;
     let dogAge = dietAgeEl.value;
 
-    // Sjekker size
     if (dietSizeEl.value == "medium") {
         serving *= 1.5;
     } else if (dietSizeEl.value == "large") {
@@ -49,7 +47,7 @@ function createPlan() {
     } else if (dietSizeEl.value == "xlarge") {
         serving *= 2;
     }
-    // Sjekker activity
+
     if (dietActivityEl.value == "active") {
         serving *= 1.25;
     } else if (dietActivityEl.value == "veryActive") {
@@ -58,8 +56,7 @@ function createPlan() {
         serving *= 1.75;
     } 
 
-    // Sjekker age
-    if (monthsOrYears.id == "dietCalcButtonYears") {
+    if (monthsOrYears.value == "years") {
         dogAge *= 12;
     }
 
@@ -81,14 +78,12 @@ function createPlan() {
             mealText.innerHTML = "Meal " + (i) + ": " + (serving*0.75).toPrecision(2) + "s with puppyfood";
         } else if (dogAge <= 100) {
             mealText.innerHTML =  "Meal " + (i) + ": " + (serving*1.5).toPrecision(2) + "s with dogfood";
-            // Hvis den er yngre enn 100mnd og eldre enn 12mnd skal det være 2 måltider + snacks
             if (i == 3) {
                 mealText.innerHTML =  "Snacks: 1s raw meat";
                 break;
             } 
         } else {
             mealText.innerHTML = "Meal " + (i) + ": " + (serving*1.25).toPrecision(2) + "s with dogfood";
-            // Hvis den er eldre enn 100mnd skal det være 3 måltider + snacks
             if (i == 4) {
                 mealText.innerHTML =  "Snacks: 1s raw meat";
                 break;

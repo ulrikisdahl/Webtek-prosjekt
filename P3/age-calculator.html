@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,7 +12,7 @@
     <div class="container">
 
         <div id="age_calc_main">
-            <img id="age_calc_img" src="./images/smilingDogs.png">
+            <img id="age_calc_img" src="./images/smilingDogs.png" alt="">
         
             <div id="age_calc_box">
                 <h1 id="age_calc_title">AGE CALCULATOR</h1>
@@ -24,18 +25,18 @@
                 </p>
 
                 <div id="age_calc_form">
-                    <div id="age_calc_age">
-                        <label for="age_calc_input" id="age_calc_input_label">AGE</label>
+                    <div class="age_calc_sec">
+                        <label for="age_calc_input" class="age_calc_labels">AGE</label>
                         <input id="age_calc_input" type="number" placeholder="Enter age" min="0">    
                     </div>
                     
-                    <button id="age_calc_months" onclick="button_function(months_input, years_input, 'months')">Months</button>
-                    <button id="age_calc_years" onclick="button_function(years_input, months_input, 'years')" class="age_calc_selected">Years</button>
+                    <button class="age_calc_button" id="age_calc_months" onclick="button_function(months_input, years_input, 'months')">Months</button>
+                    <button class="age_calc_button age_calc_selected" id="age_calc_years" onclick="button_function(years_input, months_input, 'years')">Years</button>
                     
-                    <div></div>
+                    <div id="space"></div>
 
-                    <div id="age_calc_size">
-                        <label for="age_calc_select" id="age_calc_select_label">SIZE</label>
+                    <div class="age_calc_sec">
+                        <label for="age_calc_select" class="age_calc_labels">SIZE</label>
                         <select id="age_calc_select">
                             <option value="">Select Size</option>
                             <option value="small">Small (0-9kg)</option>

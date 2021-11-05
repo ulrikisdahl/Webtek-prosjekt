@@ -8,10 +8,11 @@ const contact_submit = document.querySelector("#contactSubmit");
 function contact_function(){
   if(subject_input.value != "" && message_input.value != ""){
     contact_submit.style.color = "black";
+    contact_submit.style.cursor = "default";
     contact_submit.innerHTML = `<a id="contact_link" href="mailto:contact@nala.com?&subject=${subject_input.value}&body=${message_input.value}" target="_blank">SEND MAIL</a>`;
   } else {
     contact_submit.style.color = "#A6A6A6";
-    contact_submit.style.color = "#A6A6A6";
+    contact_submit.style.cursor = "not-allowed";
     contact_submit.innerHTML = `SEND MAIL`;
   }
 }
