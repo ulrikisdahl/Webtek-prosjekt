@@ -546,10 +546,10 @@ footer {
 #breed-vectordog {
   width: 300px;
   margin-top: 200px;
-  transform: translate(20%);
+  transform: translate(20%);  
 }
 /* Making the page responsive */
-@media screen and (max-width: 1325px) {
+@media screen and (max-width: 1350px) {
   #breed-vectordog {
     display: block;
     margin-right: auto;
