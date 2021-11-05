@@ -2,7 +2,7 @@
 const displayAge = document.querySelector('#displayAge');
 
 function timeSinceBorn(){
-    const millisec = Date.parse('12 Apr 2020 00:12:00 GMT')
+    const millisec = Date.parse('12 Apr 2020 00:12:00 GMT') //Nalas birthdate
     const millisecNow = Date.parse(Date())
     const secSinceBorn = (millisecNow - millisec)/1000
 

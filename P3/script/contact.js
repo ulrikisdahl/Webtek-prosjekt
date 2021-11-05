@@ -21,15 +21,12 @@ function contact_function(){
 
 
 
-
-
-
-
-
 // --- FAQ --- //
 
 const faqDiv = document.querySelector('#faqDiv');
 
+//Add questions here: 
+//['Question', 'Answer']
 const faqContent = {
     1: ['What is Nalas favourite food?', 'Nala generally loves all types of food, but her absolute favourite type of food is cooked chicken. However, she only gets to eat cooked chicken on special occasions. She is also very fond eating leftovers from her family. Nala also eats a lot of dog-food in order to get the micronutrients that she needs.'], 
     2: ['What to do when your dog eats chocolate?', 'If you believe your dog ate chocolate, call your veterinarian immediately or call the Pet Poison Helpline for advice. Based on your dog’s size and the amount and type of chocolate consumed, your veterinarian may recommend that you monitor your dog for the clinical signs listed above and call back if his condition worsens.'],
