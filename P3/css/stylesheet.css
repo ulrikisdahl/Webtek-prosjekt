@@ -540,14 +540,14 @@ footer {
   padding: 20px;
   border-radius: 15px;
   width: 40%;
-  transform: translate(0%, -46px);
+  transform: translate(0%, -50px);
   margin-bottom: 40px;
   margin-left: 25px;
 }
 #breed-vectordog {
   width: 300px;
   margin-top: 200px;
-  transform: translate(20%);  
+  transform: translate(10%);  
 }
 /* Making the page responsive */
 @media screen and (max-width: 1350px) {
@@ -556,7 +556,6 @@ footer {
     margin-right: auto;
     margin-left: auto;
     margin-top: 0%;
-    top: 0px;
     transform: translate(0%);
   }
   #pb-all {
@@ -581,13 +580,6 @@ footer {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-  }
-  #breed-vectordog {
-    margin-top: 0%;
-  }
-  #pb-all {
-    float: none;
-    align-items: center;
   }
 }
 
