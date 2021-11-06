@@ -8,17 +8,19 @@ const output_p = document.querySelector("#age_calc_output");
 let age_type = "years";
 let age_in_months;
 
-function button_function(add, remove, type){
+function button_function(add, remove, type){ // Defining the function which adds and removes a class from the age buttons
   add.classList.add("age_calc_selected");
   remove.classList.remove("age_calc_selected");
 
   age_type = type;
 }
 
-function calculate_age(){
+function calculate_age(){ // Defining the function which calculates the age
+
   output_p.style.padding = "15px";
   output_p.style.backgroundColor = "#FF4F4F";
-  if(input.value == ""){
+
+  if(input.value == ""){ // Checks of all the inputs are filled and with correct data
     output_p.innerHTML = `Select the age of your dog`;
   } else if(select_input.value == ""){
     output_p.innerHTML = `Select the size of your dog`;
@@ -27,6 +29,7 @@ function calculate_age(){
   } else if(age_type == "months" && (input.value < 0 || input.value > 192)){
     output_p.innerHTML = `Select an age between 0 and 192 months`;
   } else{
+
     let age_input;
     let age_output;
 
