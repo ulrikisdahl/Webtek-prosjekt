@@ -1072,7 +1072,6 @@ footer {
   margin: 2em 0 0 6em;
   display: inline-block;
   width: 40%;
-  margin-bottom: 20px;
 }
 
 #contactForm{
@@ -1101,7 +1100,7 @@ footer {
 }
 
 #contactSubmit{
-  margin: 1em 5% 0.2em 5%;
+  margin: 1em 5% 0 5%;
   width: 90%;
   background: white;
   border: 1px solid black;
@@ -1115,8 +1114,21 @@ footer {
 #contactNalaImg{
   width: 25em;
   border-radius: 2%;
-  display: inline-block;
   box-shadow: 3px 3px #A6A6A6;
+}
+
+@media screen and (max-width: 917px) {
+  #contactSection, #contactNalaImg, #contactForm, .info{
+    display: block;
+    margin: auto;
+  }
+  #contactSection{
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .info{
+    width: 50%;
+  }
 }
 
 .faqChild{
