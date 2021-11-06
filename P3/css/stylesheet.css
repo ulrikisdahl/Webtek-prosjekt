@@ -935,7 +935,7 @@ footer {
 
 #age_calc_input{
   padding: 15px;
-  font-size: 15px;
+  font-size: .8em;
   outline: none;
 }
 
@@ -1087,7 +1087,7 @@ footer {
   height: 2.3em;
   font-family: arial, helvetica, sans-serif;
   padding: 15px;
-  font-size: 15px;
+  font-size: .8em;
 }
 
 #message{
@@ -1095,7 +1095,7 @@ footer {
   width: 90%;
   font-family: arial, helvetica, sans-serif;
   padding: 13px;
-  font-size: 15px;
+  font-size: .8em;
 }
 
 #contactSubmit{
