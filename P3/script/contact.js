@@ -18,11 +18,6 @@ function contact_function(){
   }
 }
 
-
-
-
-
-
 // --- FAQ --- //
 
 const faqDiv = document.querySelector('#faqDiv');
