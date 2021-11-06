@@ -1079,11 +1079,12 @@ footer {
   width: 75%;
   padding-bottom: 1em;
   border-radius: 4%;
+  box-shadow: 3px 3px #A6A6A6;
 }
 
 #subject{
   margin: 0 5% 0.2em 5%;
-  width: 90%;
+  width: 75%;
   height: 2.3em;
   font-family: arial, helvetica, sans-serif;
   padding: 15px;
@@ -1092,7 +1093,7 @@ footer {
 
 #message{
   margin: 0.2em 5% 0.2em 5%;
-  width: 90%;
+  width: 75%;
   font-family: arial, helvetica, sans-serif;
   padding: 13px;
   font-size: .8em;
@@ -1115,6 +1116,9 @@ footer {
   height: 25em;
   margin-left: 8%;
   border-radius: 2%;
+  display: inline;
+  margin: auto;
+  box-shadow: 3px 3px #A6A6A6;
 }
 
 .faqChild{
@@ -1123,6 +1127,7 @@ footer {
   background-color: white;
   margin: 0 auto;
   margin-bottom: 1em;
+  box-shadow: 3px 3px #A6A6A6;
 }
 
 .faqChild>h3{
@@ -1148,7 +1153,7 @@ footer {
   cursor: pointer;
 }
 
-#FAQ{
+#faq{
   margin-left: 15.5%;
   margin-top: 5em;
 }
