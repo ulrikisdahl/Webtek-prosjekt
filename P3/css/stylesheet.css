@@ -1,7 +1,7 @@
 /* 
 *  CSS TABLE OF CONTENTS
 *   
-*  1.0 - Header
+*  1.0 - Header 
 *  2.0 - Footer
 *  3.0 - Home
 *  4.0 - Diet
@@ -10,6 +10,9 @@
 *  7.0 - Age Calculator
 *  8.0 - Contact
 */
+body, nav, #dropdown, footer, #dietParent, #dietChild1Div, #dietChild2Div, #dietTextDiv, #dietCalcDiv, #dietOutputDiv, .mealDivClass, #dietOutputContent, #dietOutputHeader, #smilingDogsDiv, .unsafeDivs, #unsafeContentDiv, #unsafeHeaderDiv, #dietUnsafeFoodsDiv, #spinningFood, #age_calc_form, .mappe, #video, #pb-all{
+  display: flex;
+}
 
 body {
   margin: 0px;
@@ -20,7 +23,6 @@ body {
   font-size: 1.1em;
   min-height: 100vh;
   position: relative;
-  display: flex;
 }
 
 .container{
@@ -52,7 +54,6 @@ h4 {
 nav { 
   border-bottom: 1px solid;
   height: 80px;
-  display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
@@ -131,7 +132,6 @@ nav {
     display: none;
   }
   #dropdown{
-    display: flex;
     background-color: #EFE2BA;
   }
   .menu {
@@ -152,7 +152,6 @@ footer {
   font-size: 0.7em;
   color: white;
   background-color: #4056A1; 
-  display: flex;
   justify-content: space-between;
   align-items: center;
   }
@@ -303,20 +302,17 @@ footer {
 /*** 4.0 - DIET ***/
 
 #dietParent {
-  display: flex;
   flex-direction: column;
 }
 
 /* Overskriften skilt fra resten av siden */
 #dietChild1Div, #dietChild2Div {
   width: 100%;
-  display: flex;
   justify-content: center;
 } 
 
 /* Tekstdelen på venstre side av siden */
 #dietTextDiv {
-  display: flex;
   flex-direction: column;
   align-items: center;
   line-height: 150%;
@@ -327,7 +323,6 @@ footer {
 
 /* Kalkulatoren på høyre siden av siden */
 #dietCalcDiv {
-  display: flex;
   width: 40%;
   align-items: center;
   flex-direction: column;
@@ -404,7 +399,6 @@ footer {
   width: 350px;
   margin: 30px;
   margin-left: 0px;
-  display: flex;
   font-size: 0.8em;
   flex-direction: column;
   border-radius: 20px;
@@ -416,21 +410,18 @@ footer {
   background-color: lightcoral;
   width: 100%;
   height: 50px;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#dietOutputContent {
+#dietOutputContent{
   width: 100%;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.mealDivClass {
-  display: flex;
+.mealDivClass{
   width: 100%;
   justify-content: left;
   align-items: center;
@@ -456,7 +447,6 @@ footer {
 
 /* Id'en som starter animasjonen */
 #spinningFood {
-  display: flex;
   animation-name: spin;
   animation-duration: 1s; 
   animation-iteration-count: 2;
@@ -470,9 +460,8 @@ footer {
 }
 
 /* Unsafe foods del */
-#dietUnsafeFoodsDiv {
+#dietUnsafeFoodsDiv{
   background-color: #ffb8b8;
-  display: flex;
   align-items: center;
   width: 90%;
   height: 650px;
@@ -480,20 +469,17 @@ footer {
   margin-bottom: 100px
 }
 
-#unsafeHeaderDiv {
-  display: flex;
+#unsafeHeaderDiv{
   justify-content: center;
 }
 
 #unsafeContentDiv {
-  display: flex;
   flex-wrap: wrap;
 }
 
 /* Classen for div'ene rundt bildene */
 .unsafeDivs {
   width: 33%;
-  display: flex;
   justify-content: center;
 }
 
@@ -528,7 +514,6 @@ footer {
 
   #smilingDogsDiv {
     width: 80%;
-    display: flex;
     justify-content: center;
   }
 
@@ -581,7 +566,6 @@ footer {
 /*** 5.0 - DOG BREED ***/
 
 #pb-all {
-  display: flex;
   flex-direction: column;
   float: right;
   margin-right: 2%;  
@@ -709,7 +693,6 @@ footer {
   }
 
 #video {
-  display: flex;
   justify-content: space-around;
   margin: 50px 0;
 }
@@ -757,12 +740,11 @@ footer {
   cursor: pointer;
 }
 
-.mappe{
+.mappe {
   position: absolute;
   right: -85%;
   top: 15%;
   width: 180%;
-  display: flex;
   justify-content: space-around;
 }
 
@@ -921,7 +903,6 @@ footer {
 }
 
 #age_calc_form{
-  display: flex;
   justify-content: center;
   display: grid;
   margin-top: 50px;
