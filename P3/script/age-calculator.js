@@ -35,14 +35,14 @@ function calculate_age(){ // Defining the function which calculates the age
 
     output_p.style.backgroundColor = "#A2FF99";
 
-    if(age_type == "months"){
+    if(age_type == "months"){ // Changes the age from months to years if the user has selected months
       age_input = input.value / 12;
       age_in_months = input.value;
     } else if(age_type == "years"){
       age_input = input.value;
     }
 
-    if(age_input <= 1){
+    if(age_input <= 1){ // Calculates age depending on the age and size
       age_output = 15 * age_input;
     } else if(age_input <= 2){
       age_output = 9 * age_input + 6;
@@ -56,8 +56,7 @@ function calculate_age(){ // Defining the function which calculates the age
         }
     }
 
-    if(age_type == "months"){
-      console.log("Months")
+    if(age_type == "months"){ // Changes the innerHTML of output_p with the correct age
       output_p.innerHTML = `The equivalent of <b>${Math.floor(age_in_months)}</b> dog months, for your <b>${select_input.value}</b> dog, is <b>${Math.floor(age_output)}</b> human years.`;
     } else if(age_type == "years"){
       output_p.innerHTML = `The equivalent of <b>${Math.floor(age_input)}</b> dog years, for your <b>${select_input.value}</b> dog, is <b>${Math.floor(age_output)}</b> human years.`;
