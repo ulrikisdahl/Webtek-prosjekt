@@ -149,7 +149,7 @@ footer {
   margin-top: auto;
   padding: 10px 30px 10px 30px;
   bottom: 0px;
-  font-size: 0.6em;
+  font-size: 0.7em;
   color: white;
   background-color: #4056A1; 
   display: flex;
@@ -400,12 +400,12 @@ footer {
 
 /* Output del (daily plan) */
 #dietOutputDiv {
-  height: 300px;
+  height: 350px;
   width: 350px;
   margin: 30px;
   margin-left: 0px;
   display: flex;
-  font-size: 0.6em;
+  font-size: 0.8em;
   flex-direction: column;
   border-radius: 20px;
   background-color: #ffb8b8;
