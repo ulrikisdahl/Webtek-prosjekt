@@ -259,6 +259,7 @@ footer {
 .contentContainer-text{
   text-align: center;
   padding: 0em 2em 0em 2em;
+  line-height: 150%;
 }
 
 @media only screen and (max-width: 1225px){
@@ -576,8 +577,6 @@ footer {
   }
 }
 
-
-
 /*** 5.0 - DOG BREED ***/
 
 #pb-all {
@@ -651,7 +650,7 @@ footer {
   margin-right: 25px;
 }
 #breed-text {
-  text-align: center;
+  line-height: 150%;
   background-color: rgb(255, 241, 248);
   float: left;
   padding: 20px;
@@ -911,7 +910,7 @@ footer {
 }
 
 #age_calc_text{
-  line-height: 25px;
+  line-height: 150%;
 }
 
 .age_calc_labels{
@@ -1156,7 +1155,7 @@ footer {
 
 .faqChild>p{
   padding: 0 1em 1em 1.5em;
-  line-height: 1.5em;
+  line-height: 150%;
 }
 
 .faqChild:hover{
