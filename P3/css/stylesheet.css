@@ -117,7 +117,7 @@ nav {
   header {
     position: fixed;
     height: 81px;
-    z-index: 1;
+    z-index: 5;
     width: 100%;
     overflow: hidden;
     transition: 0.6s;
@@ -851,7 +851,7 @@ footer {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 2;
+  z-index: 10;
   display: none;
   justify-content: center;
 }
