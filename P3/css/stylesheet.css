@@ -117,7 +117,7 @@ nav {
   header {
     position: fixed;
     height: 81px;
-    z-index: 10;
+    z-index: 1;
     width: 100%;
     overflow: hidden;
     transition: 0.6s;
@@ -226,10 +226,10 @@ footer {
   background-color: #f8f1d5;
   margin: auto;
   width: 90%;
-  border-top-left-radius: 6%;
-  border-top-right-radius: 6%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   padding-bottom: 5em;
-
+  
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr min(2fr) 1fr;
@@ -288,7 +288,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 480px){ /*!!?!?!?!?!?! */
+@media only screen and (max-width: 480px){
   .item1{
       grid-column: span 1;
   }
@@ -301,6 +301,7 @@ footer {
       margin: 18% 18% 0 18%;
   }
 }
+
 /*** 4.0 - DIET ***/
 
 #dietParent {
@@ -343,7 +344,7 @@ footer {
 }
 
 #dietInformationDiv {
-  background-color: white;
+  background-color: rgb(255, 241, 248);
   width: 80%;
   border-radius: 50px;
   padding: 20px;
@@ -600,7 +601,7 @@ footer {
 
 
 .pb-unit {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
@@ -620,23 +621,23 @@ footer {
 
 #barking-level {
   animation: progress 2s;
-  width: 70%;
+  width: 30%;
 }
 #shedding-level {
   animation: progress 2s;
-  width: 12%;
+  width: 45%;
 }
 #family-adaptability {
   animation: progress 2s;
-  width: 87%;
+  width: 92%;
 }
 #drooling-level {
   animation: progress 2s;
-  width: 18%;
+  width: 12%;
 }
 #trainability {
   animation: progress 2s;
-  width: 95%;
+  width: 80%;
 }
 
 /* Styling title and text */
@@ -1077,7 +1078,7 @@ footer {
   background-color: #FFF1F8;
   width: 75%;
   padding-bottom: 1em;
-  border-radius: 4%;
+  border-radius: 10px;
   box-shadow: 3px 3px #A6A6A6;
 }
 
@@ -1128,6 +1129,10 @@ footer {
   .info{
     width: 50%;
   }
+}
+
+#faqDiv{
+  margin-bottom: 75px;
 }
 
 .faqChild{

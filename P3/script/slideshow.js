@@ -19,7 +19,7 @@ for (let i = 1; i<(antallBilder+1); i++) {
     }
 }
 
-// backgroundImage til 3 første Div
+// backgroundImage to 3 first Div
 function mainbakgrunn(i){
     pic1.style.backgroundImage = bilder[i][0]
     pic2.style.backgroundImage = bilder[i][1]
@@ -27,7 +27,7 @@ function mainbakgrunn(i){
     
 }
 
-// backgroundImage til 3 Div utenfor til høyre
+// backgroundImage to 3 Div outside to the right
 function sidebakgrunn(i, bool){
     if (bool){
         i = (i+1)%bilder.length
@@ -41,7 +41,7 @@ mainbakgrunn(0)
 sidebakgrunn(1)
 let index = 0
 
-// Starter animasjon til høyre "onClick"
+// Starts the animation to the right "onClick"
 function right(){
     index = (index+1)%bilder.length
     setTimeout(function(){mainbakgrunn(index)},930)
@@ -52,7 +52,7 @@ function right(){
     mappe.classList.add("left")
 }
 
-// Starter animasjon til venstre "onClick"
+// Starts the animation to the left "onClick"
 function left(){
     sidebakgrunn(index, false)
     if (index==0){
@@ -67,8 +67,8 @@ function left(){
     mappe.classList.add("right")
 }
 
-// Funksjon til når man trykker på bilde
-// Showcase bilde/video
+// Function to when a person clicks a picture/video
+// Showcase pic/video
 document.getElementById("poster1").style.backgroundImage = 'url("./videoes/poster1.png")'
 document.getElementById("poster2").style.backgroundImage = 'url("./videoes/poster2.png")'
 document.getElementById("poster3").style.backgroundImage = 'url("./videoes/poster3.png")'
@@ -97,23 +97,23 @@ function show(e){
             dark[1].style.display = "none";
             dark[1].pause()
         },200)
-        // Starter animasjon
+        // Starts animation
         blackscreen.className = "lighter"
 
     } else if(blackscreen.className == "lighter"){
-        // Hvis et bilde blir trykket på
+        // If a picture is clicked
         if (e.target.className == dark[0].id) {
             dark[0].style.display = "block"
             dark[0].src = e.target.style.backgroundImage.slice(5,-2)
         } else {
-            // Hvis video blir trykket på
+            // If a video is clicked
             dark[1].style.display = "block"
             dark[2].src = `./videoes/nalavid${e.target.id.slice(-1)}.mp4`
             dark[3].src = `./videoes/nalavid${e.target.id.slice(-1)}.ogv`
             dark[1].load()
         }
         blackscreen.style.display = "flex"
-        // Starter animasjon
+        // Starts animation
         blackscreen.className = "darker"
     }
 }

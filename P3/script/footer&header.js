@@ -109,8 +109,7 @@ function removeAtt(){
     header.removeAttribute("style")
     dropbutton.setAttribute("style","transform: rotate(0deg)")
 }
-let x = window.matchMedia("(min-width: 600px)")
-x.addListener(removeAtt)
+window.onresize = removeAtt
 // GOOGLE FONTS
 
 const head = document.querySelector("head");
