@@ -1,14 +1,14 @@
 /* 
 *  CSS TABLE OF CONTENTS
 *   
-*  1.0 - Header 
-*  2.0 - Footer
-*  3.0 - Home
-*  4.0 - Diet
-*  5.0 - Dog Breed
-*  6.0 - Gallery
-*  7.0 - Age Calculator
-*  8.0 - Contact
+*  1.0 - Header         Line: 50-145
+*  2.0 - Footer         Line: 146-183
+*  3.0 - Home           Line: 184-304
+*  4.0 - Diet           Line: 305-580
+*  5.0 - Dog Breed      Line: 581-702
+*  6.0 - Gallery        Line: 703-882
+*  7.0 - Age Calculator Line: 883-1068
+*  8.0 - Contact        Line: 1069-1175
 */
 
 body {
@@ -117,7 +117,7 @@ nav {
   header {
     position: fixed;
     height: 81px;
-    z-index: 1;
+    z-index: 5;
     width: 100%;
     overflow: hidden;
     transition: 0.6s;
@@ -851,7 +851,7 @@ footer {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 2;
+  z-index: 10;
   display: none;
   justify-content: center;
 }
