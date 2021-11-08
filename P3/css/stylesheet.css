@@ -117,7 +117,7 @@ nav {
   header {
     position: fixed;
     height: 81px;
-    z-index: 10;
+    z-index: 1;
     width: 100%;
     overflow: hidden;
     transition: 0.6s;
@@ -621,23 +621,23 @@ footer {
 
 #barking-level {
   animation: progress 2s;
-  width: 70%;
+  width: 30%;
 }
 #shedding-level {
   animation: progress 2s;
-  width: 12%;
+  width: 45%;
 }
 #family-adaptability {
   animation: progress 2s;
-  width: 87%;
+  width: 92%;
 }
 #drooling-level {
   animation: progress 2s;
-  width: 18%;
+  width: 12%;
 }
 #trainability {
   animation: progress 2s;
-  width: 95%;
+  width: 80%;
 }
 
 /* Styling title and text */
