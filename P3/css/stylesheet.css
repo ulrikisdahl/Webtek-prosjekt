@@ -24,6 +24,7 @@ body {
 }
 
 .container{
+  padding-top: 80px;
   position: relative;
 }
 
@@ -53,6 +54,9 @@ nav {
   border-bottom: 1px solid;
   height: 80px;
   display: flex;
+  position: fixed;
+  background-color: #EFE2BA;;
+  z-index: 1000;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
@@ -60,7 +64,8 @@ nav {
 }
 
 .menu {
-  width: 11em;
+  width: 13em;
+  height: 18px;
   margin: 0 4px;
   font-size: 0.8em;
   background-color: #AFB7FF;
@@ -111,9 +116,6 @@ nav {
 }
 
 @media screen and (max-width: 760px) {
-  .container{
-    padding-top: 80px;
-  }
   header {
     position: fixed;
     height: 81px;
@@ -361,7 +363,6 @@ footer {
     width: 200px;
     height: 30px;
 }
-
 
 .dietCalcInput {
   height: 50px;
