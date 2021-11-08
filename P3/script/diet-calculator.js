@@ -75,15 +75,15 @@ function createPlan() {
         let mealText = document.createElement("h4");
         mealDiv.appendChild(mealText);
         if (dogAge <= 12) {
-            mealText.innerHTML = "Meal " + (i) + ": " + (serving*0.75).toPrecision(2) + "s with puppyfood";
+            mealText.innerHTML = "Meal " + (i) + ": " + (serving*0.75).toPrecision(1) + "s with puppyfood";
         } else if (dogAge <= 100) {
-            mealText.innerHTML =  "Meal " + (i) + ": " + (serving*1.5).toPrecision(2) + "s with dogfood";
+            mealText.innerHTML =  "Meal " + (i) + ": " + (serving*1.5).toPrecision(1) + "s with dogfood";
             if (i == 3) {
                 mealText.innerHTML =  "Snacks: 1s raw meat";
                 break;
             } 
         } else {
-            mealText.innerHTML = "Meal " + (i) + ": " + (serving*1.25).toPrecision(2) + "s with dogfood";
+            mealText.innerHTML = "Meal " + (i) + ": " + (serving*1.25).toPrecision(1) + "s with dogfood";
             if (i == 4) {
                 mealText.innerHTML =  "Snacks: 1s raw meat";
                 break;
