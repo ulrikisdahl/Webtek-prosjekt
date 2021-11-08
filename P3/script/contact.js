@@ -39,6 +39,7 @@ for (const idx in faqContent){
     
     const h3 = document.createElement('h3')
     h3.innerText = faqContent[idx][0]
+    h3.id = `h3_${idx}`
     const img = document.createElement('img')
     img.src = 'images/contact/arrow-down.png'
     img.id = `img_${idx}`
@@ -53,13 +54,10 @@ for (const idx in faqContent){
 }
 
 faqDiv.addEventListener('click', function(e){
-    let currentId = e.path[1].id //gets the id of the element that we click on if it is inside faqDiv
-    if (currentId == 'faqDiv'){
-        currentId = e.target.id
-    }else if(currentId == ''){ //if you click outside the area of the elements inside faqDiv, but still inside faqDiv, then currentId will return an empty string which we have to handle like this
+    let currentId = e.target.id.slice(-1) //gets the id of the element that we click on if it is inside faqDiv - we only want the number at the end of the id "slice(-1)"
+    if (currentId == 'v'){ //currentId will have a value of 'v' if you click outside of the faqDiv children elements, but still inside of faqDiv's margin. Therefore we have to return the function to prevent error if this happens
         return
     }
-
     //Selecting relevant elements based on the id we are looking for
     const paragraphToBeChanged = document.querySelector(`#p${currentId}`)
     const paragraphState = paragraphToBeChanged.style.display
@@ -74,4 +72,5 @@ faqDiv.addEventListener('click', function(e){
         imageToBeChanged.style.transform = "rotate(180deg)" //flips the image upside down (rotates 180 degrees)
     }
 })
+
 
