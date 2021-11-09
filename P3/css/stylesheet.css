@@ -98,6 +98,7 @@ nav {
 #dropimg {
   height: 70%;
 }
+
 #dropbutton{
   height: 50%;
   cursor: pointer;
@@ -107,6 +108,10 @@ nav {
   font-family: Roboto Condensed;
   font-variant: small-caps;
   font-weight: normal;
+}
+
+#dropimg:hover, #droptext:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 950px) {
