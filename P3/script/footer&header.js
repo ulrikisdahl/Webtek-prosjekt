@@ -15,23 +15,23 @@ logoHeader.src = "images/logo.png";
 navEl.appendChild(logoHeader);
 logoHeader.className = "logoClass";
 logoHeader.id = "logoHead"
-logoHeader.addEventListener('click', function() {
-    window.location = "index.html";
-    }, false)
+logoHeader.addEventListener('click', linkHome);
 
 // Legger til dropdown header
 let dropdown = document.createElement("div");
 navEl.appendChild(dropdown);
 dropdown.className = "menu";
 dropdown.id = "dropdown";
-
 let dropimg = document.createElement("img");
 dropimg.src = "images/logo.png";
 dropimg.id = "dropimg";
+dropimg.addEventListener('click', linkHome)
 dropdown.appendChild(dropimg);
 
 let droptext = document.createElement("h1");
 droptext.innerText = "Nala the Dog"
+droptext.addEventListener('click', linkHome)
+
 droptext.id = "droptext"
 dropdown.appendChild(droptext);
 
@@ -48,6 +48,7 @@ bodyEl.insertBefore(footerEl, script);
 let logo = document.createElement("img");
 logo.src = "images/logo.png";
 logo.className = "logoClass";
+logo.addEventListener('click', linkHome)
 footerEl.appendChild(logo);
 
 let madeByText = document.createElement("p");
@@ -73,6 +74,10 @@ let fbText = document.createElement("p");
 fbText.innerHTML = "FACEBOOK GROUP";
 fbText.className = "fbTextClass";
 fbDiv.appendChild(fbText); 
+
+function linkHome() {
+    window.location= "index.html";
+}
 
 // Lager navbar
 let knapp = [["HOME","index.html"],["DIET","diet.html"],["DOG BREED","breed.html"],["GALLERY","gallery.html"],["AGE CALCULATOR","age-calculator.html"],["CONTACT","contact.html"]]

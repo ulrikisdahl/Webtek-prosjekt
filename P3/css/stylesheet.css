@@ -165,6 +165,10 @@ footer {
   margin-left: 10px;
 }
 
+.logoClass:hover {
+  cursor: pointer;
+}
+
 .fbClass {
   width: 40px;
   height: 40px;
