@@ -73,6 +73,7 @@ nav {
   padding: 10px 0;
   border-radius: 5px;
   transition: 0.2s;
+  user-select: none;
 }
 
 .menu:hover {
