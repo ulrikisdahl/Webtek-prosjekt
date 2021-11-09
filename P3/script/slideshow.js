@@ -69,9 +69,9 @@ function left(){
 
 // Function to when a person clicks a picture/video
 // Showcase pic/video
-document.getElementById("poster1").style.backgroundImage = 'url("./videoes/poster1.png")'
-document.getElementById("poster2").style.backgroundImage = 'url("./videoes/poster2.png")'
-document.getElementById("poster3").style.backgroundImage = 'url("./videoes/poster3.png")'
+document.getElementById("poster1").style.backgroundImage = 'url("./videos/poster1.png")'
+document.getElementById("poster2").style.backgroundImage = 'url("./videos/poster2.png")'
+document.getElementById("poster3").style.backgroundImage = 'url("./videos/poster3.png")'
 
 let posters = document.querySelectorAll(".poster")
 let pictures = document.querySelectorAll(".bilde")
@@ -108,8 +108,8 @@ function show(e){
         } else {
             // If a video is clicked
             dark[1].style.display = "block"
-            dark[2].src = `./videoes/nalavid${e.target.id.slice(-1)}.mp4`
-            dark[3].src = `./videoes/nalavid${e.target.id.slice(-1)}.ogv`
+            dark[2].src = `./videos/nalavid${e.target.id.slice(-1)}.mp4`
+            dark[3].src = `./videos/nalavid${e.target.id.slice(-1)}.ogv`
             dark[1].load()
         }
         blackscreen.style.display = "flex"
