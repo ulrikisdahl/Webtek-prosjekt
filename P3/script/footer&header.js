@@ -15,6 +15,9 @@ logoHeader.src = "images/logo.png";
 navEl.appendChild(logoHeader);
 logoHeader.className = "logoClass";
 logoHeader.id = "logoHead"
+logoHeader.addEventListener('click', function() {
+    window.location = "index.html";
+    }, false)
 
 // Legger til dropdown header
 let dropdown = document.createElement("div");
@@ -58,14 +61,13 @@ fbDiv.style.display = "flex";
 fbDiv.style.alignItems = "center";
 footerEl.appendChild(fbDiv);
 
-let fbLink = document.createElement("a");
-fbLink.href = "https://www.facebook.com/groups/202077743151125";
-fbLink.target = "_blank";
-fbDiv.appendChild(fbLink);
 let fb = document.createElement("img");
 fb.src = "images/facebook.png";
 fb.className = "fbClass";
-fbLink.appendChild(fb);
+fbDiv.appendChild(fb);
+fb.addEventListener('click', function() {
+    window.location= "https://www.facebook.com/groups/202077743151125";
+    }, false)
 
 let fbText = document.createElement("p");   
 fbText.innerHTML = "FACEBOOK GROUP";
