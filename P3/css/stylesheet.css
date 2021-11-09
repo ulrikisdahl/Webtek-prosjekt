@@ -490,7 +490,8 @@ footer {
   width: 90%;
   height: 650px;
   flex-direction: column;
-  margin-bottom: 100px
+  margin-bottom: 100px;
+  padding-top: 25px;
 }
 
 #unsafeHeaderDiv {
