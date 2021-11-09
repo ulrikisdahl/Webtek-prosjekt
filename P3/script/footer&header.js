@@ -25,8 +25,8 @@ dropdown.id = "dropdown";
 let dropimg = document.createElement("img");
 dropimg.src = "images/logo.png";
 dropimg.id = "dropimg";
-dropimg.addEventListener('click', linkHome)
 dropdown.appendChild(dropimg);
+dropimg.addEventListener('click', linkHome)
 
 let droptext = document.createElement("h1");
 droptext.innerText = "Nala the Dog"
@@ -48,8 +48,8 @@ bodyEl.insertBefore(footerEl, script);
 let logo = document.createElement("img");
 logo.src = "images/logo.png";
 logo.className = "logoClass";
-logo.addEventListener('click', linkHome)
 footerEl.appendChild(logo);
+logo.addEventListener('click', linkHome)
 
 let madeByText = document.createElement("p");
 madeByText.innerHTML = "WEBSITE MADE BY GROUP 15";
