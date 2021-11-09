@@ -57,9 +57,9 @@ function calculate_age(){ // Defining the function which calculates the age
     }
 
     if(age_type == "months"){ // Changes the innerHTML of output_p with the correct age
-      output_p.innerHTML = `The equivalent of <b>${Math.floor(age_in_months)}</b> dog months, for your <b>${select_input.value}</b> dog, is <b>${Math.floor(age_output)}</b> human years.`;
+      output_p.innerHTML = `The equivalent of <b>${Math.floor(age_in_months)}</b> human months, for your <b>${select_input.value}</b> dog, is <b>${Math.floor(age_output)}</b> dog years.`;
     } else if(age_type == "years"){
-      output_p.innerHTML = `The equivalent of <b>${Math.floor(age_input)}</b> dog years, for your <b>${select_input.value}</b> dog, is <b>${Math.floor(age_output)}</b> human years.`;
+      output_p.innerHTML = `The equivalent of <b>${Math.floor(age_input)}</b> human years, for your <b>${select_input.value}</b> dog, is <b>${Math.floor(age_output)}</b> dog years.`;
     }
   }
 }
