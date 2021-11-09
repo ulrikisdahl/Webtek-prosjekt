@@ -413,6 +413,10 @@ footer {
   border: 1px solid black;
 }
 
+label {
+  font-size: 0.7em;
+}
+
 #dietSubmit {
   border-radius: 20px;
   width: 150px; 
