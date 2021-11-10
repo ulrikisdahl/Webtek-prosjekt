@@ -2,7 +2,6 @@ const input = document.querySelector("#age_calc_input");
 const months_input = document.querySelector("#age_calc_months");
 const years_input = document.querySelector("#age_calc_years");
 const select_input = document.querySelector("#age_calc_select");
-const submit_button = document.querySelector("#age_calc_submit");
 const output_p = document.querySelector("#age_calc_output");
 
 let age_type = "years";
@@ -57,9 +56,9 @@ function calculate_age(){ // Defining the function which calculates the age
     }
 
     if(age_type == "months"){ // Changes the innerHTML of output_p with the correct age
-      output_p.innerHTML = `The equivalent of <b>${Math.floor(age_in_months)}</b> human months, for your <b>${select_input.value}</b> dog, is <b>${Math.floor(age_output)}</b> dog years.`;
+      output_p.innerHTML = `The equivalent of <b>${Math.floor(age_in_months)}</b> dog months, for your <b>${select_input.value}</b> dog, is <b>${Math.floor(age_output)}</b> human years.`;
     } else if(age_type == "years"){
-      output_p.innerHTML = `The equivalent of <b>${Math.floor(age_input)}</b> human years, for your <b>${select_input.value}</b> dog, is <b>${Math.floor(age_output)}</b> dog years.`;
+      output_p.innerHTML = `The equivalent of <b>${Math.floor(age_input)}</b> dog years, for your <b>${select_input.value}</b> dog, is <b>${Math.floor(age_output)}</b> human years.`;
     }
   }
 }

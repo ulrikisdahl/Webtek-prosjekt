@@ -14,7 +14,7 @@ let logoHeader = document.createElement("img");
 logoHeader.src = "images/logo.png";
 navEl.appendChild(logoHeader);
 logoHeader.className = "logoClass";
-logoHeader.id = "logoHead"
+logoHeader.id = "logoHead";
 logoHeader.addEventListener('click', linkHome);
 
 // Legger til dropdown header
@@ -26,19 +26,19 @@ let dropimg = document.createElement("img");
 dropimg.src = "images/logo.png";
 dropimg.id = "dropimg";
 dropdown.appendChild(dropimg);
-dropimg.addEventListener('click', linkHome)
+dropimg.addEventListener('click', linkHome);
 
 let droptext = document.createElement("h1");
-droptext.innerText = "Nala the Dog"
-droptext.addEventListener('click', linkHome)
+droptext.innerText = "Nala the Dog";
+droptext.addEventListener('click', linkHome);
 
-droptext.id = "droptext"
+droptext.id = "droptext";
 dropdown.appendChild(droptext);
 
 let dropbutton = document.createElement("img");
 dropbutton.src = "images/dropdown-logo.png";
 dropbutton.id = "dropbutton";
-dropbutton.setAttribute("onClick", "dropdownfun()")
+dropbutton.setAttribute("onClick", "dropdownfun()");
 dropdown.appendChild(dropbutton);
 
 // Lager footerelementet
@@ -49,7 +49,7 @@ let logo = document.createElement("img");
 logo.src = "images/logo.png";
 logo.className = "logoClass";
 footerEl.appendChild(logo);
-logo.addEventListener('click', linkHome)
+logo.addEventListener('click', linkHome);
 
 let madeByText = document.createElement("p");
 madeByText.innerHTML = "WEBSITE MADE BY GROUP 15";
@@ -68,7 +68,7 @@ fb.className = "fbClass";
 fbDiv.appendChild(fb);
 fb.addEventListener('click', function() {
     window.location= "https://www.facebook.com/groups/202077743151125";
-    }, false)
+    }, false);
 
 let fbText = document.createElement("p");   
 fbText.innerHTML = "FACEBOOK GROUP";
@@ -80,43 +80,42 @@ function linkHome() {
 }
 
 // Lager navbar
-let knapp = [["HOME","index.html"],["DIET","diet.html"],["DOG BREED","breed.html"],["GALLERY","gallery.html"],["AGE CALCULATOR","age-calculator.html"],["CONTACT","contact.html"]]
+let knapp = [["HOME","index.html"],["DIET","diet.html"],["DOG BREED","breed.html"],["GALLERY","gallery.html"],["AGE CALCULATOR","age-calculator.html"],["CONTACT","contact.html"]];
 
 for (let i of knapp) {
-    let e1 = document.createElement("div")
-    e1.className = "menu"
+    let e1 = document.createElement("div");
+    e1.className = "menu";
     if (window.location.pathname.split("/").splice(-1)[0] == i[1]){
-        e1.id = "aktiv"
+        e1.id = "aktiv";
     }
-    e2 = document.createElement("div")
-    e2.innerText = i[0]
-    e2.className = "menuP"
-    e1.appendChild(e2)
-    navEl.appendChild(e1)
+    e2 = document.createElement("div");
+    e2.innerText = i[0];
+    e1.appendChild(e2);
+    navEl.appendChild(e1);
 
     e1.addEventListener('click', function() {
-        window.location = i[1]
-        }, false)
+        window.location = i[1];
+        }, false);
     
 }
 
 // Dropdown
-let header = document.querySelector("header")
-let menu = document.querySelectorAll(".menu")
+let header = document.querySelector("header");
+let menu = document.querySelectorAll(".menu");
 function dropdownfun(){
-    let height = `${menu[1].offsetHeight*(menu.length-1)+82}px`
+    let height = `${menu[1].offsetHeight*(menu.length-1)+82}px`;
     if(header.style.height == height){
-        removeAtt()
+        removeAtt();
     } else {
-        dropbutton.setAttribute("style","transform: rotate(90deg)")
-        header.setAttribute("style",`height: ${height}`)
+        dropbutton.setAttribute("style","transform: rotate(90deg)");
+        header.setAttribute("style",`height: ${height}`);
     }
 }
 function removeAtt(){
-    header.removeAttribute("style")
-    dropbutton.setAttribute("style","transform: rotate(0deg)")
+    header.removeAttribute("style");
+    dropbutton.setAttribute("style","transform: rotate(0deg)");
 }
-window.onresize = removeAtt
+window.onresize = removeAtt;
 // GOOGLE FONTS
 
 const head = document.querySelector("head");
