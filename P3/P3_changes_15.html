@@ -54,7 +54,12 @@
                 are outside of the calculator's range.
             </p>
             <p> 
-                Sondre 
+                Sondre fulfilled his javascript requirement by making an own blackscreen element with img and video element 
+                inside with display none with animation instead of using existing elements and adding animations on them. 
+                Sondre fulfilled the dynamical display of images, although we decided that we should not have static sizes 
+                to images and videos, instead the pictures have a 10% and videos have 17% width size every time. The size of 
+                the images and videos has also changed when clicked. Instead of 70% x 70%, it has max 90% where it autoscales 
+                to make the images and videos more friendly to watch. 
             </p> 
             <p>
                 Billy fulfilled his javascript requirement through the function that sends the user to a formatted email 
@@ -113,8 +118,10 @@
                             <ul>
                                 <li>breed.png</li>
                                 <li>calculator.png</li>
+                                <li>diet-bowl.png</li>
                                 <li>diet.png</li>
                                 <li>gallery.png</li>
+                                <li>griffonbruxellois.png</li>
                                 <li>text-bubble.png</li>
                             </ul>
                         </li>
@@ -122,7 +129,7 @@
                         <li>dropdown-logo.png</li>
                         <li>facebook.png</li>
                         <li>logo.png</li>
-                        <li>Picture 1.png</li>
+                        <li>Picture-1.png</li>
                         <li>smilingDogs.png</li>
                     </ul>
                 </li>
@@ -203,7 +210,7 @@
                 </tr>
                 <tr>
                     <td>age-calculator.js</td>
-                    <td>A javascript that converts dog age to human age</td>
+                    <td>A javascript that converts human age to dog age</td>
                     <td>Julian</td>
                 </tr>
                 <tr>
@@ -241,16 +248,21 @@
         <section>
             <h2>Modularity</h2>
             <p>
-                Sondre and Ulrik were responsible for the modularity of the project. They created a javascript 
-                script for each sub-page and a script that every sub-page used called “footer&header.js”. This 
-                script was responsible for creating a navbar, dropdown menu and a footer for every sub-page (including 
-                the home page) in the website using javascript, so that we didn't need to write the same code for the 
-                navbar and the footer for every sub-page. Furthermore, we used a single stylesheet called “stylesheet.css” 
-                to style the website. On this stylesheet, some fundamental commonalities across the website were declared 
-                such as font family and font size for header and body text elements as well as background colour. Another 
-                modular implementation Sondre did on “footer&header.js” was to simplify the workflow to add more pages. 
-                The solution is to just add the name and url to the new page to an existing array. With “Contact.js” and 
-                the DOM Ulrik added code reusability to “contact.html” for the frequently asked questions section. 
+                Sondre and Ulrik were responsible for the modularity of the project. 
+                They created a javascript script for each sub-page and a script that 
+                every sub-page used called “footer&header.js”. This script was responsible 
+                for creating a navbar, dropdown menu and a footer for every sub-page 
+                (including the home page) in the website using javascript, so that we didn't 
+                need to write the same code for the navbar and the footer for every sub-page. 
+                Furthermore, we used a single stylesheet called “stylesheet.css” to style the 
+                website. On this stylesheet, some fundamental commonalities across the website 
+                were declared such as font family and font size for header and body text 
+                elements as well as background colour. Another modular implementation Sondre 
+                did on “footer&header.js” was to simplify the workflow to add more pages. The 
+                solution is to just add the name and url to the new page to an existing array. 
+                With “Contact.js” and the DOM Ulrik added code reusability to “contact.html” 
+                for the frequently asked questions section. With “Slideshow.js” and Sondre 
+                implemented reusability to “gallery.html” for how many pictures the gallery can show. 
             </p>
         </section>
     </main>

@@ -6,7 +6,7 @@ let dietSizeEl = document.getElementById("dietSize");
 let dietActivityEl = document.getElementById("dietActivity");
 let monthsOrYears = calcButtons[1];
 let foodNoneEl = document.querySelector("#foodNone");
-let formEl = document.getElementById("dietCalcForm")
+let formEl = document.getElementById("dietCalcForm");
 
 // Legger til event listener på knappene
 calcButtons[0].addEventListener("click", changeButtonColor);
@@ -65,7 +65,7 @@ function createPlan() {
         // Lager div
         let mealDiv = document.createElement("div");
         mealDiv.className = "mealDivClass";
-        dietOutputTextEL.appendChild(mealDiv)
+        dietOutputTextEL.appendChild(mealDiv);
         // Legger til bildet
         let foodCheckPhoto = document.createElement("img");
         foodCheckPhoto.src = "images/diet/dogFoodCheck.png";
