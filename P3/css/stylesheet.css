@@ -339,7 +339,6 @@ footer {
   justify-content: center;
 } 
 
-/* Tekstdelen på venstre side av siden */
 #dietTextDiv {
   display: flex;
   flex-direction: column;
@@ -350,15 +349,12 @@ footer {
   margin-bottom: 40px;
 }
 
-/* Kalkulatoren på høyre siden av siden */
 #dietCalcDiv {
   display: flex;
   width: 40%;
   align-items: center;
   flex-direction: column;
 }
-
-/* Venstre side */
 
 #smilingDogsDiv {
   margin-top: 25px;
@@ -373,9 +369,7 @@ footer {
   padding: 20px;
 }
 
-/* Høyre side */
-
-/* Kalkualtoren */
+/* Kalkulatoren på høyre siden av siden */
 #dietInputDiv {
   margin-top: 50px;
 }
@@ -471,7 +465,6 @@ label {
   left: 20%;
 }
 
-/* Hundeprint bildene som brukes som bulletpoints */
 .foodCheckPhotoClass {
   width: 30px;
   height: 30px;
@@ -491,7 +484,6 @@ label {
   animation-timing-function: linear; 
 }
 
-/* Animasjon som roterer hundeskålen */
 @keyframes spin {
   from {transform:rotate(0deg);}
   to {transform:rotate(360deg);}
@@ -519,7 +511,6 @@ label {
   flex-wrap: wrap;
 }
 
-/* Classen for div'ene rundt bildene */
 .unsafeDivs {
   width: 33%;
   display: flex;
