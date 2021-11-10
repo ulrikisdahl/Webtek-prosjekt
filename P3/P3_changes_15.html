@@ -32,13 +32,52 @@
         </section>
         <section>
             <h2>Significant Changes</h2>
-            <p><b>Changes to index.html:</b> We changed where clicking on the image of Nala takes the user. Insted of taking the the user to gallery.html, the user gets sent to the content section at the bottom of the homepage, where they can get an overview of the website's content. We did this by having the value of the "href" attribute set as the ID of the content-section-element. Presicely "href='#contentContainer'". This makes it easier for the user to find this section where they can get an overview of the content.</p>
-            <p><b>Changes to diet.html:</b> On the diet page we decided to add a daily plan element. The reason we added this element was to give the page a better structure, and to show the user where the plan is going to be displayed. We styled it equal to the “Unsafe foods” element, with a pink background color. We also added dog footprints as bullet lists for the meals, to make the plan more appealing to children. Except for that, the page is very similar compared to the description in P2.</p>
-            <p><b>Changes to breed.html:</b> The breed pages look largely similar to the previously proposed design, however when the page becomes smaller, some of the elements has to stack on top of each other before turning into a more linear format at max-width: 950px. At 1350 px the two visual elements start to clash so they are stacked adding another responsive breaking point on this page. The font used for the traits was also changed as it was deemed good to have some variety to draw attention to the visual element and its importance. The font was changed to ‘Courier New’ as this font seemed different enough from the main text but still not flashy or dramatic.</p>
-            <p><b>Changes to gallery.html:</b> We added slidershow and showcase for when a picture or video is clicked as intended. But we added some extra features. When a video is clicked, it will autostart the video. If wanting to add more picture is requested, it would be easy to add a picture, by just adding the picture in the images folder with the right name and edit one variable on the slideshow.js file that defines how many pictures is in the gallery. There is also an compatability feature were the videos is algined vertically if nessesary. </p>
-            <p><b>Changes to age-calculator.html:</b> We changed the background-color of the output-field, so it's easier for the user to see if they got an error message because of wrong inputs in the calculator (red background), or if they got a correct age as output (green background).</p>
-            <p><b>Changes to contact.html:</b> We added javascript functionality to the FAQ section. While it was intended in P2 that the FAQ elements would have a dropdown feature, it was not intended that this feeature would be created with javascript. However, we decided to use javascript to reduce the amount of code needed to add new questions. Instead of needing to write a new div element and the corresponding children elements to that div for each FAQ question, you simply only have to add the question text and awnser text to the "faqContent" object in content.js.</p>
-            <p><b>Changes to stylesheet.css:</b> We reduced the font size of the p elements from 1.2em to 1.1em, and h1 font size from 3em to 2.5em. We also changed the font in the navbar from 1.6em to 0.8em. The reason we changed all the fonts was because the text looked out of proportion compared to the rest of the content, so we needed to size it down. In P2 we wrote that Roboto was going to be our default font on the page. After trying some different styles, we decided to instead go with Arial as default font and Roboto for titles and subtitles. The reason behind this decision was that the Roboto font did not look so good on longer paragraphs.</p>
+            <p><b>Changes to index.html:</b> We changed where clicking on the image of Nala takes the user. Insted 
+                of taking the the user to gallery.html, the user gets sent to the content section at the bottom of the 
+                homepage, where they can get an overview of the website's content. We did this by having the value of 
+                the "href" attribute set as the ID of the content-section-element. Presicely "href='#contentContainer'". 
+                This makes it easier for the user to find this section where they can get an overview of the content.
+            </p>
+            <p><b>Changes to diet.html:</b> On the diet page we decided to add a daily plan element. The reason we added 
+                this element was to give the page a better structure, and to show the user where the plan is going to be 
+                displayed. We styled it equal to the “Unsafe foods” element, with a pink background color. We also added 
+                dog footprints as bullet lists for the meals, to make the plan more appealing to children. Except for that, 
+                the page is very similar compared to the description in P2.
+            </p>
+            <p><b>Changes to breed.html:</b> The breed pages look largely similar to the previously proposed design, however 
+                when the page becomes smaller, some of the elements has to stack on top of each other before turning into 
+                a more linear format at max-width: 950px. At 1350 px the two visual elements start to clash so they are 
+                stacked adding another responsive breaking point on this page. The font used for the traits was also changed 
+                as it was deemed good to have some variety to draw attention to the visual element and its importance. The 
+                font was changed to ‘Courier New’ as this font seemed different enough from the main text but still not flashy 
+                or dramatic.
+            </p>
+            <p><b>Changes to gallery.html:</b> We added slidershow and showcase for when a picture or video is clicked as 
+                intended. But we added some extra features. When a video is clicked, it will autostart the video. If wanting 
+                to add more picture is requested, it would be easy to add a picture, by just adding the picture in the images 
+                folder with the right name and edit one variable on the slideshow.js file that defines how many pictures is in 
+                the gallery. There is also an compatability feature were the videos is algined vertically if nessesary. 
+            </p>
+            <p><b>Changes to age-calculator.html:</b> We changed the background-color of the output-field, so it's easier for the 
+                user to see if they got an error message because of wrong inputs in the calculator (red background), or if they got
+                a correct age as output (green background).
+            </p>
+            <p><b>Changes to contact.html:</b> We added javascript functionality to the FAQ section. While it was intended in P2 
+                that the FAQ elements would have a dropdown feature, it was not intended that this feeature would be created with 
+                javascript. However, we decided to use javascript to reduce the amount of code needed to add new questions. Instead 
+                of needing to write a new div element and the corresponding children elements to that div for each FAQ question, 
+                you simply only have to add the question text and awnser text to the "faqContent" object in content.js.
+            </p>
+            <p><b>Changes to stylesheet.css:</b> We reduced the font size of the p elements from 1.2em to 1.1em, and h1 font size from 
+                3em to 2.5em. We also changed the font in the navbar from 1.6em to 0.8em. The reason we changed all the fonts was because 
+                the text looked out of proportion compared to the rest of the content, so we needed to size it down. In P2 we wrote that 
+                Roboto was going to be our default font on the page. After trying some different styles, we decided to instead go with Arial 
+                as default font and Roboto for titles and subtitles. The reason behind this decision was that the Roboto font did not look so 
+                good on longer paragraphs. In P2 we also wrote that the body background was going to be the beige color EFE2BA. While coding 
+                the website we found out that this color did not belong to the color scheme we had chosen. We therefore changed it to a 
+                lighter beige (FAF0CA), the color we were supposed to use all along.  The box elements with text were also supposed to 
+                have a different background color than we wrote in P2. So we changed it to the light pink color FFF1F8, insead of white. 
+            </p>
         </section>
         <section>
             <h2>How we fulfilled minimum requirements</h2>
