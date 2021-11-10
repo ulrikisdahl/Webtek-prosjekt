@@ -8,7 +8,7 @@ let monthsOrYears = calcButtons[1];
 let foodNoneEl = document.querySelector("#foodNone");
 let formEl = document.getElementById("dietCalcForm")
 
-// Legger til event listener på knappene på siden 
+// Legger til event listener på knappene
 calcButtons[0].addEventListener("click", changeButtonColor);
 calcButtons[1].addEventListener("click", changeButtonColor);
 calcButtons[2].addEventListener("click", runAnimation);
